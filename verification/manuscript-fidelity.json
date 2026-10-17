@@ -1,0 +1,306 @@
+{
+  "status": "passed",
+  "baseline_tex_files_checked": 18,
+  "included_tex_files": 17,
+  "e3_source_assets_verified": 60,
+  "e3_approved_changes_retained": 9,
+  "only_new_manuscript_edit": "Authorized prepublication repository notice",
+  "combined_patch_exactly_reproduces_e3": true,
+  "baseline_mathematical_spans_compared": 1350,
+  "approved_expression_differences": [
+    {
+      "file": "abstract.tex",
+      "kind": "insert",
+      "before": [],
+      "after": [
+        "$\\complexityBoth$"
+      ],
+      "classification": "Approved narrative-only complexity/time notation, or question-ending punctuation; no changed formula"
+    },
+    {
+      "file": "bestOfBoth.tex",
+      "kind": "replace",
+      "before": [
+        "\\[\\ProErr_{\\stoPro}(\\timeHorizon)\\leq\\tcO\\left(\\exp\\left(-\\frac{\\timeHorizon}{\\complexitySR\\log\\nArms}\\right)\\right)\\text{~~~and~~~}\\ProErr_{\\advPro(\\gainVector)}(\\timeHorizon)\\leq\\tcO\\left(\\exp\\left(-\\frac{\\timeHorizon}{\\complexityUnif(\\gainVector)}\\right)\\right)\\textbf{?}\\]"
+      ],
+      "after": [
+        "\\[\\ProErr_{\\stoPro}(\\timeHorizon)\\leq\\tcO\\left(\\exp\\left(-\\frac{\\timeHorizon}{\\complexitySR\\log\\nArms}\\right)\\right)\\text{~~~and~~~}\\ProErr_{\\advPro(\\gainVector)}(\\timeHorizon)\\leq\\tcO\\left(\\exp\\left(-\\frac{\\timeHorizon}{\\complexityUnif(\\gainVector)}\\right)\\right).\\]"
+      ],
+      "classification": "Approved narrative-only complexity/time notation, or question-ending punctuation; no changed formula"
+    },
+    {
+      "file": "lowerBoundBOB.tex",
+      "kind": "insert",
+      "before": [],
+      "after": [
+        "$\\complexitySR$",
+        "$\\complexityBoth$"
+      ],
+      "classification": "Approved narrative-only complexity/time notation, or question-ending punctuation; no changed formula"
+    },
+    {
+      "file": "upperBoundBOB.tex",
+      "kind": "delete",
+      "before": [
+        "$t$"
+      ],
+      "after": [],
+      "classification": "Approved narrative-only complexity/time notation, or question-ending punctuation; no changed formula"
+    },
+    {
+      "file": "upperBoundBOB.tex",
+      "kind": "insert",
+      "before": [],
+      "after": [
+        "$\\nArms/24$"
+      ],
+      "classification": "Approved narrative-only complexity/time notation, or question-ending punctuation; no changed formula"
+    }
+  ],
+  "approved_figure_prose_difference": [
+    {
+      "file": "problemFormulation.tex",
+      "change": "Earlier approved E2 punctuation: removed sentence stop between gain vector and its formula in Figure 1",
+      "new_step24_figure_edit": false,
+      "all_math_spans_identical": true
+    }
+  ],
+  "protected_environments": [
+    {
+      "file": "appExp.tex",
+      "environment": "figure",
+      "index": 0,
+      "baseline_normalized_sha256": "cb31bd933cbd238587610f2670e8b31dd200487d4cf5a978f7f7764495142234",
+      "included_normalized_sha256": "cb31bd933cbd238587610f2670e8b31dd200487d4cf5a978f7f7764495142234",
+      "whole_block_equal_after_normalization": true
+    },
+    {
+      "file": "appExp.tex",
+      "environment": "table",
+      "index": 0,
+      "baseline_normalized_sha256": "41eb7516cfcb7111a18811318e02d38473841f3ec14e3220d6c1d1e296208a00",
+      "included_normalized_sha256": "41eb7516cfcb7111a18811318e02d38473841f3ec14e3220d6c1d1e296208a00",
+      "whole_block_equal_after_normalization": true
+    },
+    {
+      "file": "appTechLem.tex",
+      "environment": "lemma",
+      "index": 0,
+      "baseline_normalized_sha256": "46aeec28cbedbf95f7c15ad4ac1691a89ca6893f01d93b85781dbc82241cee35",
+      "included_normalized_sha256": "46aeec28cbedbf95f7c15ad4ac1691a89ca6893f01d93b85781dbc82241cee35",
+      "whole_block_equal_after_normalization": true
+    },
+    {
+      "file": "appUPPBOB.tex",
+      "environment": "lemma",
+      "index": 0,
+      "baseline_normalized_sha256": "c0d9d2147cd6b0551118e43e8ad1169e54ba7bf099f3125bf7ed7c07b87232a9",
+      "included_normalized_sha256": "c0d9d2147cd6b0551118e43e8ad1169e54ba7bf099f3125bf7ed7c07b87232a9",
+      "whole_block_equal_after_normalization": true
+    },
+    {
+      "file": "appUPPBOB.tex",
+      "environment": "lemma",
+      "index": 1,
+      "baseline_normalized_sha256": "b0944cc27109e7c51459d5b1ba324d33a69b26bac35152782567797b28071b8f",
+      "included_normalized_sha256": "b0944cc27109e7c51459d5b1ba324d33a69b26bac35152782567797b28071b8f",
+      "whole_block_equal_after_normalization": true
+    },
+    {
+      "file": "lowerBoundBOB.tex",
+      "environment": "restatable",
+      "index": 0,
+      "baseline_normalized_sha256": "6761a154775d6623967f845e2e030cb7159315aee049413574563214ccb67490",
+      "included_normalized_sha256": "6761a154775d6623967f845e2e030cb7159315aee049413574563214ccb67490",
+      "whole_block_equal_after_normalization": true
+    },
+    {
+      "file": "problemFormulation.tex",
+      "environment": "figure",
+      "index": 0,
+      "baseline_normalized_sha256": "8c4081b706563dd9804bfbdfadbaac495e56ee7c640769f305802c89cf310327",
+      "included_normalized_sha256": "68c4399ae9e1b8b328515b4ad8179f86f376c8ef8a2b51e289eeebd93bb31e05",
+      "whole_block_equal_after_normalization": false
+    },
+    {
+      "file": "upLowGenAd.tex",
+      "environment": "restatable",
+      "index": 0,
+      "baseline_normalized_sha256": "6fe691968826d12084df3f7b6cc6870f64394cd978b02034b5086313b4ea68b8",
+      "included_normalized_sha256": "6fe691968826d12084df3f7b6cc6870f64394cd978b02034b5086313b4ea68b8",
+      "whole_block_equal_after_normalization": true
+    },
+    {
+      "file": "upLowGenAd.tex",
+      "environment": "restatable",
+      "index": 1,
+      "baseline_normalized_sha256": "88602de6a6a8895cb9a80f8e28d44a7f5c0d399608aa1696bed1b77cd21ffa9e",
+      "included_normalized_sha256": "88602de6a6a8895cb9a80f8e28d44a7f5c0d399608aa1696bed1b77cd21ffa9e",
+      "whole_block_equal_after_normalization": true
+    },
+    {
+      "file": "upperBoundBOB.tex",
+      "environment": "restatable",
+      "index": 0,
+      "baseline_normalized_sha256": "bb8d0c178bf2f2f37dd7e55c49a1fb9784c1a123823aab91768a0cd4220f7af0",
+      "included_normalized_sha256": "bb8d0c178bf2f2f37dd7e55c49a1fb9784c1a123823aab91768a0cd4220f7af0",
+      "whole_block_equal_after_normalization": true
+    },
+    {
+      "file": "upperBoundBOB.tex",
+      "environment": "restatable",
+      "index": 1,
+      "baseline_normalized_sha256": "914777fc2d11fed7cbad2260955323975bca031a45ac65d5dd540877dcbad58c",
+      "included_normalized_sha256": "914777fc2d11fed7cbad2260955323975bca031a45ac65d5dd540877dcbad58c",
+      "whole_block_equal_after_normalization": true
+    },
+    {
+      "file": "upperBoundBOB.tex",
+      "environment": "figure",
+      "index": 0,
+      "baseline_normalized_sha256": "51b9e0f35d6c008edeefd33618d4d862e516e39e6cd28e3d1ba2180e55a028df",
+      "included_normalized_sha256": "51b9e0f35d6c008edeefd33618d4d862e516e39e6cd28e3d1ba2180e55a028df",
+      "whole_block_equal_after_normalization": true
+    }
+  ],
+  "principal_results": [
+    {
+      "manuscript_result": "Theorem 1",
+      "file": "paper/source/upLowGenAd.tex",
+      "label": "th:UPARU",
+      "statement": "identical after comment/whitespace normalization",
+      "normalized_sha256": "6fe691968826d12084df3f7b6cc6870f64394cd978b02034b5086313b4ea68b8"
+    },
+    {
+      "manuscript_result": "Theorem 2",
+      "file": "paper/source/upLowGenAd.tex",
+      "label": "th:LOWadPRO",
+      "statement": "identical after comment/whitespace normalization",
+      "normalized_sha256": "88602de6a6a8895cb9a80f8e28d44a7f5c0d399608aa1696bed1b77cd21ffa9e"
+    },
+    {
+      "manuscript_result": "Theorem 4",
+      "file": "paper/source/lowerBoundBOB.tex",
+      "label": "th:lowBOB",
+      "statement": "identical after comment/whitespace normalization",
+      "normalized_sha256": "6761a154775d6623967f845e2e030cb7159315aee049413574563214ccb67490"
+    },
+    {
+      "manuscript_result": "Theorem 6",
+      "file": "paper/source/upperBoundBOB.tex",
+      "label": "th:UpBOB",
+      "statement": "identical after comment/whitespace normalization",
+      "normalized_sha256": "bb8d0c178bf2f2f37dd7e55c49a1fb9784c1a123823aab91768a0cd4220f7af0"
+    },
+    {
+      "manuscript_result": "Corollary 7",
+      "file": "paper/source/upperBoundBOB.tex",
+      "label": "coco",
+      "statement": "identical after comment/whitespace normalization",
+      "normalized_sha256": "914777fc2d11fed7cbad2260955323975bca031a45ac65d5dd540877dcbad58c"
+    },
+    {
+      "manuscript_result": "Lemma 10",
+      "file": "paper/source/appTechLem.tex",
+      "label": "l:transcriptChangeMeas",
+      "statement": "identical after comment/whitespace normalization",
+      "normalized_sha256": "46aeec28cbedbf95f7c15ad4ac1691a89ca6893f01d93b85781dbc82241cee35"
+    }
+  ],
+  "all_reference_numbers_unchanged": true,
+  "bibliography_unchanged": true,
+  "defining_macros_def_tex_byte_identical": true,
+  "e3_source_sha256": {
+    "Discussion.tex": "f6d075a22f6b17a78fee8bc2a70a85e28110ae8bd8304a21facfa2b3f98f1b8c",
+    "Extensions.tex": "32db59e4032d461ae4b93d07fd3a336d5393a6fe1d703d2aa6f2f71176a50f2f",
+    "Main-mpgraph.mp": "221a8b4be916f0790928db2ba5e190875c596498afb7ad00668269e9dafcf6c9",
+    "Main.tex": "84885d33cf52b4bb451e41f2c8e36b9bfd897a0f741c9af4eca263a28291eaa5",
+    "Makefile": "297e954aab7f3331d92d4f6a80c33b1b85c5a0e56547ad114e65d57ee8d26ee4",
+    "abstract.tex": "f645f209eddf41dd421028a2eeacdabf130b5459fed08fe3057de946d380f4d9",
+    "appExp.tex": "73fc642d585d5ccc88e0ac1257fdc7c60a9ae955cf735d468bd936b3f90c00f2",
+    "appLOWAd.tex": "4b11ed0713eecd2894bcc781a48f6c9af60c28d8ce00b8889362a5094e890c48",
+    "appLOWBOB.tex": "31e6d1e7664277a10448724313fd7591ec37a45824795893c6aba8fe93264102",
+    "appTechLem.tex": "9c39bd680b86806a76442ad7000770e865119228782ce53bcb22b6d09bbc7bd3",
+    "appUPPBOB.tex": "8b8537b3f9282438b5e31ea0d1704b908738df8e2ffce9bfd51d4eb4422558ea",
+    "appUpperUniform.tex": "1a4f9977712e0e63f316cb6b5e5ba395c52d79d54d0f6408f8ec5b7ff738fd76",
+    "appendices.tex": "cb537e1f0bc4b452b154d44aeaab2dbc86d2d5d0d9a1f77ec7dd0c32ff7db482",
+    "bandits.bib": "9b3b5dc1cf8f1ef138b61b6da43ee137e121d48ad1bd63babe072c65107d2219",
+    "bestOfBoth.tex": "96ca9e89871498605e3a221fce8d14f4365d3aee02df07b2f331a2ac553f5736",
+    "biblio.bib": "c9b54e84a49708220eba099fe142204d32ca25261c6790181ffae2a09dc1288b",
+    "colt2018.cls": "2b13ff9141736521cd2a33efd0a1449a4d05dccfefc12081ded03b3027f9eb4c",
+    "def.tex": "39d83e5c6823a5d64a31d46900d5cd2b7f7dee9013a4707673457746abc7ce6e",
+    "image/Gaussian_distribution.pdf": "6adaecbbb6613e941640c36ba2293e3b5ae393cf20be2993c52c0bfbcee84071",
+    "image/Gaussian_distribution.svg": "e6870c0c7af16aa90f301dcdd3617b6ba76a4749121b6f91c8ce30152e2f379c",
+    "image/Logcauchypdf.svg": "0aec1f6e8faa11d471c5521c90910c8fe0db082c48cf499abf06786f0f4269a8",
+    "image/SQRTregime.pdf": "3702b77e4543a6053cdb9f0909f39108b3973907c9078cf9a495c1ff4ad04c02",
+    "image/SQRTregime.svg": "ebc5bcbe4d9f1e2f166560f10ed0e219dbe9e4362ada876f38e028f001401125",
+    "image/alloc.pdf": "085b6988e3ac28eb35025a6fb49a91caa90ea56c885c9e4d5f74cbd740f66700",
+    "image/base.pdf": "72f392a135575089e768b1921fa2b80055138a3b101ac6e17ee851ec9f756047",
+    "image/base.svg": "e749c5bccf396d581115d541d9dad2796a42ccaba3f7e223008a6c6b70469bbf",
+    "image/exp1.pdf": "339185f09326d080139cd03a2d27851f70da80c0a4e4d0b30cf88378149a0f2c",
+    "image/exp2.pdf": "ee3a3ab3ec00bae859b657c0be722faf8abe2a5d2d4094a23894fc78fd4d52a6",
+    "image/exp3.pdf": "fd4af0244d0699d08409e037c978598f7cada7a3661c6bcc817bdd743c961116",
+    "image/exp4.pdf": "838baa10c181ae6d340b9901bd235a3dc5fa11fcd0de8e855acbd669527137d4",
+    "image/exp5.pdf": "4bab09a5100bc75748982910c02f5cd36e592825b8c98ad296dee0d683f2d548",
+    "image/exp6.pdf": "8ebc719cad8bd33d66ac13eec20cdc7f961d165af72d1b0512c718ac0a796a03",
+    "image/exp7.pdf": "07f2524ce105ba25b580670e16f58c5990b118321f109fac04e9c32f159e01a1",
+    "image/exp8.pdf": "9bec837dddce51460f86923685dd43110972538760a65c17eb7035fc70601860",
+    "image/flatregime.pdf": "c62660e7d7997f9b4459a79ae51988c42239e8bbd2d749244a5ad842325321e7",
+    "image/flatregime.svg": "0970a5ef5b3b766f37deee17b8581b14180da5e9522e6a667e776c5c9f1ca83e",
+    "image/harmo.svg": "3a853012d8b805eed426655b06e3958d26d635574692ac4d94aa40cb07703a2b",
+    "image/harmocop.pdf": "ffaacd4d5666cda3b4897f7ada52f250773f82f9be5e798b295bc8cdc8d9608c",
+    "image/harmocop.svg": "0f72415d26460baa8b4e66efc162577519343a2c7590c15fbaac9abc2358f27c",
+    "image/harmocop2.pdf": "64eaf1d6c67c99be36427f60fb727e89eb90366a18f59b5b5e166e65e28ffaf5",
+    "image/harmocop2.svg": "4f955d85a29cd66bf0c5b74001cfc57c1f12804b6622159015179c11b591a77e",
+    "image/harmocop3.pdf": "d57536fd8a8bc59634835b41de905b55402aa1a1571e9100090595781738006b",
+    "image/harmocop4.pdf": "dc24d99b12ca75eb1ea460da78e1c86818def3f80b8e9bdd78b17fe298f2de12",
+    "image/linearregime.pdf": "e5de55c894bce9e932655a7b47a753473de3fb5a886987be4426d6fe8e26e0ef",
+    "image/linearregime.svg": "ce28211acb5d722ad3aacd5c08145971e369365d4c4f65dde3dfccdcf3dc0f52",
+    "image/lowAd.pdf": "c0e029dacbc589e2687184ab5254c3689603f48d24981086123b8720772af825",
+    "image/lowAd.svg": "11d30e39f8c4dc377190cba1c6a8fa5ef66d814b20f95e2bb87cfad5b0acf4fc",
+    "image/lowBOB.pdf": "dcd7ecd00f361c89c4c13f227f32455c4b5f0177f74f1e31a1e4b010c0728a3d",
+    "image/lowBOB.svg": "98e820657a3bf1e74985844203a15c0174e02993abe9c16a006fa0ad502a50d8",
+    "image/wug.gif": "0ef44300cc4b26e503381f045cbe65e8d93d8a773df9121898010a849c7eb8a3",
+    "image/wug.jpeg": "efee47f807c6de94aa3b4306702c6c4c67e4e0abbf847ba5a385baf436c7a0ef",
+    "intro.tex": "60a02eee8bd09c1d5327ede3c2304a2599d87906715ef3a73445fe557a3753f9",
+    "jmlr.cls": "f609fecec9cc317dce86075b473362a83a7d955cf486638da12adddda9ad8256",
+    "jmlrutils.sty": "9ca26b2d15e81082984ea376c941b49781cb37f4e3bb54419c8a41f1b63f79a4",
+    "lowerBoundBOB.tex": "e1a217afd93b2e2ee4f2398377b62423d2e5f30d33bd57fabae0e0ea9957e358",
+    "problemFormulation.tex": "7bf01fc134077cbdd176e9d6ce412ea2ce5e4ec7e51d767241c7859402cb0f3b",
+    "sty/notation.sty": "42923aa243e8b67d73a1b764f5b385058b9b059918fd81677468886164290ca1",
+    "sty/wdel.sty": "97d82633835b30ba6f0cb19ba26b70c9caec1e87464876e1b36dc76c6709a883",
+    "upLowGenAd.tex": "1e617b5aa628ff95410e33ffb1a61618da45986d1d5ccc976bf84b070022bcc9",
+    "upperBoundBOB.tex": "8c5c4eb46131d3e9cb4c0cf8d9f0850f3bb40129f7dbf4cdebb48de3c6442456"
+  },
+  "included_sources": {
+    "appLOWBOB.tex": "31e6d1e7664277a10448724313fd7591ec37a45824795893c6aba8fe93264102",
+    "abstract.tex": "f645f209eddf41dd421028a2eeacdabf130b5459fed08fe3057de946d380f4d9",
+    "appExp.tex": "73fc642d585d5ccc88e0ac1257fdc7c60a9ae955cf735d468bd936b3f90c00f2",
+    "jmlrutils.sty": "9ca26b2d15e81082984ea376c941b49781cb37f4e3bb54419c8a41f1b63f79a4",
+    "intro.tex": "b3aaeace45ba79adae6ccc576d513f05709c9505397780df6540e37870d46e2f",
+    "colt2018.cls": "2b13ff9141736521cd2a33efd0a1449a4d05dccfefc12081ded03b3027f9eb4c",
+    "bestOfBoth.tex": "96ca9e89871498605e3a221fce8d14f4365d3aee02df07b2f331a2ac553f5736",
+    "appUPPBOB.tex": "8b8537b3f9282438b5e31ea0d1704b908738df8e2ffce9bfd51d4eb4422558ea",
+    "jmlr.cls": "f609fecec9cc317dce86075b473362a83a7d955cf486638da12adddda9ad8256",
+    "biblio.bib": "c9b54e84a49708220eba099fe142204d32ca25261c6790181ffae2a09dc1288b",
+    "appendices.tex": "cb537e1f0bc4b452b154d44aeaab2dbc86d2d5d0d9a1f77ec7dd0c32ff7db482",
+    "lowerBoundBOB.tex": "e1a217afd93b2e2ee4f2398377b62423d2e5f30d33bd57fabae0e0ea9957e358",
+    "Extensions.tex": "32db59e4032d461ae4b93d07fd3a336d5393a6fe1d703d2aa6f2f71176a50f2f",
+    "problemFormulation.tex": "7bf01fc134077cbdd176e9d6ce412ea2ce5e4ec7e51d767241c7859402cb0f3b",
+    "appUpperUniform.tex": "1a4f9977712e0e63f316cb6b5e5ba395c52d79d54d0f6408f8ec5b7ff738fd76",
+    "Main.tex": "84885d33cf52b4bb451e41f2c8e36b9bfd897a0f741c9af4eca263a28291eaa5",
+    "upperBoundBOB.tex": "8c5c4eb46131d3e9cb4c0cf8d9f0850f3bb40129f7dbf4cdebb48de3c6442456",
+    "appTechLem.tex": "9c39bd680b86806a76442ad7000770e865119228782ce53bcb22b6d09bbc7bd3",
+    "appLOWAd.tex": "4b11ed0713eecd2894bcc781a48f6c9af60c28d8ce00b8889362a5094e890c48",
+    "upLowGenAd.tex": "1e617b5aa628ff95410e33ffb1a61618da45986d1d5ccc976bf84b070022bcc9",
+    "def.tex": "39d83e5c6823a5d64a31d46900d5cd2b7f7dee9013a4707673457746abc7ce6e",
+    "image/exp6.pdf": "8ebc719cad8bd33d66ac13eec20cdc7f961d165af72d1b0512c718ac0a796a03",
+    "image/exp4.pdf": "838baa10c181ae6d340b9901bd235a3dc5fa11fcd0de8e855acbd669527137d4",
+    "image/exp7.pdf": "07f2524ce105ba25b580670e16f58c5990b118321f109fac04e9c32f159e01a1",
+    "image/exp2.pdf": "ee3a3ab3ec00bae859b657c0be722faf8abe2a5d2d4094a23894fc78fd4d52a6",
+    "image/exp3.pdf": "fd4af0244d0699d08409e037c978598f7cada7a3661c6bcc817bdd743c961116",
+    "image/exp5.pdf": "4bab09a5100bc75748982910c02f5cd36e592825b8c98ad296dee0d683f2d548",
+    "image/exp8.pdf": "9bec837dddce51460f86923685dd43110972538760a65c17eb7035fc70601860",
+    "image/exp1.pdf": "339185f09326d080139cd03a2d27851f70da80c0a4e4d0b30cf88378149a0f2c"
+  }
+}

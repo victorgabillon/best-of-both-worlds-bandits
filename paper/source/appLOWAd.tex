@@ -1,0 +1,288 @@
+% !TEX root = Main.tex
+\section{Lower bound in the general adversarial setting} %(Theorem~\ref{th:LOWadPRO}) }
+\label{app:prooflowadPRO}
+%
+	\setcounter{scratchcounter}{\value{theorem}}\setcounter{theorem}{\the\numexpr\getrefnumber{th:LOWadPRO}-1}
+\toto*
+\setcounter{theorem}{\the\numexpr\value{scratchcounter}}
+\begin{proof}%[Theorem~\ref{th:LOWadPRO}]
+Fix the reference gaps
+$0<\gap_1=\gap_2\leq\cdots\leq\gap_{\nArms}\leq1/8$,
+a learner, and a positive integer horizon $\timeHorizon$ satisfying
+Theorem~\ref{th:LOWadPRO}. Write
+$H=\complexityUnif=\nArms/\gap_1^2$ for the reference complexity.
+The learner may know the horizon. The constructions and selected arm
+below may depend on the learner and horizon, but not on its realized
+random choices. Set
+\[
+m=\lfloor\timeHorizon/2\rfloor,\qquad \beta=m/\timeHorizon.
+\]
+The horizon assumption gives
+\[
+\timeHorizon\gap_1^2\geq128\log(128\nArms)\geq1.
+\]
+Since $\gap_1\leq1/8$, we have $\timeHorizon\geq64$, and therefore
+$1\leq m<\timeHorizon$. Moreover,
+\[
+\frac{11}{24}\leq\frac12-\frac{1}{2\timeHorizon}
+\leq\beta\leq\frac12,
+\]
+where the first inequality uses $\timeHorizon\geq12$.
+
+Consider a base problem \basePro{} with independent Bernoulli rewards
+of means $\mean_1^{\basePro}=1/2$ and
+$\mean_j^{\basePro}=1/2-\gap_j$ for $j\in\setArmsmo$.
+Let $\pullsNumber_j(m)$ be the number of pulls of arm $j$ through
+round $m$. Since the expected pull counts of arms in $\setArmsmo$
+sum to at most $m$, choose a fixed arm $\refarm\in\setArmsmo$ such that
+\begin{equation}\label{eq:notSoMuchPullsAD}
+\Exp_{\basePro}\left[\pullsNumber_{\refarm}(m)\right]
+\leq\frac{m}{\nArms-1}\leq\frac{\timeHorizon}{\nArms}.
+\end{equation}
+The last inequality follows from $m\leq\timeHorizon/2$ and
+$\nArms\leq2(\nArms-1)$ for $\nArms\geq2$.
+This arm is chosen from expectations under \basePro{}, before either
+adversarial table is sampled. The initial phase is the prefix
+$\earlyPhase=\{1,\ldots,m\}$.
+
+Set
+\[
+c=\gap_{\refarm}-\gap_1.
+\]
+Since $\gap_1\leq\gap_{\refarm}\leq1/8$, we have $0\leq c\leq1/8$.
+Construct two distributions $\advPro_1$ and $\advPro_2$ over complete
+reward tables, sampled before interaction and independently of the
+learner's internal randomness. In $\advPro_1$, the prefix follows
+\basePro{} on all arms. In $\advPro_2$, the prefix also follows
+\basePro{}, except that arm $\refarm$ has Bernoulli mean
+$1/2-\gap_{\refarm}+2\gap_1$. All prefix entries are independent
+across arms and rounds. In both environments the second phase has
+$m$ rounds and is identical and deterministic: for $m<t\leq2m$,
+\[
+\gainVector_{\refarm,t}=c,\qquad
+\gainVector_{j,t}=0\quad(j\neq\refarm).
+\]
+For $2m<t\leq\timeHorizon$, set $\gainVector_{j,t}=0$ for every arm
+$j$. Thus even horizons give the original two equal phases, while
+odd horizons append one all-zero final round. These rewards lie in
+$[0,1]$. The original learner, configured for horizon $\timeHorizon$,
+chooses an arm in every round, including the optional last round,
+and recommends an arm only after round $\timeHorizon$.
+Let $\Pro_\ell$ and $\Exp_\ell$ denote the full table-and-learner
+probabilities and expectations in $\advPro_\ell$, for $\ell\in\{1,2\}$.
+On tables with tied maximizing arms, define $\bestArm_{\gainVector}$
+as the smallest maximizing index.
+
+Write $M_j^\ell=\Exp_\ell[\cumulGain_j]$, where
+$\cumulGain_j=\sum_{t=1}^{\timeHorizon}\gainVector_{j,t}$.
+The identity $mc=m(\gap_{\refarm}-\gap_1)$ gives the exact expected
+totals below; the optional final zero round contributes nothing:
+\begin{align*}
+M_1^1=M_1^2&=m/2,\\
+M_j^1=M_j^2&=m(1/2-\gap_j)
+\quad(j\notin\{1,\refarm\}),\\
+M_{\refarm}^1
+&=m(1/2-\gap_{\refarm})+mc
+=m(1/2-\gap_1),\\
+M_{\refarm}^2
+&=m(1/2-\gap_{\refarm}+2\gap_1)+mc
+=m(1/2+\gap_1).
+\end{align*}
+The common deterministic second phase places arm $\refarm$ just below
+arm $1$ in the first expected table and just above it in the second. The expected average
+gap between them is $\beta\gap_1$, irrespective of the original
+size of $\gap_{\refarm}$, while the environments differ only in the
+initial rewards of the lightly sampled arm.
+
+For $\ell\in\{1,2\}$ define the full-table good event
+\[
+\eventc_\ell=\left\{\forall j\in\setArms,\quad
+|\cumulGain_j-M_j^\ell|\leq\frac{\timeHorizon\gap_1}{16}\right\}.
+\]
+Only the first $m$ rewards of each arm are random. Two-sided Hoeffding
+and a union bound over the complete arm sequences give
+\begin{equation}\label{eq:goodEventGenAd}
+\Pro_\ell(\eventc_\ell^c)
+\leq2\nArms\exp\left(-\frac{2(\timeHorizon\gap_1/16)^2}{m}\right)
+\leq2\nArms\exp\left(-\frac{\timeHorizon\gap_1^2}{64}\right),
+\end{equation}
+since $m\leq\timeHorizon/2$. These events involve the full reward
+table and are generally not determined by the learner's observations.
+
+On either good event, every normalized pairwise difference deviates
+from its expectation by at most $\gap_1/8$.
+On $\eventc_1$, the expected differences from arm $1$ are
+$\beta\gap_1$ for arm $\refarm$ and $\beta\gap_j$ for
+$j\notin\{1,\refarm\}$. Since
+$\beta-1/8\geq1/3$, $\beta+1/8\leq5/8$, and $\gap_1\leq\gap_j$,
+\[
+\frac{\gap_1}{3}\leq
+\frac{\cumulGain_1-\cumulGain_{\refarm}}{\timeHorizon}
+\leq\frac{5\gap_1}{8},\qquad
+\frac{\gap_j}{3}\leq
+\frac{\cumulGain_1-\cumulGain_j}{\timeHorizon}
+\leq\frac{5\gap_j}{8}
+\quad(j\notin\{1,\refarm\}).
+\]
+All these differences are positive, so arm $1$ is uniquely best.
+Its own gap is the minimum of these differences; the lower bounds
+and the upper bound from arm $\refarm$ give
+\[
+\frac{\gap_1}{3}\leq\gap_1^{\gainVector}\leq\frac{5\gap_1}{8}.
+\]
+Thus every label satisfies the defining bounds for $\Gaps_3$, with
+$\refarm$ as the exceptional label, and every table in $\eventc_1$
+belongs to $\Gaps_3$.
+
+On $\eventc_2$, the expected differences from arm $\refarm$ are
+$\beta\gap_1$ for arm $1$ and $\beta(\gap_j+\gap_1)$ for
+$j\notin\{1,\refarm\}$. Consequently,
+\[
+\frac{\gap_1}{3}\leq
+\frac{\cumulGain_{\refarm}-\cumulGain_1}{\timeHorizon}
+\leq\frac{5\gap_1}{8},\qquad
+\frac{\gap_j}{3}\leq
+\frac{\cumulGain_{\refarm}-\cumulGain_j}{\timeHorizon}
+\leq\frac{9\gap_j}{8}
+\quad(j\notin\{1,\refarm\}).
+\]
+For the latter lower bound,
+$\beta(\gap_j+\gap_1)-\gap_1/8
+\geq(\beta-1/8)\gap_j\geq\gap_j/3$.
+For the upper bound, $\beta\leq1/2$ and $\gap_1\leq\gap_j$ give
+$\beta(\gap_j+\gap_1)+\gap_1/8\leq9\gap_j/8$.
+Arm $\refarm$ is uniquely best, and its own gap, the minimum of
+its differences from every other arm, satisfies
+\[
+\frac{\gap_1}{3}\leq\gap_{\refarm}^{\gainVector}\leq\frac{5\gap_1}{8}.
+\]
+The upper bound uses the difference from arm $1$. Label $1$ meets
+its ordinary reference-gap requirement, all other labels except
+$\refarm$ meet theirs, and $\refarm$ meets the exceptional requirement.
+Every table in $\eventc_2$ therefore also belongs to $\Gaps_3$.
+
+Let $P_1,P_2$ be the observed-transcript laws from
+Lemma~\ref{l:transcriptChangeMeas} under $\advPro_1,\advPro_2$,
+distinguished from the full laws $\Pro_1,\Pro_2$.
+Apply the lemma with $A=\advPro_1$, $B=\advPro_2$,
+$\mathcal T=\{1,\ldots,m\}$, and
+\[
+u=\frac12-\gap_{\refarm},\qquad
+v=\frac12-\gap_{\refarm}+2\gap_1.
+\]
+All table entries are independent of one another and of the learner's
+randomness. The common distributions have finite support, including
+the identical deterministic second phase and optional last round,
+and $u,v\in[3/8,5/8]\subset(0,1)$. This entire continuation contributes
+no additional likelihood-ratio factors.
+The same learner is run with the same horizon.
+The lemma gives
+\[
+D(P_1\Vert P_2)
+=\Exp_1[\pullsNumber_{\refarm}(m)]\operatorname{kl}(u,v)
+=\Exp_{\basePro}[\pullsNumber_{\refarm}(m)]\operatorname{kl}(u,v).
+\]
+The second equality holds because $\advPro_1$ and \basePro{} have
+identical interaction laws through the prefix, including the learner's
+adaptive actions. No law is conditioned on a good-table event.
+
+Using $\log z\leq z-1$,
+\[
+\operatorname{kl}(u,v)
+\leq u\left(\frac{u}{v}-1\right)
++(1-u)\left(\frac{1-u}{1-v}-1\right)
+=\frac{(u-v)^2}{v(1-v)}.
+\]
+Here $|u-v|=2\gap_1$ and $v(1-v)\geq15/64$, so
+$\operatorname{kl}(u,v)\leq(256/15)\gap_1^2$.
+Set $x=\timeHorizon/H=\timeHorizon\gap_1^2/\nArms>0$.
+Equation~\ref{eq:notSoMuchPullsAD} yields
+\begin{equation}\label{eq:transcriptKLGenAd}
+D(P_1\Vert P_2)
+\leq\frac{256}{15}\gap_1^2\frac{\timeHorizon}{\nArms}
+=\frac{256}{15}x\leq32x.
+\end{equation}
+For the transcript event $W=\{\recomArm_{\timeHorizon}=1\}$,
+the testing bound in Equation~\ref{eq:transcriptTesting} now gives
+\[
+P_1(\recomArm_{\timeHorizon}\neq1)+P_2(\recomArm_{\timeHorizon}=1)
+\geq\frac12\exp(-D(P_1\Vert P_2))\geq\frac12\exp(-32x).
+\]
+The learner may recommend any arm; recommending arm $1$ is simply
+one error event in the second environment on its good tables.
+
+Write $\varepsilon=\exp(-32x)$ and
+$b_\ell=\Pro_\ell(\eventc_\ell^c)$.
+Both theorem assumptions are needed to compare the bad-table
+probabilities with this testing bound. Equation~\ref{eq:goodEventGenAd}
+and $\nArms\exp(-\timeHorizon\gap_1^2/128)\leq1/128$ give
+\begin{align*}
+b_\ell
+&\leq2\nArms\exp(-\timeHorizon\gap_1^2/64)\\
+&=2\left[\nArms\exp(-\timeHorizon\gap_1^2/128)\right]
+\exp(-\timeHorizon\gap_1^2/128)\\
+&\leq\frac1{64}\exp(-\timeHorizon\gap_1^2/128)
+\leq\frac{\varepsilon}{64}.
+\end{align*}
+The last inequality uses $\nArms\geq4096$, which implies
+$32/\nArms\leq1/128$. Thus bad tables cost only a fixed fraction
+of the exponentially small testing bound.
+
+For a fixed table $\gainVector$, let
+$\ProErr_{\advPro(\gainVector)}(\timeHorizon)$ denote error over the
+learner's internal randomness, using the best-arm convention above.
+Define its error mass on good tables by
+\[
+R_\ell=\Exp_{\gainVector\sim\advPro_\ell}
+\left[\ProErr_{\advPro(\gainVector)}(\timeHorizon)
+\indicator{\gainVector\in\eventc_\ell}\right].
+\]
+The unique best arms on the good events give
+\begin{align*}
+R_1&=\Pro_1(\{\recomArm_{\timeHorizon}\neq1\}\cap\eventc_1),\\
+R_2&=\Pro_2(\{\recomArm_{\timeHorizon}\neq\refarm\}\cap\eventc_2)
+\geq\Pro_2(\{\recomArm_{\timeHorizon}=1\}\cap\eventc_2).
+\end{align*}
+Subtracting the bad-table probabilities therefore yields
+\begin{equation}\label{eq:goodErrorGenAd}
+\begin{aligned}
+R_1+R_2
+&\geq P_1(\recomArm_{\timeHorizon}\neq1)
++P_2(\recomArm_{\timeHorizon}=1)-b_1-b_2\\
+&\geq\frac{\varepsilon}{2}-\frac{2\varepsilon}{64}
+=\frac{15\varepsilon}{32}.
+\end{aligned}
+\end{equation}
+All joint events involving $\eventc_\ell$ use the full law $\Pro_\ell$;
+no independence from the recommendation is required.
+
+Each table distribution has finite support: only its $m\nArms$
+prefix entries are random Bernoulli variables and its suffix is fixed.
+Each good subset of that support is nonempty, since
+$b_\ell\leq\varepsilon/64<1$. Choose a deterministic table
+$\gainVector^\ell$ maximizing
+$\ProErr_{\advPro(\gainVector)}(\timeHorizon)$ over the good support of
+$\advPro_\ell$. Then
+\[
+R_\ell\leq\Pro_\ell(\eventc_\ell)
+\ProErr_{\advPro(\gainVector^\ell)}(\timeHorizon)
+\leq\ProErr_{\advPro(\gainVector^\ell)}(\timeHorizon).
+\]
+Equation~\ref{eq:goodErrorGenAd} implies
+\[
+\max_{\ell\in\{1,2\}}
+\ProErr_{\advPro(\gainVector^\ell)}(\timeHorizon)
+\geq\frac{R_1+R_2}{2}
+\geq\frac{15}{64}\exp\left(-\frac{32\timeHorizon}{H}\right).
+\]
+Both tables belong to $\Gaps_3$ and have different unique best arms,
+$1$ and $\refarm$. Since $15/64\geq1/128$, this bound implies
+\[
+\max_{\ell\in\{1,2\}}\ProErr_{\gainVector^\ell}(\timeHorizon)
+\geq\min\left\{\frac1{128}\exp\left(-\frac{32\timeHorizon}
+{\complexityUnif}\right),\frac1{32}\right\},
+\]
+which is the claimed conclusion. The extraction uses finite-support
+maximization and requires neither conditional probabilities on null
+events nor a coupling of the two table draws.
+\end{proof}%

@@ -1,0 +1,648 @@
+% !TEX root = Main.tex
+%
+\section{Upper bound in best of both worlds} %Setting (Theorem~\ref{th:UpBOB}) }
+\label{app:proofupBOB}
+%
+\paragraph{Stochastic setup.}
+We work in the bounded i.i.d.\,stochastic setting of
+Section~\ref{s:FormuBOB}, with arm laws $\nu_h$ on $[0,1]$ and
+means $\mean_h$. For the analysis, relabel the arms so that
+$\mean_1>\mean_2\geq\cdots\geq\mean_{\nArms}$, ordering equal
+suboptimal means arbitrarily and consistently. Thus
+$0<\gap_1=\gap_2\leq\cdots\leq\gap_{\nArms}\leq1$.
+This does not affect the learner's rankings or tie resolution.
+Fix any deterministic admissible schedule
+$\propTimeVec\in\propTimeVecSpa$ and write
+$\phaseTime_r=\timeHorizon\propTime_r$, so that
+\[
+\phaseTime_1=\phaseTime_2=\timeHorizon
+\geq\phaseTime_3\geq\cdots\geq\phaseTime_{\nArms}\geq1,
+\qquad \phaseTime_{\nArms+1}=0.
+\]
+All comparison times are integers. The schedule may depend on the
+instance and horizon, but not on the realized observations.
+Coincident comparison times are allowed, and sums over empty time
+intervals are zero.
+
+For $u\in[\timeHorizon]$, the rank $\tilde{\langle k\rangle}_u$
+is the learner's ranking from $\estCumulGainVector_{\cdot,u-1}$.
+At the unplayed time $\timeHorizon+1$, use a decreasing-score ranking
+of $\estCumulGainVector_{\cdot,\timeHorizon}$ that places the actual
+recommendation $\recomArm_{\timeHorizon}$ first among tied maximizers;
+order other ties arbitrarily. This is only an analysis convention:
+no additional pull is made, and neither the recommendation nor its
+tie rule is changed.
+Intuitively, after comparison time $\phaseTime_i$, we expect arms
+whose means are within $\gap_i/2$ of the best mean to occupy the
+first $i-1$ ranks. For $i\in[2:\nArms]$, define
+\begin{equation}\label{eq:eventbob}
+\eventbob_i
+\triangleq
+\left\{
+\begin{array}{l}
+\forall u\in\Integer\text{ with }\phaseTime_i<u\leq\timeHorizon+1,
+\ \forall k\in\setArms:\\
+\displaystyle
+\mean_1-\mean_k<\frac{\gap_i}{2}
+\implies\tilde{\langle k\rangle}_u<i
+\end{array}
+\right\}.
+\end{equation}
+Set $\eventbob_{\nArms+1}=\Omega$ and abbreviate
+$E_i=\bigcap_{p=i+1}^{\nArms+1}\eventbob_p$.
+Since only arm $1$ satisfies the eligibility condition for
+$\eventbob_2$, and $\phaseTime_2=\timeHorizon$, we have
+$\eventbob_2=\{\recomArm_{\timeHorizon}=1\}$.
+
+Let $\mathcal F_{s-1}$ be the information available immediately
+before drawing $\pulledArm_s$, including past actions and observed
+rewards and the current resolved ranking. These information sets
+form a filtration by including any next-round tie resolution in
+$\mathcal F_s$, without revealing future action-sampling coins or
+current rewards before sampling. Thus the ranks and the conditional
+probabilities $\learnerDist_{h,s}$ are predictable. The fresh action
+draw is independent of the current rewards given the past, and the
+reward observed when arm $h$ is selected has conditional law $\nu_h$.
+For each arm $h$, put
+\[
+X_{h,s}=\estGainVector_{h,s}-\mean_h,\qquad
+M_h(t)=\sum_{s=1}^t X_{h,s}
+=\estCumulGainVector_{h,t}-t\mean_h,\qquad
+V_h(t)=\sum_{s=1}^t\Exp[X_{h,s}^2\mid\mathcal F_{s-1}].
+\]
+The importance-weighted estimator and $0\leq Y\leq1$ give
+\begin{align*}
+\Exp[X_{h,s}\mid\mathcal F_{s-1}]&=0,\\
+\Exp[X_{h,s}^2\mid\mathcal F_{s-1}]
+&=\frac{\Exp_{Y\sim\nu_h}[Y^2]}{\learnerDist_{h,s}}-\mean_h^2
+\leq\frac1{\learnerDist_{h,s}},
+\qquad
+|X_{h,s}|\leq\frac1{\learnerDist_{h,s}}
+\leq\nArms\bar\log\nArms.
+\end{align*}
+In particular, $M_h$ is a martingale and $V_h$ is its predictable
+variance process; no Bernoulli assumption is needed.
+
+\paragraph{Concentration on good-ranking events.}
+We use the following fixed-time Bernstein--Freedman inequality
+\citep{Freedman75OT}: for martingale differences bounded in absolute
+value by $B>0$, their sum $M_t$ and predictable variance $V_t$ satisfy,
+for deterministic $z,v>0$,
+\[
+\Pro(M_t\geq z,\ V_t\leq v)
+\leq\exp\left(-\frac{z^2}{2(v+Bz/3)}\right).
+\]
+The same bound holds for $-M_t$. Indeed, for $0<\lambda<3/B$,
+\[
+\Exp[e^{\lambda X_s}\mid\mathcal F_{s-1}]
+\leq\exp\left(
+\frac{\lambda^2\Exp[X_s^2\mid\mathcal F_{s-1}]}
+{2(1-\lambda B/3)}\right),
+\]
+so $\exp\{\lambda M_t-\lambda^2 V_t/[2(1-\lambda B/3)]\}$
+has expectation at most one. Markov's inequality with
+$\lambda=z/(v+Bz/3)<3/B$ yields the stated bound.
+If a good-ranking event $E$ implies $V_t\leq v$, then
+\[
+\{M_t\geq z\}\cap E\subseteq\{M_t\geq z,\ V_t\leq v\},
+\]
+and hence the same bound applies to its probability. The event $E$
+may involve observations after time $t$ or have probability zero:
+we never condition the stochastic law on $E$.
+
+\begin{lemma}\label{l:errTwoArms}
+For the fixed schedule $\propTimeVec$, let $i\in[2:\nArms]$,
+$j\in[i:\nArms]$, and let $k\in\setArms$ satisfy
+$\mean_1-\mean_k<\gap_i/2$. For every integer $t$ with
+$\phaseTime_i\leq t\leq\timeHorizon$, playing~\Pone{},
+\[
+\Pro\left(
+\{\estCumulGainVector_{k,t}\leq\estCumulGainVector_{j,t}\}
+\cap E_i\right)
+\leq2\exp\left(-\frac{\timeHorizon}
+{128\complexityProOne(\propTimeVec)}\right).
+\]
+\end{lemma}
+\begin{proof}
+First, the assumptions give $k<i\leq j$ and
+\[
+\mean_k-\mean_j
+=\gap_j-(\mean_1-\mean_k)
+>\gap_j-\frac{\gap_i}{2}
+\geq\frac{\gap_j}{2}>0.
+\]
+Splitting a comparison error between the lower tail of the better
+arm and the upper tail of the worse arm, we obtain
+\begin{equation}\label{eq13}
+\begin{split}
+\Pro\left(
+\{\estCumulGainVector_{k,t}\leq\estCumulGainVector_{j,t}\}
+\cap E_i\right)
+\leq{}&\Pro\left(E_i\cap\{-M_k(t)>t\gap_j/4\}\right)\\
+&+\Pro\left(E_i\cap\{M_j(t)>t\gap_j/4\}\right).
+\end{split}
+\end{equation}
+Define the doubled-gap rank
+\[
+j^+=\max\{r\in[j:\nArms]:\gap_r\leq2\gap_j\}.
+\]
+The set contains $j$, so $j\leq j^+\leq\nArms$ and
+$\gap_{j^+}\leq2\gap_j$. If $j^+<\nArms$, then
+$\gap_j<\gap_{j^++1}/2$. When $j^+=\nArms$, the universal rank
+bound $\nArms$ will suffice. Thus tied gaps and exact doubled-gap
+equality are included without requiring any additional arm.
+
+We bound both terms in Equation~\ref{eq13} using the same
+virtual-phase variance calculation. Write
+\[
+S_r=\sum_{\ell=r}^{\nArms}\ell(\phaseTime_\ell-\phaseTime_{\ell+1}),
+\]
+and take $(h,r)=(k,i)$ for the better arm and $(h,r)=(j,j^+)$
+for the worse arm. In either case $r\geq i$ and
+$t\geq\phaseTime_i\geq\phaseTime_r$.
+If $r<\nArms$, the corresponding mean-gap condition is
+$\mean_1-\mean_h<\gap_{r+1}/2$: for $h=k$ this follows from
+$\gap_i\leq\gap_{i+1}$, and for $h=j$ it follows from the
+definition of $j^+$.
+On $E_i$, in each block
+$\phaseTime_{\ell+1}<s\leq\phaseTime_\ell$, $r\leq\ell\leq\nArms$,
+event $\eventbob_{\ell+1}$ gives
+$\tilde{\langle h\rangle}_s\leq\ell$ when $\ell<\nArms$;
+the bound is automatic when $\ell=\nArms$.
+After $\phaseTime_r$, event $\eventbob_{r+1}$ similarly gives rank
+at most $r$, with the universal bound used when $r=\nArms$.
+All events used have indices larger than $i$ and belong to $E_i$.
+Thus good earlier rankings increase sampling probabilities and
+reduce the conditional variance. Summing the per-round bounds over
+the disjoint phase blocks and the continuation interval yields,
+on $E_i$,
+\begin{align*}
+V_h(t)
+&\leq\bar\log\nArms\left[
+\sum_{\ell=r}^{\nArms}\ell(\phaseTime_\ell-\phaseTime_{\ell+1})
++r(t-\phaseTime_r)\right]\\
+&=\bar\log\nArms\,[S_r+r(t-\phaseTime_r)].
+\end{align*}
+Empty blocks contribute zero, including when comparison times coincide.
+
+Apply the joint-event concentration bound with
+$z=t\gap_r/8$, $B=\nArms\bar\log\nArms$, and the positive
+variance allowance $v=\bar\log\nArms\,[S_r+r(t-\phaseTime_r)]$.
+For either sign separately, it gives
+\begin{align*}
+\Pro\left(E_i\cap\{\pm M_h(t)\geq t\gap_r/8\}\right)
+&\leq\exp\left(
+-\frac{(t\gap_r/8)^2}
+{2\bar\log\nArms\,[S_r+r(t-\phaseTime_r)]
++(\nArms\bar\log\nArms)t\gap_r/12}\right)\\
+&=\exp\left(
+-\frac{t^2\gap_r^2}
+{128\bar\log\nArms\,[S_r+r(t-\phaseTime_r)
++(\nArms/24)t\gap_r]}\right).
+\end{align*}
+Here the factor $2$ multiplies the entire variance allowance;
+$128=8^2\cdot2$, and the coefficient $\nArms/24$ comes from $Bz/3$.
+
+The identity
+$S_r=r\phaseTime_r+\sum_{\ell=r+1}^{\nArms}\phaseTime_\ell
+\geq r\phaseTime_r$ implies, for $t\geq\phaseTime_r$,
+\[
+S_r+r(t-\phaseTime_r)\leq\frac{t}{\phaseTime_r}S_r.
+\]
+Consequently,
+\begin{align*}
+\frac{t^2\gap_r^2}
+{128\bar\log\nArms\,[S_r+r(t-\phaseTime_r)
++(\nArms/24)t\gap_r]}
+&\geq
+\frac{\phaseTime_r^2\gap_r^2}
+{128\bar\log\nArms\,[S_r+(\nArms/24)\phaseTime_r\gap_r]}\\
+&\geq\frac{\timeHorizon}{128\complexityProOne(\propTimeVec)}.
+\end{align*}
+For the last step, the existing complexity definition, after
+substituting $\phaseTime_r=\timeHorizon\propTime_r$, reads
+\[
+\complexityProOne(\propTimeVec)
+=\timeHorizon\bar\log\nArms\,
+\max_{r\in[\nArms]}
+\frac{S_r+(\nArms/24)\phaseTime_r\gap_r}
+{\phaseTime_r^2\gap_r^2}.
+\]
+Finally, $t\gap_j/4\geq t\gap_i/8$ for the better-arm tail,
+and $t\gap_j/4\geq t\gap_{j^+}/8$ for the worse-arm tail.
+The two one-sided joint bounds therefore control the two terms
+in Equation~\ref{eq13}; summing them proves the claim for the
+fixed schedule $\propTimeVec$.
+\end{proof}
+\begin{lemma}\label{l:errPOGerrPO}
+For the fixed admissible schedule $\propTimeVec$, playing~\Pone{}
+in the stochastic setting above, we have for every $i\in[2:\nArms]$,
+\[
+\Pro(\eventbob_i^c\cap E_i)
+\leq2\nArms^2\timeHorizon
+\exp\left(-\frac{\timeHorizon}
+{128\complexityProOne(\propTimeVec)}\right).
+\]
+\end{lemma}
+\begin{proof}
+If $\eventbob_i$ fails, there are an integer $u$ with
+$\phaseTime_i<u\leq\timeHorizon+1$ and an arm $k$ satisfying
+$\mean_1-\mean_k<\gap_i/2$ but $\tilde{\langle k\rangle}_u\geq i$.
+Necessarily $k<i$: otherwise $k\geq i\geq2$ and
+$\mean_1-\mean_k=\gap_k\geq\gap_i$, contradicting eligibility.
+At least $i-1$ arms precede $k$ in the estimated ranking, and
+only $i-2$ other arms can have true labels in $[1:i-1]$.
+Thus some arm $j\in[i:\nArms]$ precedes $k$. Since the ranking
+uses the estimates through round $u-1$, this implies
+$\estCumulGainVector_{k,u-1}\leq\estCumulGainVector_{j,u-1}$,
+including when the estimated scores tie.
+
+Since $\phaseTime_i\leq u-1\leq\timeHorizon$,
+Lemma~\ref{l:errTwoArms} at $t=u-1$ gives
+\[
+\Pro\left(
+\{\estCumulGainVector_{k,u-1}\leq\estCumulGainVector_{j,u-1}\}
+\cap E_i\right)
+\leq2\exp\left(-\frac{\timeHorizon}
+{128\complexityProOne(\propTimeVec)}\right).
+\]
+There are at most $i-1$ eligible arms $k$, $\nArms-i+1$
+competitors $j$, and $\timeHorizon-\phaseTime_i+1\leq\timeHorizon$
+ranking times $u$, since $\phaseTime_i\geq1$.
+A union bound gives
+\begin{align*}
+\Pro(\eventbob_i^c\cap E_i)
+&\leq2(i-1)(\nArms-i+1)(\timeHorizon-\phaseTime_i+1)
+\exp\left(-\frac{\timeHorizon}
+{128\complexityProOne(\propTimeVec)}\right)\\
+&\leq2\nArms^2\timeHorizon
+\exp\left(-\frac{\timeHorizon}
+{128\complexityProOne(\propTimeVec)}\right).
+\end{align*}
+\end{proof}%
+%
+	\setcounter{scratchcounter}{\value{theorem}}\setcounter{theorem}{\the\numexpr\getrefnumber{th:UpBOB}-1}
+\lightres*
+\setcounter{theorem}{\the\numexpr\value{scratchcounter}}
+\begin{proof} %[Theorem~\ref{th:UpBOB}] 
+We consider two cases separately.
+	%Let us consider the $a^*_i$ that maximizes the proof quantity
+	%
+	%
+	\paragraph{The i.i.d.~stochastic case}
+For the fixed schedule $\propTimeVec$, the terminal-ranking
+convention gives
+\[
+\ProErr_{\stoPro}(\timeHorizon)
+=\Pro(\recomArm_{\timeHorizon}\neq1)
+=\Pro(\eventbob_2^c).
+\]
+If $\eventbob_2$ fails, take the largest failed index $i\in[2:\nArms]$.
+Every event with a larger index holds, since
+$\eventbob_{\nArms+1}$ is certain.
+Hence
+\[
+\eventbob_2^c\subseteq
+\bigcup_{i=2}^{\nArms}(\eventbob_i^c\cap E_i).
+\]
+A union bound and Lemma~\ref{l:errPOGerrPO} give
+\begin{align*}
+\ProErr_{\stoPro}(\timeHorizon)
+&\leq\sum_{i=2}^{\nArms}\Pro(\eventbob_i^c\cap E_i)\\
+&\leq2(\nArms-1)\nArms^2\timeHorizon
+\exp\left(-\frac{\timeHorizon}
+{128\complexityProOne(\propTimeVec)}\right)\\
+&\leq2\nArms^3\timeHorizon
+\exp\left(-\frac{\timeHorizon}
+{128\complexityProOne(\propTimeVec)}\right).
+\end{align*}
+This holds for every admissible schedule; its virtual comparison
+times do not affect \Pone{} or the final error probability. The admissible set is finite and nonempty:
+its entries lie in $\{1/\timeHorizon,\ldots,1\}$ and the all-ones
+schedule is allowed. Positive comparison times and gaps make
+$\complexityProOne(\propTimeVec)$ finite and positive.
+Choosing a minimizing schedule gives
+\[
+\ProErr_{\stoPro}(\timeHorizon)
+\leq2\nArms^3\timeHorizon
+\exp\left(-\frac{\timeHorizon}{128\complexityProOne}\right).
+\]
+
+	\paragraph{The adversarial case}
+Fix a deterministic oblivious table
+$\gainVector\in[0,1]^{\nArms\times\timeHorizon}$ and relabel its
+unique best arm as $1$ for analysis. Only the learner is random.
+It suffices to use the sampling probability guaranteed to every arm;
+no favorable ranking event is needed. With the information before
+each action defined as above, the adaptive probabilities satisfy
+\[
+\learnerDist_{k,t}
+=\Pro(\pulledArm_t=k\mid\mathcal F_{t-1})
+=\frac1{\tilde{\langle k\rangle}_t\bar\log\nArms}
+\geq\frac1{\nArms\bar\log\nArms}
+\]
+on every history. Put
+\[
+\cumulGain_{k,t}=\sum_{s=1}^t\gainVector_{k,s},\qquad
+Y_{k,t}=\estGainVector_{k,t}-\gainVector_{k,t},\qquad
+M_k^{\gainVector}(t)=\sum_{s=1}^tY_{k,s}
+=\estCumulGainVector_{k,t}-\cumulGain_{k,t}.
+\]
+Since the table is deterministic, centering at $\gainVector_{k,t}$
+is appropriate. Conditionally, the sampling indicator is Bernoulli
+with parameter $\learnerDist_{k,t}$, so
+\begin{align*}
+\Exp[Y_{k,t}\mid\mathcal F_{t-1}]&=0,\\
+\Exp[Y_{k,t}^2\mid\mathcal F_{t-1}]
+&=\gainVector_{k,t}^2\left(\frac1{\learnerDist_{k,t}}-1\right)
+\leq\frac1{\learnerDist_{k,t}}\leq\nArms\bar\log\nArms,\\
+|Y_{k,t}|&\leq\frac1{\learnerDist_{k,t}}\leq\nArms\bar\log\nArms.
+\end{align*}
+Thus $M_k^{\gainVector}$ is a martingale with predictable variance
+\[
+V_k^{\gainVector}(\timeHorizon)
+=\sum_{t=1}^{\timeHorizon}\Exp[Y_{k,t}^2\mid\mathcal F_{t-1}]
+\leq\timeHorizon\nArms\bar\log\nArms
+\quad\text{almost surely}.
+\]
+
+Recall that
+$\timeHorizon\gap_j^{\gainVector}
+=\cumulGain_{1,\timeHorizon}-\cumulGain_{j,\timeHorizon}$ for $j\neq1$
+and $\gap_1^{\gainVector}=\min_{j\neq1}\gap_j^{\gainVector}$.
+Hence $0<\gap_1^{\gainVector}\leq\gap_j^{\gainVector}\leq1$ and
+$\complexityUnif(\gainVector)=\nArms/(\gap_1^{\gainVector})^2$.
+The error event satisfies
+\[
+\{\recomArm_{\timeHorizon}\neq1\}
+\subseteq
+\{M_1^{\gainVector}(\timeHorizon)\leq-\timeHorizon\gap_1^{\gainVector}/2\}
+\ \cup\!
+\bigcup_{j=2}^{\nArms}
+\{M_j^{\gainVector}(\timeHorizon)\geq\timeHorizon\gap_j^{\gainVector}/2\}.
+\]
+Indeed, outside the right-hand side, for every $j\neq1$,
+\begin{align*}
+\estCumulGainVector_{1,\timeHorizon}
+&>\cumulGain_{1,\timeHorizon}-\timeHorizon\gap_1^{\gainVector}/2
+\geq\cumulGain_{1,\timeHorizon}-\timeHorizon\gap_j^{\gainVector}/2\\
+&=\cumulGain_{j,\timeHorizon}+\timeHorizon\gap_j^{\gainVector}/2
+>\estCumulGainVector_{j,\timeHorizon}.
+\end{align*}
+Thus arm $1$ is the unique estimated maximizer, regardless of tie rules.
+
+Apply the Bernstein--Freedman inequality above with
+$B=\nArms\bar\log\nArms$, $v=\timeHorizon\nArms\bar\log\nArms$,
+and $z=\timeHorizon\gap_k^{\gainVector}/2$.
+The variance bound holds almost surely, so for either sign separately,
+\begin{align*}
+\Pro\left(\pm M_k^{\gainVector}(\timeHorizon)
+\geq\timeHorizon\gap_k^{\gainVector}/2\right)
+&\leq\exp\left(
+-\frac{(\timeHorizon\gap_k^{\gainVector}/2)^2}
+{2[\timeHorizon\nArms\bar\log\nArms
++(\nArms\bar\log\nArms)\timeHorizon\gap_k^{\gainVector}/6]}\right)\\
+&=\exp\left(-\frac{\timeHorizon(\gap_k^{\gainVector})^2}
+{8\nArms\bar\log\nArms(1+\gap_k^{\gainVector}/6)}\right)\\
+&\leq\exp\left(-\frac{3\timeHorizon(\gap_k^{\gainVector})^2}
+{28\nArms\bar\log\nArms}\right),
+\end{align*}
+since $1+\gap_k^{\gainVector}/6\leq7/6$.
+There are $\nArms$ one-sided error events: one lower tail for arm $1$
+and one upper tail for each other arm. A union bound gives
+\begin{align*}
+\ProErr_{\advPro(\gainVector)}(\timeHorizon)
+&\leq\nArms\exp\left(-\frac{3\timeHorizon(\gap_1^{\gainVector})^2}
+{28\nArms\bar\log\nArms}\right)\\
+&=\nArms\exp\left(-\frac{3\timeHorizon}
+{28\bar\log\nArms\complexityUnif(\gainVector)}\right)\\
+&\leq\nArms\exp\left(-\frac{3\timeHorizon}
+{40\bar\log\nArms\complexityUnif(\gainVector)}\right),
+\end{align*}
+as claimed.
+\end{proof}
+%
+\section{On the complexities of $\complexityProOne$, $\complexitySR$, and 
+	$\complexityBoth$}  %Proof of  Corollary~\ref{coco}}
+\label{s:moreOnRem}
+%\todomi{right reference to the remark in the title?}
+%\todom{recheck the derivations below in detail}
+%
+%
+ %\begin{remark} 
+ We now show that for $\timeHorizon\geq\gap_{(\nArms)}/\gap_{(1)}$,
+	$\complexityProOne = \cO\left(\complexityBoth\log^2\nArms\right)$. 
+	This demonstrates that \Pone{} achieves the best 
+	that can be wished for in the two worlds, up to log
+	 factors.
+	The extra $\log\nArms$ from the $\log^2\nArms$ is not always
+	present  and we report an 
+	even more detailed discussion on the three different regimes of the
+	gaps used in 
+	Remark~\ref{rem:LOWbobCOMP}  at the end of the section.
+	%\todov{its not he right number for the corrolary numbering!}	
+	\setcounter{scratchcounter}{\value{theorem}}\setcounter{theorem}{\the\numexpr\getrefnumber{coco}-1}
+	\cocores*
+	\setcounter{theorem}{\the\numexpr\value{scratchcounter}}
+\begin{proof}%[Proof of Corollary~\ref{coco}]
+Recall that $\gap_{(1)}=\gap_{(2)}$, and let
+$Q=\max_{1\leq j\leq\nArms}j/\gap_{(j)}$, so that
+$\complexityBoth=Q/\gap_{(1)}$. Since the rewards are in $[0,1]$,
+$0<\gap_{(1)}\leq\gap_{(r)}\leq1$, $Q\geq2/\gap_{(1)}$, and $Q\geq\nArms$.
+Set the ideal fractions $\alpha_r=\gap_{(1)}/\gap_{(r)}$ and the rounded fractions
+$\propTime_r=\lceil\timeHorizon\alpha_r\rceil/\timeHorizon$ for
+$r\in\setArms$, with $\alpha_{\nArms+1}=\propTime_{\nArms+1}=0$.
+Ceilings preserve weak ordering, so
+$1=\propTime_1=\propTime_2\geq\cdots\geq\propTime_{\nArms}>0$ and
+$1\leq\timeHorizon\propTime_r\leq\timeHorizon$, with
+$\timeHorizon\propTime_r\in\Integer$.
+Thus $\propTimeVec\in\propTimeVecSpa$, including when comparison rounds coincide.
+
+For an ordered positive vector $b$ with $b_1=b_2=1$ and $b_{\nArms+1}=0$, let
+\[
+\Phi(b)=\bar\log\nArms\,
+\max_{1\leq r\leq\nArms}
+\frac{\sum_{j=r}^{\nArms}j(b_j-b_{j+1})
++(\nArms/24)b_r\gap_{(r)}}{b_r^2\gap_{(r)}^2}.
+\]
+This is the algebraic expression defining $\complexityProOne(\propTimeVec)$;
+we use it for nonintegral comparison times only as an algebraic comparison.
+The identity
+\[
+\sum_{j=r}^{\nArms}j(b_j-b_{j+1})
+=r b_r+\sum_{j=r+1}^{\nArms}b_j
+\]
+makes all coefficients in the numerator nonnegative.
+
+Since $\alpha_r\gap_{(r)}=\gap_{(1)}$, the second numerator term divided by
+the denominator is $\nArms/(24\gap_{(1)})\leq\complexityBoth/24$.
+For the first term, when $r\geq2$, the identity gives
+\begin{align*}
+\frac{1}{\gap_{(1)}}\sum_{j=r}^{\nArms}j(\alpha_j-\alpha_{j+1})
+&=\frac{r}{\gap_{(r)}}+\sum_{j=r+1}^{\nArms}\frac{1}{\gap_{(j)}}\\
+&\leq Q\left(1+\sum_{j=r+1}^{\nArms}\frac{1}{j}\right)
+\leq Q\left(\bar\log\nArms-\frac12\right).
+\end{align*}
+For $r=1$, the weighted sum equals that for $r=2$ because $\alpha_1=\alpha_2$.
+The tail sums are empty when $\nArms=2$, so this case is also covered.
+It follows that
+\[
+\Phi(\alpha)\leq\complexityBoth\bar\log\nArms
+\left(\bar\log\nArms-\frac12+\frac{1}{24}\right)
+\leq\complexityBoth(\bar\log\nArms)^2.
+\]
+
+If $\timeHorizon\geq\gap_{(\nArms)}/\gap_{(1)}$, then
+$\timeHorizon\alpha_r\geq1$ for every rank, and
+\[
+\alpha_r\leq\propTime_r<\alpha_r+\frac{1}{\timeHorizon}\leq2\alpha_r.
+\]
+Moving each comparison by less than one round therefore makes the telescoped
+numerator at most twice its value at $\alpha$, while the denominator is
+no smaller. Using the admissible rounded schedule, we obtain
+\[
+\complexityProOne\leq\Phi(\propTimeVec)\leq2\Phi(\alpha)
+\leq2\complexityBoth(\bar\log\nArms)^2
+=\cO\left(\complexityBoth\log^2\nArms\right),
+\]
+where the last comparison uses $\bar\log\nArms\leq1+\log\nArms$.
+Theorem~\ref{th:UpBOB} then gives
+\[
+\ProErr_{\stoPro}(\timeHorizon)
+\leq2\nArms^3\timeHorizon\exp\left(-\frac{\timeHorizon}{128\complexityProOne}\right)
+\leq2\nArms^3\timeHorizon\exp\left(
+-\frac{\timeHorizon}{256\complexityBoth(\bar\log\nArms)^2}\right).
+\]
+For $1\leq\timeHorizon<\gap_{(\nArms)}/\gap_{(1)}$,
+$\complexityBoth\geq2/\gap_{(1)}^2$ gives
+\[
+\frac{\timeHorizon}{256\complexityBoth(\bar\log\nArms)^2}
+<\frac{\gap_{(1)}\gap_{(\nArms)}}{512(\bar\log\nArms)^2}\leq\frac{1}{512}.
+\]
+Since $2\nArms^3\timeHorizon\geq16$ and $\exp(-x)\geq1-x$, the displayed
+error bound exceeds one and follows from $\ProErr_{\stoPro}(\timeHorizon)\leq1$.
+This proves the error bound for all positive integer horizons, without
+asserting the complexity comparison for these smaller budgets.
+\end{proof}
+%
+
+\subsection{Relation between 
+	$\complexityProOne$, $\complexitySR$, and 
+	$\complexityBoth$ for different regimes of the 
+	gaps.}
+We now study the relation between 
+$\complexityProOne$, $\complexitySR$, and 
+$\complexityBoth$ for different regimes of the 
+gaps.
+We use the same examples as the ones used in 
+Remark~\ref{rem:LOWbobCOMP}.
+We first choose ideal fractions $b$,
+with $1=b_1=b_2\geq\cdots\geq b_{\nArms}>b_{\nArms+1}=0$,
+and use the algebraic expression $\Phi$ from the preceding corollary proof.
+Set $\propTime_r=\lceil\timeHorizon b_r\rceil/\timeHorizon$ for $r\in\setArms$
+and $\propTime_{\nArms+1}=0$. Ceilings preserve weak ordering and give
+admissible integer times, even when some coincide; only the analysis
+changes, while \Pone{} and its horizon are unchanged.
+If $\timeHorizon b_{\nArms}\geq1$, the positive telescoped numerator gives
+$\complexityProOne\leq\Phi(\propTimeVec)\leq2\Phi(b)$, as proved above.
+These schedules compare larger-gap arms earlier, keeping the best two
+arms at the final comparison time.
+In the stated horizon ranges, the comparisons are at worst
+$\cO(\complexityBoth\log^2\nArms)$, and
+$\cO(\complexityBoth\log\nArms)$ in the flat and square-root regimes.
+
+\paragraph{\raisebox{.04cm}{\textcolor{bull}{$\blacktriangleright$}}~Flat regime}  All the gaps are equal, that is,
+$k\in\setArmsmo,$ we have that $\gap_k=\gap_{1}$. 
+
+\smallskip
+\noindent
+We choose $b_r=1$, $\forall r\in\setArms$.
+All comparisons occur at the final round, and no rounding is needed.
+The weighted sum equals $\nArms$ at every rank, and
+$\complexitySR=\complexityBoth=\nArms/\gap_{(1)}^2$. Thus the two terms give
+\[
+\complexityProOne\leq\Phi(b)
+=\bar\log\nArms\left(\frac{\nArms}{\gap_{(1)}^2}+\frac{\nArms}{24\gap_{(1)}}\right)
+\leq\frac{25}{24}\complexityBoth\bar\log\nArms,
+\]
+since $\gap_{(1)}\leq1$. The single-logarithmic comparison holds for every
+positive integer horizon.
+
+\paragraph{\raisebox{.04cm}{\textcolor{bull}{$\blacktriangleright$}}~Super-linear gaps}  Since $2\in\argmin_{r\in\setArms}(\gap_{(r)}/r)$,
+$\gap_{(r)}\geq r\gap_{(1)}/2$ for $r\geq2$ and
+$\complexitySR=\complexityBoth=2/\gap_{(1)}^2$.
+Also, $\nArms\gap_{(1)}\leq2$ since $\gap_{(\nArms)}\leq1$.
+
+\smallskip
+\noindent
+Let $b_1=1$ and $b_r=2/r$, $r\in[2:\nArms]$.
+This normalizes the reciprocal-rank schedule, with $b_2=1$ and
+$b_r\gap_{(r)}\geq\gap_{(1)}$. The large gaps permit early identification
+of bad arms.
+The second complexity term satisfies
+\[
+\frac{\nArms}{24b_r\gap_{(r)}}
+\leq\frac{\nArms}{24\gap_{(1)}}\leq\frac{\complexityBoth}{24}.
+\]
+For the first term, telescoping gives, for $r\geq2$,
+\[
+\sum_{j=r}^{\nArms}j(b_j-b_{j+1})
+=2+2\sum_{j=r+1}^{\nArms}\frac1j
+\leq2\left(\bar\log\nArms-\frac12\right).
+\]
+The rank-$1$ sum equals the rank-$2$ sum since $b_1=b_2$.
+Using $b_r\gap_{(r)}\geq\gap_{(1)}$ gives
+\[
+\Phi(b)\leq\complexityBoth\bar\log\nArms
+\left(\bar\log\nArms-\frac12+\frac1{24}\right)
+\leq\complexityBoth(\bar\log\nArms)^2.
+\]
+Since $b_{\nArms}=2/\nArms$, rounding gives
+\[
+\complexityProOne\leq2\complexityBoth(\bar\log\nArms)^2
+=\cO(\complexityBoth\log^2\nArms),\qquad\timeHorizon\geq\nArms/2.
+\]
+
+\paragraph{\raisebox{.04cm}{\textcolor{bull}{$\blacktriangleright$}}~Square-root gaps} We have that $2\in\argmin_{r\in\setArms}(\gap^2_{(r)}/r)$,
+$\sqrt{\nArms/2}\gap_{(1)}=\gap_{(\nArms)}$, and also that
+$\sqrt{r/2}\gap_{(1)}\geq\gap_{(r)}$ for each intermediate rank $3\leq r<\nArms$.
+The minimizing condition gives the reverse inequality, hence
+$\gap_{(r)}=\gap_{(1)}\sqrt{r/2}$ for every $r\geq2$.
+Thus $\complexitySR=2/\gap_{(1)}^2$ and
+$\complexityBoth=\sqrt{2\nArms}/\gap_{(1)}^2=\sqrt{\nArms/2}\complexitySR$.
+
+\smallskip
+\noindent
+Let $b_1=1$ and $b_r=\sqrt{2/r}$, $r\in[2:\nArms]$.
+This normalizes the square-root schedule, with $b_2=1$ and
+$b_r\gap_{(r)}=\gap_{(1)}$.
+For $r\geq2$, the integral comparison
+$\sum_{j=r+1}^{\nArms}j^{-1/2}\leq2(\sqrt{\nArms}-\sqrt r)$ gives
+\[
+\sum_{j=r}^{\nArms}j(b_j-b_{j+1})
+=\sqrt{2r}+\sum_{j=r+1}^{\nArms}\sqrt{2/j}
+\leq2\sqrt{2\nArms}.
+\]
+The rank-$1$ sum equals the rank-$2$ sum. The first complexity term
+is at most $2\complexityBoth$, and the second is
+$\nArms/(24\gap_{(1)})\leq\complexityBoth/24$, since
+$\gap_{(\nArms)}=\gap_{(1)}\sqrt{\nArms/2}\leq1$.
+Thus $\Phi(b)\leq(49/24)\complexityBoth\bar\log\nArms$.
+Since $b_{\nArms}=\sqrt{2/\nArms}$, rounding gives
+\[
+\complexityProOne\leq2\Phi(b)\leq\frac{49}{12}\complexityBoth\bar\log\nArms
+=\cO(\complexityBoth\log\nArms),\qquad
+\timeHorizon\geq\sqrt{\nArms/2}.
+\]
+For $\nArms=2$, the tail sums are empty and both normalized schedules
+reduce to the flat case, without rounding loss.
+The larger $\complexityBoth$ reflects the extra variance incurred before
+focusing on the best arms, as discussed in Remark~\ref{rem:LOWbobCOMP}.
+For shorter horizons, these complexity bounds are not asserted.
+In either nonflat regime the threshold is at most $1/\gap_{(1)}$ and
+$\complexityBoth\geq2/\gap_{(1)}^2$, so $\timeHorizon/\complexityBoth<1/2$.
+The corresponding derived probability bounds from Theorem~\ref{th:UpBOB} exceed one:
+the exponent has magnitude less than $1/256$ and
+$2\nArms^3\timeHorizon\geq16$. They follow from
+$\ProErr_{\stoPro}(\timeHorizon)\leq1$, as in Corollary~\ref{coco}'s proof.
+%\todomi{gramarly it all in the end}

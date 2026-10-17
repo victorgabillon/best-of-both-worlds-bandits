@@ -1,0 +1,95 @@
+% !TEX root = Main.tex 
+\section{Upper bound on the probability of error of \RULE{} in the 
+	general adversarial case} %(Theorem~\ref{th:UPARU}) }
+\label{app:proofupadPRO}
+%
+\setcounter{scratchcounter}{\value{theorem}}\setcounter{theorem}{\the\numexpr\getrefnumber{th:UPARU}-1}
+\tata*
+\setcounter{theorem}{\the\numexpr\value{scratchcounter}}
+\begin{proof}%[Theorem~\ref{th:UPARU}]
+Fix a deterministic oblivious table
+$\gainVector\in[0,1]^{\nArms\times\timeHorizon}$ and relabel its unique
+best arm as $1$. Only the learner is random. Its fresh uniform draws
+make the selection indicators independent across rounds for each
+fixed arm $k$, with Bernoulli parameter $1/\nArms$.
+Thus $\estGainVector_{k,t}=\nArms\gainVector_{k,t}\indicator{\pulledArm_t=k}$.
+Put
+\[
+X_{k,t}=\estGainVector_{k,t}-\gainVector_{k,t},\qquad
+M_k(\timeHorizon)=\sum_{t=1}^{\timeHorizon}X_{k,t}
+=\estCumulGainVector_{k,\timeHorizon}-\cumulGain_{k,\timeHorizon},
+\]
+where $\cumulGain_{k,\timeHorizon}=\sum_{t=1}^{\timeHorizon}\gainVector_{k,t}$.
+For each fixed arm, the centered variables are independent and satisfy
+\begin{align*}
+\Exp[X_{k,t}]&=0,\qquad |X_{k,t}|\leq\nArms,\\
+\var_{X_{k,t}}
+&=\nArms^2\gainVector_{k,t}^2\frac1{\nArms}
+\left(1-\frac1{\nArms}\right)
+=(\nArms-1)\gainVector_{k,t}^2\leq\nArms.
+\end{align*}
+Hence $\sum_{t=1}^{\timeHorizon}\var_{X_{k,t}}\leq\timeHorizon\nArms$.
+
+For this table,
+$\timeHorizon\gap_j^{\gainVector}
+=\cumulGain_{1,\timeHorizon}-\cumulGain_{j,\timeHorizon}$ for $j\neq1$,
+and $\gap_1^{\gainVector}=\min_{j\neq1}\gap_j^{\gainVector}$.
+The recommendation satisfies the error-event inclusion
+\[
+\{\recomArm_{\timeHorizon}\neq1\}
+\subseteq
+\{M_1(\timeHorizon)\leq-\timeHorizon\gap_1^{\gainVector}/2\}
+\ \cup\!
+\bigcup_{j=2}^{\nArms}
+\{M_j(\timeHorizon)\geq\timeHorizon\gap_j^{\gainVector}/2\}.
+\]
+Indeed, outside the right-hand side, for every $j\neq1$,
+\begin{align*}
+\estCumulGainVector_{1,\timeHorizon}
+&>\cumulGain_{1,\timeHorizon}-\timeHorizon\gap_1^{\gainVector}/2
+\geq\cumulGain_{1,\timeHorizon}-\timeHorizon\gap_j^{\gainVector}/2\\
+&=\cumulGain_{j,\timeHorizon}+\timeHorizon\gap_j^{\gainVector}/2
+>\estCumulGainVector_{j,\timeHorizon}.
+\end{align*}
+Thus arm $1$ is the unique estimated maximizer, so estimated-score
+ties cause no difficulty.
+
+Bernstein's inequality for the independent centered variables gives,
+for each sign separately and $z>0$,
+\[
+\Pro(\pm M_k(\timeHorizon)\geq z)
+\leq\exp\left(-\frac{z^2}
+{2(\timeHorizon\nArms+\nArms z/3)}\right).
+\]
+With $z=\timeHorizon\gap_k^{\gainVector}/2$ and
+$0<\gap_k^{\gainVector}\leq1$, this yields
+\begin{align*}
+\Pro\left(\pm M_k(\timeHorizon)
+\geq\timeHorizon\gap_k^{\gainVector}/2\right)
+&\leq\exp\left(-\frac{\timeHorizon(\gap_k^{\gainVector})^2}
+{8\nArms(1+\gap_k^{\gainVector}/6)}\right)\\
+&\leq\exp\left(-\frac{3\timeHorizon(\gap_k^{\gainVector})^2}
+{28\nArms}\right).
+\end{align*}
+A union bound over the $\nArms$ error events, one best-arm lower tail
+and one upper tail for each competitor, therefore gives
+\begin{align*}
+\ProErr_{\advPro(\gainVector)}(\timeHorizon)
+&\leq\sum_{k=1}^{\nArms}
+\exp\left(-\frac{3\timeHorizon(\gap_k^{\gainVector})^2}
+{28\nArms}\right)\\
+&\leq\nArms\exp\left(-\frac{3\timeHorizon(\gap_1^{\gainVector})^2}
+{28\nArms}\right)
+=\nArms\exp\left(-\frac{3\timeHorizon}
+{28\complexityUnif(\gainVector)}\right),
+\end{align*}
+using $\gap_k^{\gainVector}\geq\gap_1^{\gainVector}$ and the existing
+definition $\complexityUnif(\gainVector)=\nArms/(\gap_1^{\gainVector})^2$.
+\end{proof}%
+%    \todomi{Michal: we could have $3K$, instead of $8K$, no?\\
+%    Victor: I made the computation clearer and now found a 40! do you agree?\\
+%    Michal: 32! You forgot additional $(/2)$ in right term of the denominator
+%    }
+%
+%
+%

@@ -1,0 +1,191 @@
+%
+% !TEX root = Main.tex 
+\section{Change of measure}
+\label{app:changeMeasureLem}
+%
+The next lemma is a finite-horizon version of the observed-history
+change-of-measure method; see
+\citet[Lemma~1 and Appendix~A]{Kaufmann16CBI}.
+We give a self-contained proof allowing common finite-support reward
+laws and include the Bretagnolle--Huber testing bound; see
+\citet[Theorem~14.2]{Lattimore20BA}.
+
+\begin{lemma}[\textcolor{titleTh}{Change of measure for observed transcripts}]
+\label{l:transcriptChangeMeas}
+Fix a positive integer horizon $\timeHorizon$, $\nArms\geq2$ arms,
+an arm $k\in\setArms$, and a deterministic set of rounds
+$\mathcal T\subseteq\{1,\ldots,\timeHorizon\}$, possibly the entire
+horizon. The arm and set are fixed before interaction. In each of two
+environments $A$ and $B$, the reward-table entries are independent,
+independent of the learner's internal randomness, and have
+finite-support distributions in $[0,1]$. At the pairs $(k,t)$ with
+$t\in\mathcal T$, environment $A$ uses Bernoulli$(u)$ and environment
+$B$ uses Bernoulli$(v)$, with fixed $u,v\in(0,1)$. At every other
+arm-round pair, the two distributions are identical; these common
+distributions may depend on the arm and round and may be deterministic.
+Since there are finitely many entries, a finite reward alphabet
+contains all their supports in both environments, including any
+values other than $0$ and $1$.
+
+Run the same adaptive randomized learner with the same horizon in both
+environments. Its actions use only past actions, observed rewards,
+and internal randomness, which may persist across rounds. It is not
+given the environment's identity. Its final recommendation
+$\recomArm_{\timeHorizon}\in\setArms$ also uses only the observed
+interaction and internal randomness.
+Let $\sample_t=\gainVector_{\pulledArm_t,t}$ be its observed reward and set
+\[
+Z=(\pulledArm_1,\sample_1,\ldots,
+\pulledArm_{\timeHorizon},\sample_{\timeHorizon},\recomArm_{\timeHorizon}).
+\]
+Only observed rewards belong to $Z$, not the complete table.
+Let $P_A$ and $P_B$ be its laws on the finite transcript space
+$\mathcal Z$, and let $\Exp_A$ denote expectation in environment $A$.
+Define
+\[
+N_k(\mathcal T)=\sum_{t\in\mathcal T}\indicator{\pulledArm_t=k}.
+\]
+Use natural logarithms and binary relative entropy
+\[
+\operatorname{kl}(a,b)
+=a\log\frac{a}{b}+(1-a)\log\frac{1-a}{1-b},
+\qquad a\in[0,1],\quad b\in(0,1),
+\]
+where zero-weight terms are zero. For laws with common support on
+$\mathcal Z$, define
+\[
+D(P_A\Vert P_B)
+=\sum_{z:P_A(z)>0}P_A(z)\log\frac{P_A(z)}{P_B(z)}.
+\]
+Then:
+\begin{enumerate}[label=(\roman*)]
+\item $P_A$ and $P_B$ have the same support.
+\item Their relative entropy satisfies
+\[
+D(P_A\Vert P_B)=\Exp_A[N_k(\mathcal T)]\operatorname{kl}(u,v).
+\]
+\item For every event $W$ determined by the observed transcript, set
+$p=P_A(W)$ and $q=P_B(W)$. If $0<q<1$, then
+\[
+\operatorname{kl}(p,q)\leq D(P_A\Vert P_B),
+\qquad
+p\log(1/q)\leq\Exp_A[N_k(\mathcal T)]\operatorname{kl}(u,v)+\log2.
+\]
+If $q=0$, then $p=0$; if $q=1$, then $p=1$.
+\item For every observed-transcript event $W$, the
+Bretagnolle--Huber testing bound holds:
+\begin{equation}\label{eq:transcriptTesting}
+P_A(W^c)+P_B(W)\geq\frac12\exp\left(-D(P_A\Vert P_B)\right).
+\end{equation}
+\end{enumerate}
+The event must be an observed-transcript event; this statement does
+not directly apply to events involving unobserved table entries.
+\end{lemma}
+
+\begin{proof}
+Draw all learner randomness as a single seed $R$ before interaction,
+independently of the reward table. Once this seed is fixed, actions,
+internal state updates, and the final recommendation are determined
+by the observed history. This includes randomness retained across
+rounds and final randomization. For a fixed
+transcript $z=(i_1,x_1,\ldots,i_{\timeHorizon},x_{\timeHorizon},j)$,
+let $C_z$ be the set of seeds for which the learner produces the
+recorded actions and recommendation when sequentially supplied the
+recorded observations. Set $w(z)=\Pro_R(C_z)$ and let
+$f^E_{j,t}(x)$ be the probability mass function of entry $(j,t)$
+in environment $E$ on the finite reward alphabet.
+For each seed in $C_z$, the observed table coordinates $(i_t,t)$
+are distinct and independent. Their probability of matching the
+recorded rewards is the product of their probability masses;
+all unobserved entries integrate to one. Integrating over these seeds
+therefore gives, for $E\in\{A,B\}$,
+\[
+P_E(z)=w(z)\prod_{t=1}^{\timeHorizon}
+f^E_{i_t,t}(x_t).
+\]
+The factor $w(z)$ is the same in both environments and need not sum
+to one over transcripts. At each arm-round pair, the two reward
+distributions have the same support: they are either identical or
+Bernoulli with parameters in $(0,1)$. Although common reward factors
+can be zero, the factorization therefore implies
+\[
+P_A(z)>0\quad\Longleftrightarrow\quad P_B(z)>0.
+\]
+This proves common support without requiring the learner to assign
+positive probability to every action.
+
+On this common positive support, $w(z)$ and all observed reward
+factors are positive. The learner factor and identical reward factors
+cancel from the likelihood ratio, leaving only observed pulls of arm
+$k$ at rounds in $\mathcal T$. Thus
+\[
+\log\frac{P_A(Z)}{P_B(Z)}
+=\sum_{t\in\mathcal T}\indicator{\pulledArm_t=k}
+\left[\sample_t\log\frac{u}{v}
++(1-\sample_t)\log\frac{1-u}{1-v}\right].
+\]
+At each round, condition on the seed, the past interaction, and the
+selected arm. Under $A$, if $t\in\mathcal T$ and $\pulledArm_t=k$,
+the current observed reward is Bernoulli$(u)$, since its table entry
+is independent of the seed and past. Taking expectations yields
+\[
+D(P_A\Vert P_B)
+=\Exp_A\left[\sum_{t\in\mathcal T}
+\indicator{\pulledArm_t=k}\operatorname{kl}(u,v)\right]
+=\Exp_A[N_k(\mathcal T)]\operatorname{kl}(u,v).
+\]
+Common deterministic rounds contribute zero additional information,
+even though the learner's actions and final recommendation may
+depend on their rewards.
+
+For $0<q<1$, regard $W$ as a subset of $\mathcal Z$ and let
+$\mathcal S$ be the common positive support. Applying the finite
+log-sum inequality separately to $W$ and its complement gives
+\begin{align*}
+D(P_A\Vert P_B)
+&=\sum_{z\in W\cap\mathcal S}P_A(z)\log\frac{P_A(z)}{P_B(z)}
++\sum_{z\in\mathcal S\setminus W}P_A(z)\log\frac{P_A(z)}{P_B(z)}\\
+&\geq p\log\frac{p}{q}+(1-p)\log\frac{1-p}{1-q}
+=\operatorname{kl}(p,q).
+\end{align*}
+Zero-mass groups are interpreted by continuity. Moreover,
+\begin{align*}
+\operatorname{kl}(p,q)
+&=p\log(1/q)+(1-p)\log(1/(1-q))\\
+&\quad+p\log p+(1-p)\log(1-p)\\
+&\geq p\log(1/q)-\log2.
+\end{align*}
+The second term in the first line is nonnegative, and binary entropy
+is maximized at $p=1/2$ with value $\log2$. Endpoint values of $p$ use the
+zero-weight convention. This proves the event consequence.
+When $q=0$ or $q=1$, common support gives respectively $p=0$ or $p=1$
+without evaluating undefined logarithms.
+
+For the testing bound, on the common positive support $\mathcal S$,
+define
+\[
+a=\sum_{z\in\mathcal S}\sqrt{P_A(z)P_B(z)},\qquad
+s=\sum_{z\in\mathcal S}\min\{P_A(z),P_B(z)\}.
+\]
+Jensen's inequality gives
+\[
+\log a
+=\log\Exp_A\left[\sqrt{\frac{P_B(Z)}{P_A(Z)}}\right]
+\geq-\frac12D(P_A\Vert P_B),
+\]
+so $a^2\geq\exp(-D(P_A\Vert P_B))$. By Cauchy--Schwarz,
+\[
+a^2\leq
+\left(\sum_{z\in\mathcal S}\min\{P_A(z),P_B(z)\}\right)
+\left(\sum_{z\in\mathcal S}\max\{P_A(z),P_B(z)\}\right)
+=s(2-s)\leq2s.
+\]
+Finally, $P_A(W^c)+P_B(W)\geq s$, proving
+Equation~\ref{eq:transcriptTesting}. This also covers $W$ empty or
+equal to the whole transcript space without taking logarithms of
+event probabilities.
+
+The distinguishing information equals the expected number of
+informative pulls times the information supplied by each pull.
+For $\mathcal T=\{1,\ldots,m\}$, $N_k(\mathcal T)=\pullsNumber_k(m)$.
+\end{proof}

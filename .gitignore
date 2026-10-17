@@ -1,0 +1,23 @@
+.lake/
+.tooling/
+.elan/
+.cache/
+__pycache__/
+*.py[cod]
+verification/runs/
+verification/verify.lock
+.vscode/
+.DS_Store
+
+# Paper build output; retain the reviewed PDF and required figure assets.
+/paper/rebuild/
+*.aux
+*.blg
+*.bbl
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+!paper/corrected-paper.pdf

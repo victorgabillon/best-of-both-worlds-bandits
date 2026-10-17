@@ -1,0 +1,195 @@
+% !TEX root = Main.tex
+\section{General adversarial case: An optimal 
+	learner can play uniformly at random}
+\label{s:ULGenAd}
+%
+In this section, we define a simple learner  (\RULE{}) and in Theorem~\ref{th:UPARU}, we 
+provide an upper bound on its probability of error 
+ depending on the gap in hindsight. 
+We also give  a matching lower bound for the general 
+adversarial best-arm identification (Theorem~\ref{th:LOWadPRO}) 
+proving that \RULE{} obtains the optimal gap-dependent rates of error against worst-case adversaries.
+%
+%\begin{figure}
+%    \centering
+%    \framebox{
+%        \begin{minipage}{.85\textwidth}
+%            \textbf{Given:} $K$ \\
+%            For $t=1,2, \ldots, \timeHorizon$\\
+% \textcolor{white}{erere}Select arm $\pulledArm_t\in [\nArms]$ 
+% with probability $\learnerDist_{k,t}=\Pro(\pulledArm_t=k)
+% =\frac{1}{\nArms}$ for all $k\in\setArms$.
+%
+%            \textbf{Returns:} $\recomArm_\timeHorizon=\argmax_{k\in\setArms} \estCumulGainVector_{k,\timeHorizon}$ 
+%        \end{minipage}%\todov{inclue pt in this def?}
+%    }
+%    \caption{The \emph{Random Uniform Learner (\RULE{})} }\label{fig:uniform}
+%\end{figure}
+%
+
+%The \emph{Random uniform  learner} (\RULE{}) is detailed in 
+%Figure~\ref{fig:uniform}. 
+%\todov{if in need for space, we can remove the figure to explain a uniform sampling!}
+%Select arm $\pulledArm_t\in [\nArms]$ 
+% with probability $\learnerDist_{k,t}=\Pro(\pulledArm_t=k)
+% =\frac{1}{\nArms}$ for all $k\in\setArms$
+At round $t$, the \emph{random uniform  learner} (\RULE{}) 
+selects an arm $\pulledArm_t\in [\nArms]$ uniformly at random, i.e., 
+with probability $\learnerDist_{k,t}\triangleq\Pro(\pulledArm_t=k)
+\triangleq 1/\nArms$ for all $k\in\setArms$.
+Each round uses a fresh uniform draw, independent of past actions and observations.
+%he choice of $\pulledArm_t$ is made uniformly  at 
+%random from $\setArms$.
+At the end of the game, the recommended 
+arm $\recomArm_\timeHorizon$ is the one with highest 
+estimated  
+%\todom{estimator is unbiased but here we have an actual realization that is biased\\
+%Victor: What do you mean biased? the realisation is what it is.} 
+cumulative gain, 
+$\recomArm_\timeHorizon \triangleq \argmax_{k\in\setArms}
+\estCumulGainVector_{k,n}$. 
+%We first prove an upper bound on the probability of error of ARU.
+%
+\begin{restatable}[\textcolor{titleTh}{Upper bound for \RULE{} in the adversarial case}]{theorem}{tata}\label{th:UPARU}
+	For any horizon $\timeHorizon$, given rewards $\gainVector$ 
+	chosen by an oblivious adversary, with $\gainVector_{k,t}\in [0,1]$ 
+	for all $t\in[\timeHorizon]$ and for all $k\in\setArms$, \RULE{}  
+	outputs an arm $\recomArm_\timeHorizon$
+	with the guarantee that its probability of error 
+	$\ProErr_{\advPro(\gainVector)}(\timeHorizon)$ verifies    
+	%
+	%    \todov{is that true against an adaptive adversary be precise}
+	\[
+	%\mathbb{P}\big[\recomArm_\timeHorizon \neq \bestArmAd\big] 
+	\ProErr_{\advPro(\gainVector)}(\timeHorizon)
+	\leq
+	\nArms\exp\left(-\frac{3\timeHorizon}{28\complexityUnif(\gainVector)}\right)\!\cdot
+	\]
+	%    
+	%Note that the factor $\nArms$ in front of the exponential is easily replaced by a $\log\nArms$ using a decomposition of the error into groups of halves as in \cite{Karnin13AO}. \todov{should we mention that? should actually get the log from the proof?}
+\end{restatable}
+%\todov{maybe define $\mean_{k,t}$,$\gap_{k,t}$, is this needed?}
+%\todov{should we have $\gainVector$ here in the equation?}
+%
+%\todov{should be able to remove the factor 2 because it appears i think if you use the two-sided Bernstein inequality... and we might only need one side}
+
+\noindent\textbf{Sketch of the proof} \textit{(full proof in 
+	Appendix~\ref{app:proofupadPRO})}:
+The deviation of
+$\estCumulGainVector_{k,t}$ from $\cumulGain_{k,t}$ is bounded by
+a Bernstein bound: for each fixed arm $k$, given the fixed table
+$\gainVector$, the $\estGainVector_{k,t}$ are independent across rounds
+because sampling uses fresh uniform draws. They are scaled
+Bernoulli$(1/\nArms)$ indicators with variance at most $\nArms$.
+Bernstein uses this variance bound of order $\nArms$, whereas Hoeffding
+would use the squared range of order $\nArms^2$.
+A union bound combines one lower tail for the best arm with one
+upper tail for each competitor.
+%
+%\todomi{did we check that all these assumptions BELOW are compatible?\\
+%Victor: Why would they?
+%the gaps are arbitrary: no assumption. Then K is large. then you set n large enough so that the condition is valid \\
+%M: is there is at least one combination of parameters when $K\ge 4095$ and ...
+%}
+\begin{restatable}[\textcolor{titleTh}{Lower bound for the adversarial problem}]{theorem}{toto}\label{th:LOWadPRO}
+	Given any problem class $\Gaps_{3}$ with associated complexity
+	$\complexityUnif$,    
+	for any learner, for any horizon $\timeHorizon$ such that    
+	$\nArms\exp\left( -\timeHorizon\gap^2_1 /128\right)\leq 1/128$ and $\nArms\geq 4096$, there exist 
+	$\gainVector^1\in\Gaps_{3}$ and $\gainVector^2\in\Gaps_{3}$ so that  
+	the  probabilities of error suffered by the learner on 
+	$\gainVector^1$ and $\gainVector^2$, denoted $\ProErr_{\gainVector^1}(n)$ 
+	and  $\ProErr_{\gainVector^2}(n)$ respectively, verify
+	%
+	\[
+	%
+	\max\left(\ProErr_{\gainVector^1}(n),\ProErr_{\gainVector^2}(n)\right)
+	%
+	\geq
+	%
+	\min\left(
+	\frac{1}{128}\exp\left(-\frac{32\timeHorizon}{\complexityUnif}\right)\CommaBin
+	\frac{1}{32}
+	\right)\!\cdot
+	%
+	\]     
+	%
+\end{restatable}
+%
+\noindent\textbf{Sketch of the proof} \textit{(full proof given 
+	in Appendix~\ref{app:prooflowadPRO})}:
+The key idea is to identify an arm that the
+learner samples infrequently and use it to
+construct two environments that are difficult
+to distinguish from the learner's observations
+but have different best arms with high probability.
+Consider a fixed learner run with horizon $\timeHorizon$, and a base
+problem \basePro{} with Bernoulli means $\mean_1^{\basePro}=1/2$ and
+$\mean_j^{\basePro}=1/2-\gap_j$ for $j\in\setArmsmo$.
+During the first $m=\lfloor\timeHorizon/2\rfloor$ rounds, Dirichlet's
+box principle gives a fixed suboptimal arm $\refarm$ whose expected
+number of pulls is at most $m/(\nArms-1)\leq\timeHorizon/\nArms$.
+We select this arm using expectations under \basePro{}, before drawing
+the reward tables, and use it to construct two similar problems.
+
+In the first phase of $m$ rounds, $\advPro_1$ follows \basePro{} on
+every arm. The problem $\advPro_2$ differs only in arm $\refarm$,
+whose Bernoulli mean is $1/2-\gap_{\refarm}+2\gap_1$ rather than
+$1/2-\gap_{\refarm}$. In both problems, the second phase also has
+$m$ rounds, from $m+1$ through $2m$: arm $\refarm$ receives the
+deterministic reward $\gap_{\refarm}-\gap_1$ in each round, and
+all other arms receive zero. If the horizon is odd, the remaining
+final round gives zero reward to every arm. The complete table is
+drawn before interaction, and the learner still acts for all
+$\timeHorizon$ rounds and recommends an arm after the last round.
+
+The common deterministic second phase makes arm $\refarm$ a close
+competitor to arm $1$, irrespective of its original gap. In the two
+problems, the expected cumulative gains satisfy
+\begin{align*}
+\Exp_1[\cumulGain_1]=\Exp_2[\cumulGain_1]&=m/2,\\
+\Exp_1[\cumulGain_{\refarm}]&=m(1/2-\gap_1),\\
+\Exp_2[\cumulGain_{\refarm}]&=m(1/2+\gap_1).
+\end{align*}
+Thus the selected arm lies just below arm $1$ in expected total
+reward in the first problem and just above it in the second.
+
+Only first-phase pulls of arm $\refarm$ distinguish the problems.
+Although its reward laws differ during $m$ rounds, the learner
+obtains at most $\timeHorizon/\nArms$ such observations in expectation
+under $\advPro_1$, whose prefix agrees with \basePro{}.
+Since the mean difference is $2\gap_1$, the relative entropy
+$D(P_1\Vert P_2)$ of the observed-transcript laws under $\advPro_1$
+and $\advPro_2$, respectively, is bounded by a constant times
+$\timeHorizon\gap_1^2/\nArms=\timeHorizon/\complexityUnif$, where
+$\complexityUnif=\nArms/\gap_1^2$ is the reference complexity.
+The change-of-measure and testing bound in
+Lemma~\ref{l:transcriptChangeMeas} gives
+\[
+P_1(\recomArm_{\timeHorizon}\neq1)
++P_2(\recomArm_{\timeHorizon}=1)
+\geq\frac12\exp\left(-\frac{32\timeHorizon}{\complexityUnif}\right).
+\]
+There are different intended best arms, but too few informative
+observations to distinguish the problems reliably.
+
+Concentration of the complete reward tables preserves the intended
+best arms, $1$ and $\refarm$, and membership in $\Gaps_3$, except on
+sufficiently rare tables. Removing these bad tables from the testing
+bound and averaging over the remaining finite supports yields two
+deterministic witnesses in $\Gaps_3$, with the required error rate
+on at least one of them. The appendix gives the complete argument.
+
+\begin{remark}
+The condition
+$\nArms\exp(-\timeHorizon\gap_1^2/128)\leq1/128$ controls
+fluctuations of the complete reward tables. Together with
+$\nArms\geq4096$, it makes the bad-table probabilities small relative
+to the exponentially small testing lower bound.
+	The assumption on~$\nArms$ is
+	likely to be an artifact of the proof.
+The lower bound is a worst-case statement over the prescribed class,
+at the exponential scale $\timeHorizon/\complexityUnif$.
+The comparison with uniform sampling should be understood at this
+scale; it does not rule out better performance on particular instances.
+\end{remark}%

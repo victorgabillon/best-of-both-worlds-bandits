@@ -1,0 +1,87 @@
+{
+  "description": "Corrected mathematical root TeX baseline independently audited in Step22; pending editorial staging is not integrated. These are identification hashes, not a distribution of manuscript material.",
+  "step22_audit_date": "2026-10-17",
+  "paper_title": "Best of both worlds: Stochastic & adversarial best-arm identification",
+  "principal_results": [
+    "Theorem 1",
+    "Theorem 2",
+    "Theorem 4",
+    "Theorem 6",
+    "Corollary 7",
+    "Lemma 10"
+  ],
+  "files": {
+    "Discussion.tex": {
+      "sha256": "f6d075a22f6b17a78fee8bc2a70a85e28110ae8bd8304a21facfa2b3f98f1b8c",
+      "bytes": 480
+    },
+    "Extensions.tex": {
+      "sha256": "8311a5ffac72cbd4bff6287160cb1110dd9215bdade7a4c3188aba6dd780802b",
+      "bytes": 6234
+    },
+    "Main.tex": {
+      "sha256": "42299533c2f48b211ac608d7d6283dbf19a8afdef7a8a8169483c429e3fc98ae",
+      "bytes": 5871
+    },
+    "abstract.tex": {
+      "sha256": "c611523efbc8c4fe685a35fd918a6dc3dbcb1a55fc453d05d48ad7072456477c",
+      "bytes": 1226
+    },
+    "appExp.tex": {
+      "sha256": "c20799812560673d83911498c1c62b55e80fa28b5b7611e837ead172889db452",
+      "bytes": 6364
+    },
+    "appLOWAd.tex": {
+      "sha256": "4b11ed0713eecd2894bcc781a48f6c9af60c28d8ce00b8889362a5094e890c48",
+      "bytes": 11597
+    },
+    "appLOWBOB.tex": {
+      "sha256": "c6dc1af29f3a129285a6d5809e9d6006b3690330ee2f4ee5ae8765f7a838d068",
+      "bytes": 21229
+    },
+    "appTechLem.tex": {
+      "sha256": "9c39bd680b86806a76442ad7000770e865119228782ce53bcb22b6d09bbc7bd3",
+      "bytes": 7750
+    },
+    "appUPPBOB.tex": {
+      "sha256": "8b8537b3f9282438b5e31ea0d1704b908738df8e2ffce9bfd51d4eb4422558ea",
+      "bytes": 25790
+    },
+    "appUpperUniform.tex": {
+      "sha256": "1a4f9977712e0e63f316cb6b5e5ba395c52d79d54d0f6408f8ec5b7ff738fd76",
+      "bytes": 3716
+    },
+    "appendices.tex": {
+      "sha256": "5ed67a2f6d2d166a96ec1f3a17a4eb5be67d7315471059599d505819d1a6a305",
+      "bytes": 531
+    },
+    "bestOfBoth.tex": {
+      "sha256": "eb098fd1884e6cb74490941e6bb01711488afd7c5a8a102d42a74744f441d68e",
+      "bytes": 7957
+    },
+    "def.tex": {
+      "sha256": "39d83e5c6823a5d64a31d46900d5cd2b7f7dee9013a4707673457746abc7ce6e",
+      "bytes": 5271
+    },
+    "intro.tex": {
+      "sha256": "bde7682a1642482bc1be5c47bb17801699bad9b3f2a2ccd2b1f3a7e3ef2f76b0",
+      "bytes": 17915
+    },
+    "lowerBoundBOB.tex": {
+      "sha256": "aaa423dc4cc873cdf2ebd5f69986a302dcdce8fd05406db558ca37f0fa5cd482",
+      "bytes": 13661
+    },
+    "problemFormulation.tex": {
+      "sha256": "98428323c93477bc669f8d8364c55f4ba75da4e99f72b29c9c1dec43c1db4814",
+      "bytes": 11262
+    },
+    "upLowGenAd.tex": {
+      "sha256": "10c12e9734c4a5986a65f33fefac3d3897903bfb138a1785314071738d763ff4",
+      "bytes": 9165
+    },
+    "upperBoundBOB.tex": {
+      "sha256": "51b81dc5d3a8fed17f3d1602bd2af92028cf5cd3fde8231aebd1251ab92a9082",
+      "bytes": 16785
+    }
+  }
+}

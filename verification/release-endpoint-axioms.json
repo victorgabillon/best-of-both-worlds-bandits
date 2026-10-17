@@ -1,0 +1,97 @@
+{
+  "BestOfBothWorlds.UniformAdversarialBound.unif_adversarial_error_bound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "BestOfBothWorlds.LowerBounds.adversarial_lower_bound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "BestOfBothWorlds.LowerBounds.BOBLowerBound.theorem4": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "BestOfBothWorlds.P1UpperBounds.p1_upper_bounds": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "BestOfBothWorlds.P1StochasticBound.p1_stochastic_error_bound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "BestOfBothWorlds.P1AdversarialBound.p1_adversarial_error_bound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "BestOfBothWorlds.P1Corollary.p1_complexity_le_bob": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "BestOfBothWorlds.P1Corollary.p1_stochastic_bob_error_bound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "BestOfBothWorlds.SeededChangeOfMeasure.lemma10_positive_support": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "BestOfBothWorlds.SeededChangeOfMeasure.lemma10_log_likelihood": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "BestOfBothWorlds.SeededChangeOfMeasure.lemma10_kl_identity": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "BestOfBothWorlds.SeededChangeOfMeasure.lemma10_kl_ne_top": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "BestOfBothWorlds.SeededChangeOfMeasure.lemma10_kl_eq_ofReal": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "BestOfBothWorlds.SeededChangeOfMeasure.lemma10_toReal_kl_identity": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "BestOfBothWorlds.SeededChangeOfMeasure.lemma10_event_binaryKL": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "BestOfBothWorlds.SeededChangeOfMeasure.lemma10_event_log": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "BestOfBothWorlds.SeededChangeOfMeasure.lemma10_event_zero": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "BestOfBothWorlds.SeededChangeOfMeasure.lemma10_event_one": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "BestOfBothWorlds.SeededChangeOfMeasure.lemma10_testing": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ]
+}

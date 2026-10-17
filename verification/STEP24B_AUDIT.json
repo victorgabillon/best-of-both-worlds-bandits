@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "candidate_version": "0.1.0-rc.4",
+  "date": "2026-10-17",
+  "lean_reproducibility": "PASS",
+  "manuscript_reproducibility": "PASS",
+  "licensing": "RESOLVED",
+  "attribution": "PASS: author-approved exact acknowledgement correction applied",
+  "ready_for_private_github_upload": "NO",
+  "reason": "Candidate complete; target remains PUBLIC. Make it PRIVATE and obtain separate commit/push authorization before uploading.",
+  "author_confirmations": {
+    "person": "Victor Gabillon",
+    "date": "2026-10-17",
+    "authority_for_additional_contributions_under_cc_by_4_0": true,
+    "only_this_coauthor_checked_ai_assisted_revisions": true,
+    "exact_acknowledgement_correction_and_pdf_rebuild_approved": true
+  },
+  "lean": {
+    "new_build_performed": false,
+    "evidence": "Unchanged historical verification/COMBINED_VERIFICATION.json; Step24 full build/axiom audit/project-only kernel replay",
+    "source_configuration_and_verifier_input_files_unchanged": 69,
+    "mathematical_modules": 57,
+    "lean_source_files": 59,
+    "project_declarations": 1742,
+    "theorem_constants": 1425,
+    "principal_endpoints": 19,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "static_check": "passed; not a new formal certificate"
+  },
+  "manuscript": {
+    "tex_files_unchanged_from_step24": 16,
+    "figure_assets_unchanged_from_step24": 8,
+    "generated_bibliography_unchanged": true,
+    "mathematical_content_changed": false,
+    "pdf_pages": 43,
+    "rebuild": {
+      "status": "passed",
+      "compiler": "Tectonic 0.17.0",
+      "bundle": "https://relay.fullyjustified.net/default_bundle_v33.tar",
+      "source_date_epoch": 1792195200,
+      "bytes": 958146,
+      "sha256": "df406d32ccddbd0986803630925f12f3316282d04ac37b682a05ebed5ebe2820",
+      "matches_included_pdf": true,
+      "external_support": {
+        "archive_sha256": "e4cacb9d2abbf964735e33314925ba654b5fdab01f9f12c50e87fa7040c59107",
+        "build_files": {
+          "colt2018.cls": {
+            "upstream_sha256": "6b4162355f3fbd5b87b511a5c15718f4f381a0a0f0fcf9453c9aa05db115e703",
+            "build_input_sha256": "2b13ff9141736521cd2a33efd0a1449a4d05dccfefc12081ded03b3027f9eb4c"
+          },
+          "jmlr.cls": {
+            "upstream_sha256": "f609fecec9cc317dce86075b473362a83a7d955cf486638da12adddda9ad8256",
+            "build_input_sha256": "f609fecec9cc317dce86075b473362a83a7d955cf486638da12adddda9ad8256"
+          },
+          "jmlrutils.sty": {
+            "upstream_sha256": "9ca26b2d15e81082984ea376c941b49781cb37f4e3bb54419c8a41f1b63f79a4",
+            "build_input_sha256": "9ca26b2d15e81082984ea376c941b49781cb37f4e3bb54419c8a41f1b63f79a4"
+          }
+        }
+      },
+      "overfull_warnings": [
+        "Overfull \\hbox (1.22124pt too wide) in paragraph at lines 15--31",
+        "Overfull \\vbox (10.71179pt too high) has occurred while \\output is active []"
+      ]
+    },
+    "fresh_source_only_copy": true,
+    "path_with_spaces": true,
+    "original_author_kit_downloaded_into_empty_cache": true,
+    "final_build_used_only_cached_resources": true,
+    "new_tectonic_bundle_download": false,
+    "bibliography_cleanup": {
+      "entry": "carpentier2014extreme",
+      "nonprinting_fields_removed": [
+        "abstract",
+        "file"
+      ],
+      "reason": "Third-party abstract and obsolete local attachment path; no printed-field edit"
+    },
+    "approved_tex_delta": "paper/source/Main.tex: exact approved acknowledgement correction only",
+    "generation_build": {
+      "status": "passed",
+      "compiler": "Tectonic 0.17.0",
+      "bundle": "https://relay.fullyjustified.net/default_bundle_v33.tar",
+      "source_date_epoch": 1792195200,
+      "bytes": 958146,
+      "sha256": "df406d32ccddbd0986803630925f12f3316282d04ac37b682a05ebed5ebe2820",
+      "matches_included_pdf": null,
+      "external_support": {
+        "archive_sha256": "e4cacb9d2abbf964735e33314925ba654b5fdab01f9f12c50e87fa7040c59107",
+        "build_files": {
+          "colt2018.cls": {
+            "upstream_sha256": "6b4162355f3fbd5b87b511a5c15718f4f381a0a0f0fcf9453c9aa05db115e703",
+            "build_input_sha256": "2b13ff9141736521cd2a33efd0a1449a4d05dccfefc12081ded03b3027f9eb4c"
+          },
+          "jmlr.cls": {
+            "upstream_sha256": "f609fecec9cc317dce86075b473362a83a7d955cf486638da12adddda9ad8256",
+            "build_input_sha256": "f609fecec9cc317dce86075b473362a83a7d955cf486638da12adddda9ad8256"
+          },
+          "jmlrutils.sty": {
+            "upstream_sha256": "9ca26b2d15e81082984ea376c941b49781cb37f4e3bb54419c8a41f1b63f79a4",
+            "build_input_sha256": "9ca26b2d15e81082984ea376c941b49781cb37f4e3bb54419c8a41f1b63f79a4"
+          }
+        }
+      },
+      "overfull_warnings": [
+        "Overfull \\hbox (1.22124pt too wide) in paragraph at lines 15--31",
+        "Overfull \\vbox (10.71179pt too high) has occurred while \\output is active []"
+      ]
+    },
+    "pdf_comparison": {
+      "status": "passed",
+      "changed_text_pages": [
+        15
+      ],
+      "other_42_pages_text_byte_identical": true,
+      "normalized_entire_pdf_text_diff_is_exact_approved_sentence_only": true,
+      "normalization": "Unicode NFKC for typographic ligatures; join letter-word line-end hyphenation; collapse whitespace",
+      "old_statement": "The authors reviewed the resulting changes and take full responsibility for the mathematical content and final presentation.",
+      "new_statement": "Victor Gabillon reviewed the resulting AI-assisted changes.",
+      "pages": 43,
+      "bibliography_byte_identical": true,
+      "old_pdf_sha256": "7c6ee873dfa54b67f4b702e2568de2dc4b1f0169d11824a5ce80f12f644c4e2b",
+      "new_pdf_sha256": "df406d32ccddbd0986803630925f12f3316282d04ac37b682a05ebed5ebe2820",
+      "new_pdf_bytes": 958146,
+      "overfull_warnings_unchanged": true,
+      "page15_visual_review": "Clear acknowledgement text, no clipping/overlap observed; targeted page15 review, not a full new visual review"
+    },
+    "other_42_pages_text_identical": true,
+    "source_delta": {
+      "old_main_tex_sha256": "84885d33cf52b4bb451e41f2c8e36b9bfd897a0f741c9af4eca263a28291eaa5",
+      "new_main_tex_sha256": "1967c6e825c49007c53fbe74768282469539150b625e12cc5b89a08efd2e0ada",
+      "exact_approved_patch_only": true
+    }
+  },
+  "licensing_evidence": {
+    "article": "CC-BY-4.0; PMLR agreement and contemporary official revision",
+    "additional_contributions": "CC-BY-4.0; author confirmed authority in this session",
+    "lean": "Apache-2.0; previously approved; standard LICENSE and NOTICE preserved",
+    "third_party_support": "Three runtime files externalized; official pinned author kit, unchanged JMLR LPPL files and explicit temporary COLT editor-line adjustment",
+    "figures": "Published Figure3 content correspondence, recolored adaptation; no separate exclusion found; new author contributions covered by confirmation",
+    "rights_document": "paper/RIGHTS.md",
+    "file_inventory": "verification/LICENSE_INVENTORY.tsv"
+  },
+  "original_candidate_files": 129,
+  "current_bundled_files": 133,
+  "externalized_files": [
+    "paper/source/colt2018.cls",
+    "paper/source/jmlr.cls",
+    "paper/source/jmlrutils.sty"
+  ],
+  "added_files": [
+    "docs/STEP24B_AUDIT.md",
+    "paper/DEPENDENCIES.md",
+    "paper/RIGHTS.md",
+    "paper/dependencies.json",
+    "paper/latex-dependencies.json",
+    "verification/LICENSE_INVENTORY.tsv",
+    "verification/STEP24B_AUDIT.json"
+  ],
+  "github_read_only_observation": {
+    "visibility": "PUBLIC",
+    "isEmpty": true,
+    "defaultBranchRef": {
+      "name": ""
+    },
+    "viewerPermission": "ADMIN",
+    "url": "https://github.com/victorgabillon/best-of-both-worlds-bandits"
+  },
+  "historical_certificates_changed": false,
+  "commits": 0,
+  "pushes": 0,
+  "publication": false,
+  "candidate_ready_for_private_review": true,
+  "acknowledgement_correction": {
+    "approved_by": "Victor Gabillon",
+    "date": "2026-10-17",
+    "text": "Victor Gabillon reviewed the resulting AI-assisted changes.",
+    "old_claim_removed": "The authors reviewed the resulting changes and take full responsibility for the mathematical content and final presentation.",
+    "patch_applied": true,
+    "page": 15,
+    "two_builds_match": true,
+    "targeted_visual_review": "page15 clear, no clipping/overlap observed",
+    "other_manuscript_and_mathematical_content_unchanged": true
+  },
+  "remaining_human_actions": [
+    "Make the target repository private before private review upload",
+    "Review final contents and separately authorize commit/push"
+  ],
+  "licensing_permissions_still_needed": [],
+  "previous_candidate": {
+    "version": "0.1.0-rc.3",
+    "archive_sha256": "5b7bff15c75ddcc22b25b5aeb48ffafec6b249f224c58bce09fca108842da3a0",
+    "preserved": true
+  }
+}

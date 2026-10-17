@@ -1,0 +1,281 @@
+% !TEX root = Main.tex
+%
+%\subsection{Lower Bound for the Stochastic \& Adversarial Rewards}
+%\label{s:LowBOB}
+\paragraph{Why is the best of both worlds unachievable?}
+% 
+We define a new notion of complexity, $\complexityBoth$ as
+%
+\[
+%
+\complexityBoth 
+\triangleq
+\frac{1}{
+\gap_{(1)}}
+\max_{k\in\setArms}\frac{k}{\gap_{(k)}}\cdot
+%
+\]
+%
+The complexity $\complexityBoth$ captures the difficulty of
+stochastic best-arm identification when the learner
+must also remain robust to adversarial rewards.
+As we detail  in Remark~\ref{rem:LOWbobCOMP}, 
+$	\complexitySR\leq\complexityBoth\leq\complexityUnif.$
+The gap between $\complexitySR$ and $\complexityBoth$ reflects the
+additional difficulty imposed by adversarial robustness.
+%Let $\mathcal S$ be the set of stochastic problem such that
+%The upcoming Theorem~\ref{th:lowBOB} shows that
+%for any $\nArms$ specified gaps, $0<\gap_1=\gap_2\leq\gap_3\leq \ldots\leq \gap_\nArms\leq 1/8$, 
+%a stochastic problem can be built with a very similar gap landscape 
+%and a complexity changed by at most a factor of $2$ such that on this problem
+% it is not possible to have a probability of error 
+%smaller than 
+%$	\frac{1}{64}\exp\left(-512\frac{\timeHorizon}{\complexityBoth}\right)$
+% %on any stochastic problem
+%  without  having 
+%  a probability of error  not converging to $0$ with large $\timeHorizon$
+%   on some adversarial problem with
+%  again a similar gap landscape.
+%
+\begin{restatable}[\textcolor{titleTh}{Lower bound for the BOB challenge}]{theorem}{thi}\label{th:lowBOB}
+Fix $\nArms\geq 2$ and reference gaps
+$0<\gap_1=\gap_2\leq\cdots\leq\gap_\nArms\leq 1/8$,
+and let $\Gaps_4$ be the corresponding problem class.
+For any learner and any positive integer horizon $\timeHorizon$
+satisfying
+\[
+\nArms\exp\left(-\frac{\gap_1^2\timeHorizon}{128}\right)
+\leq \frac{1}{32},
+\]
+there exists an i.i.d.\ stochastic problem $\stoPro\in\Gaps_4$
+such that, if
+\[
+\ProErr_{\stoPro}(\timeHorizon)
+\leq \frac{1}{64}\exp\left(
+-\frac{2048\timeHorizon}{\complexityBoth^{\stoPro}}
+\right),
+\]
+then there exists a deterministic gain table
+$\gainVector\in[0,1]^{\nArms\times\timeHorizon}$
+belonging to $\Gaps_4$ for which
+\[
+\ProErr_{\advPro(\gainVector)}(\timeHorizon)
+\geq \frac{1}{16}.
+\]
+Here $\complexityBoth^{\stoPro}$ is the complexity computed
+from the gaps of the constructed stochastic problem.
+The constructed stochastic problem and gain table may depend
+on the learner and on $\timeHorizon$.
+      \end{restatable}    
+%
+\begin{remark}\label{rem:LOWbobCOMP}
+	In general, we have
+	%
+	\[
+	\complexitySR\leq\complexityBoth\leq\complexityUnif.
+	\]
+	%
+%We first compare the complexities in a general regime. Then we spell out three different regimes to intuitively explore when the inequalities in the previous equation are strict or not.
+Below, we compare the three  complexities in 
+three specific gap regimes in order to intuitively explore   whether
+the inequalities in the previous equation are strict or not. 
+Interestingly, while in two regimes  $\complexitySR=\complexityBoth$, in the third regime, called the `square-root gaps', we can obtain $\complexityBoth=\sqrt{\nArms/2}\complexitySR$.  
+This equality shows that on some problems and for large values of $\nArms$,
+% 	\todovout{actually really large value on K , like millions !!! :(, i am not sure we want to comment on that no?those numerical constants!}
+ our lower bound on 
+the complexity of the BOB problem is 
+significantly larger than the complexity of the strictly stochastic case.
+Uniformly scaling the gaps down to satisfy $\gap_{(\nArms)}\leq1/8$
+leaves all complexity ratios unchanged.
+The square-root separation also persists, up to universal constants,
+for the stochastic instances constructed in the proof of
+Theorem~\ref{th:lowBOB} (Appendix~\ref{app:prooflowBOB}).
+For sufficiently large $\nArms$, the optimal purely stochastic rate,
+if guaranteed uniformly over stochastic instances and horizons, would
+satisfy the premise of Theorem~\ref{th:lowBOB} at all sufficiently large
+horizons. Hence it cannot be combined with vanishing worst-case error
+over the adversarial class. Thus, in general,
+the best performance achievable in the two worlds cannot be obtained
+simultaneously.
+	\end{remark}
+%\begin{description}
+%	\item[General Regime:] Let the set $S$ of pairs $(k,\alpha)$, be $S=\{k\in\setArmsmo,\alpha\geq 0 : \gap^{\alpha}_{(1)}=\frac{\gap^{\alpha}_{(k)}}{k}\}$. This set is not empty as for each $k$ it contains the pair $\left(k,\alpha=\frac{\log k}{\log\left(\frac{\gap{(k)}}{\gap_{(1)}}\right)}\right)$
+%	Let us denote $\kappa=\max_{k,\alpha\in S} k^{\frac{1}{\alpha}}$
+	%
+	\paragraph{\raisebox{.04cm}{\textcolor{bull}{$\blacktriangleright$}}~Flat regime}  We assume all the gaps are equal, 
+$k\in\setArms,~ \gap_k=\gap_{1}$. Then, 
+$\complexitySR=\complexityBoth=\complexityUnif$. Having $\complexitySR=\complexityBoth$  shows that our  
+stochastic BOB lower bound for robust learners (Theorem~\ref{th:lowBOB}) using $\complexityBoth$ is of the same order as the one in the 
+strict stochastic setting~\citep{Audibert10BA} using $\complexitySR$.   
+In this stochastic regime, \RULE{} is optimal while being robust to an adversary.
+%
+\paragraph{\raisebox{.04cm}{\textcolor{bull}{$\blacktriangleright$}}~Super-linear gaps} Let $2\in\argmin_{k\in\setArms} (\gap_{(k)}/k).$ 
+This holds if 
+$\gap_{(k)}=k\gap_{(1)}$ for every rank $k$ with $3\leq k\leq\nArms$,
+and $\gap_{(1)}\leq 1/(8\nArms)$. Then, 
+$\complexitySR=\complexityBoth=(2/\nArms) \complexityUnif$. 
+Again, our BOB lower bound is of the same order as in 
+the strict stochastic setting. This seems to indicate that in this case, BOB is achievable. However, it is not achieved by the uniform 
+learner that is clearly suboptimal. This motivates the design of a learner that adapts its sampling strategy. Intuitively,  the learner can  
+identify bad arms quickly
+and  start focusing early on the best arms without incurring 
+high variance on its estimates for them.
+%
+%\todov{think more about the right 2s!}
+\paragraph{\raisebox{.04cm}{\textcolor{bull}{$\blacktriangleright$}}~Square-root gaps}   We assume $2\!\in\!\argmin_{k\in\setArms} (\gap^2_{(k)}/k).$ 
+%This means that for all $k\in\setArms$, $\gap_{(1)}\leq \frac{\gap{(k)}}{\sqrt{k}}$. 
+\newline
+Choose a rank $j\in\argmin_{k\in\setArms} (\gap_{(k)}/k)$. 
+For some constant $c$, let $\gap_{(1)}=c\gap_{(j)}/j$. We have 
+$c\leq \sqrt{2j}$ because  $\gap^2_{(1)}/2 \leq \gap^2_{(j)}/j$ 
+as  $2\in\argmin_{k\in\setArms} (\gap^2_{(k)}/k)$.
+Therefore,  \[\complexitySR=\frac{2}{\gap^2_{(2)}}=\frac{2}{\gap^2_{(1)}}= \frac{2}{\gap_{(1)}} \frac{j}{c\gap_{(j)}}=\frac{2\complexityBoth}{c}=\frac{2\complexityUnif}{\nArms}\cdot\]	
+We can get $c=\sqrt{2j}=\sqrt{2\nArms}$.
+This happens if 
+$\sqrt{\nArms/2}\gap_{(1)}=\gap_{(\nArms)}$ and
+$\sqrt{k/2}\gap_{(1)}\geq\gap_{(k)}$ for ranks $k$ with $3\leq k<\nArms$. 
+Then,  we get  $\sqrt{\nArms/2}\complexitySR=\complexityBoth$.
+$\complexityBoth$ is $\sqrt{\nArms/2}$ larger than the complexity of
+the strictly stochastic setting.
+Intuitively,  the learner needs to spend some time to 
+identify the `square-root gaps' suboptimal arms before starting 
+to focus on the best arms. This makes it suffer an additional amount
+of variance on its estimates for the best arms.
+%\vspace{.1cm}
+%
+%\textbullet~ If all the gaps are such that for all $i$ , $\gap_i/i$ are
+% equal (or more generally if, which means
+% $\gap_1$ is quite small comparatively to the other gaps, the gaps in the example are increasing rapidly : linearly), we have the lowerbound 
+%  $\complexitySR=\complexityBoth=\frac{1}{\nArms}\complexityUnif	$
+%   the normal lowerbound again
+%
+%\textbullet~ If all the gaps are such that for all $i$ , $\gap^2_i/i$ are
+% equal (or, more generally, If $1=\argmin_k \gap^2_k/k$, which 
+% means arm 1 is quite small comparatively but as small as in
+%  the previous case!, the gaps are increasing in a square root fashion ), in this case we have  $K=\argmin_k \gap_k/k$ we have the lowerbound 
+%  $\complexitySR=\frac{1}{\sqrt{\nArms}}\complexityBoth=\frac{1}{\nArms}\complexityUnif	$ 
+%  which is a new lowerbound larger than in the traditional case so 
+%  thats cool. Indeed note that this is a case where the definition of the 
+%  classical complexity is $\exp(-N\gap^2_1)$
+%  
+%  \todovout{\textbullet~ Think about other examples, what can we say in general? We can add something bout general geometric setting where all $\frac{i}{\gap^\alpha_i}$ are the same.}
+
+%
+%\begin{remark}
+%The assumption $\nArms\exp\left(-\frac{1}{32}\gap^2_{(1)}\timeHorizon\right)\leq 1/32$ is mild. 
+%Essentially, at most, it  asks for $\timeHorizon$ to be large 
+%enough so that the stochastic problem is solvable within the budget $\timeHorizon$.
+%% $\timeHorizon$ is required to be large enough here.
+%\end{remark}%
+%
+
+\vspace{.5cm}
+\noindent\textbf{Sketch of the proof} 
+\textit{(full proof in 
+	Appendix~\ref{app:prooflowBOB})}:
+The proof constructs a stochastic problem and
+an adversarial environment that are difficult
+for the learner to distinguish, but for which
+successful identification requires different
+recommendations.
+Our proof of the lower bound uses some arguments of purely stochastic best-arm identification 
+lower bounds of~\cite{Audibert10BA} and~\cite{Carpentier16TB}.
+We were also inspired by the lower bound of~\cite{Auer16AA} 
+for the BOB question for the cumulative regret. However, 
+our specific construction is new.
+%\todov{thats a long sketch! should we shortening it or remove it? or no}
+
+Fix the reference gaps, a learner, and a horizon $\timeHorizon$
+satisfying Theorem~\ref{th:lowBOB}.
+We construct a stochastic and an adversarial problem.
+Between the two problems, only one arm differs.
+Let us define $\nArms$ base Bernoulli distributions with means
+$\mean_1^{\basePro}=1/2$ and
+$\mean_j^{\basePro}=1/2-\gap_j$ for $j\in\setArmsmo$.
+Choose any maximizing index
+$i\in\arg\max_{j\in\setArms}j/\gap_j$; since $\gap_1=\gap_2$, $i\geq2$.
+The initial phase is the prefix of $\timeHorizon_i$ rounds, where
+\[
+\dividefac_i=\min\left\{1,\frac{2\gap_1}{\gap_i}\right\},
+\qquad
+\timeHorizon_i=\left\lceil\timeHorizon\dividefac_i\right\rceil
+\leq\timeHorizon.
+\]
+If $\timeHorizon_i=\timeHorizon$, as when $i=2$, the second phase is empty.
+
+By Dirichlet's box principle, for $i\geq3$ at least one arm, denoted $\refarm$, among
+$\lceil i/2\rceil,\ldots,i$ has expected pull count at most
+$2\timeHorizon_i/i$. The maximizing property of $i$ makes its gap
+comparable to $\gap_i$. For $i=2$, take $\refarm=2$. In both cases,
+\[
+\Exp_{\basePro}[\pullsNumber_{\refarm}(\timeHorizon_i)]
+\leq\frac{2\timeHorizon_i}{i},\qquad
+\frac{\gap_i}{2}\leq\gap_{\refarm}\leq\gap_i,\qquad\refarm\neq1.
+\]
+This lightly sampled arm is chosen from expectations under \basePro{},
+before sampling the constructed tables.
+
+The stochastic problem \stoPro{} is made by only modifying the original
+Bernoulli distribution of arm $\refarm$, setting its mean to
+$1/2+\gap_1/4$. Its distributions are stationary, and $\refarm$ is
+uniquely best. The adversarial problem \advPro{} samples $\gainVector$ randomly
+before interaction, independently of the learner's randomness.
+It follows \basePro{} through the first $\timeHorizon_i$ rounds and
+\stoPro{} afterward; all other arms keep their distributions throughout.
+To make the resulting lower bound as strong as possible, we seek a
+short initial phase to limit the distinguishing information.
+However, it must be long enough to keep arm $1$ uniquely best on a
+high-probability good-table event and preserve the prescribed gaps
+after reward fluctuations. The chosen fraction provides this margin
+while remaining of order $\gap_1/\gap_i$, up to the cap at one.
+The appendix verifies that \stoPro{} and every good \advPro{} table
+belong to $\Gaps_4$.
+
+Let $P_A,P_S$ be the distributions of the learner's observed actions,
+rewards, and final recommendation under \advPro{} and \stoPro{}.
+To compare these observations, we use the change-of-measure
+method of \citet*{Kaufmann16CBI}, in the form proved in
+Lemma~\ref{l:transcriptChangeMeas}.
+The lemma expresses the relative entropy of the two observation
+distributions as the expected number of informative pulls times
+the information supplied by each pull:
+\[
+D(P_A\Vert P_S)
+=\Exp_{\basePro}[\pullsNumber_{\refarm}(\timeHorizon_i)]
+\operatorname{kl}\left(\frac12-\gap_{\refarm},\frac12+\frac{\gap_1}{4}\right).
+\]
+Here the \advPro{} and \basePro{} interaction laws agree through the
+prefix. The appendix gives, for universal constants $C,C'$,
+\[
+D(P_A\Vert P_S)
+\leq\frac{C\timeHorizon_i\gap_i^2}{i}
+\leq\frac{C'\timeHorizon\gap_1\gap_i}{i}
+=\frac{C'\timeHorizon}{\complexityBoth^{\basePro}}.
+\]
+We want the lower bound on the learner's error to be as large
+as possible. When the learner meets the prescribed guarantee
+on \stoPro{}, a smaller upper bound on $D(P_A\Vert P_S)$ forces
+a larger lower bound on its error in \advPro{}: its observations
+provide less evidence for distinguishing the two problems.
+This explains our choice of $i$: maximizing $i/\gap_i$ minimizes
+the expression $\timeHorizon\gap_1\gap_i/i$ in the bound above.
+For this maximizing index,
+$\complexityBoth^{\basePro}=i/(\gap_1\gap_i)$, which gives the
+dependence on $\timeHorizon/\complexityBoth^{\basePro}$.
+The $\gap_j$ are the reference gaps; after reordering the constructed
+\stoPro{} gaps, the appendix shows
+$\complexityBoth^{\stoPro}\leq16\complexityBoth^{\basePro}$.
+Thus the information is also bounded by a universal constant times
+$\timeHorizon/\complexityBoth^{\stoPro}$.
+
+Recommending arm $1$ is an error in \stoPro{}.
+If its error satisfies Theorem~\ref{th:lowBOB}'s premise, this
+recommendation is very unlikely under $P_S$. The lemma's event
+consequence prevents it from being sufficiently likely under $P_A$
+for reliable identification of arm $1$, forcing a positive constant
+adversarial error. Concentration controls the bad tables, and the
+appendix extracts a deterministic $\gainVector\in\Gaps_4$ with error
+at least $1/16$.
+The constructed instances may depend on $\timeHorizon$; this suffices
+against guarantees required uniformly over instances and budgets.
+%

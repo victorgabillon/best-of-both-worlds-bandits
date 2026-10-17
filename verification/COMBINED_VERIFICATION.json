@@ -1,0 +1,1129 @@
+{
+  "candidate_version": "0.1.0-rc.2",
+  "mathematical_fidelity": "PASS",
+  "lean_reproducibility": "PASS",
+  "manuscript_reproducibility": "PASS",
+  "license_and_attribution": "PENDING",
+  "lean_apache_2_approval": "APPROVED",
+  "neutral_attribution": "APPROVED by author instructions",
+  "remaining_rights": "Corrected paper/TeX/bibliography/eight figures/COLT wrapper and historical JMLR work-subset packaging",
+  "ready_for_github_upload": "NO",
+  "github_target": "https://github.com/victorgabillon/best-of-both-worlds-bandits",
+  "github_state_observed": {
+    "defaultBranchRef": {
+      "name": ""
+    },
+    "isEmpty": true,
+    "name": "best-of-both-worlds-bandits",
+    "owner": {
+      "id": "MDQ6VXNlcjc2NDMzMTY=",
+      "login": "victorgabillon"
+    },
+    "url": "https://github.com/victorgabillon/best-of-both-worlds-bandits",
+    "viewerPermission": "ADMIN",
+    "visibility": "PUBLIC"
+  },
+  "versions": {
+    "lean": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+    "lake": "Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)"
+  },
+  "dependencies": [
+    {
+      "name": "Cli",
+      "revision": "c24fe6078c630e89b489bffe59b3e20ac30d12c8",
+      "url": "https://github.com/leanprover/lean4-cli",
+      "tracked_sources_clean": true,
+      "untracked_source_overrides": []
+    },
+    {
+      "name": "LeanSearchClient",
+      "revision": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "url": "https://github.com/leanprover-community/LeanSearchClient",
+      "tracked_sources_clean": true,
+      "untracked_source_overrides": []
+    },
+    {
+      "name": "Qq",
+      "revision": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "url": "https://github.com/leanprover-community/quote4",
+      "tracked_sources_clean": true,
+      "untracked_source_overrides": []
+    },
+    {
+      "name": "aesop",
+      "revision": "4a174c490d8707121c4a9290800489f105d85e07",
+      "url": "https://github.com/leanprover-community/aesop",
+      "tracked_sources_clean": true,
+      "untracked_source_overrides": []
+    },
+    {
+      "name": "batteries",
+      "revision": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "url": "https://github.com/leanprover-community/batteries",
+      "tracked_sources_clean": true,
+      "untracked_source_overrides": []
+    },
+    {
+      "name": "importGraph",
+      "revision": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "url": "https://github.com/leanprover-community/import-graph",
+      "tracked_sources_clean": true,
+      "untracked_source_overrides": []
+    },
+    {
+      "name": "mathlib",
+      "revision": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "url": "https://github.com/leanprover-community/mathlib4.git",
+      "tracked_sources_clean": true,
+      "untracked_source_overrides": []
+    },
+    {
+      "name": "plausible",
+      "revision": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "url": "https://github.com/leanprover-community/plausible",
+      "tracked_sources_clean": true,
+      "untracked_source_overrides": []
+    },
+    {
+      "name": "proofwidgets",
+      "revision": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "url": "https://github.com/leanprover-community/ProofWidgets4",
+      "tracked_sources_clean": true,
+      "untracked_source_overrides": []
+    }
+  ],
+  "source_config_preservation": {
+    "BestOfBothWorlds.lean": {
+      "sha256": "ae4e6fbaae26ca320ba2d911c8dddabf3e6828cab70863750cd396c64150d0b8",
+      "bytes": 492
+    },
+    "BestOfBothWorlds/AdaptiveBanditMoments.lean": {
+      "sha256": "a6cb47c6a3b06b485f233b1046c80c85a864761bec9689200c73c3986c41dceb",
+      "bytes": 27215
+    },
+    "BestOfBothWorlds/AdaptiveBanditProcess.lean": {
+      "sha256": "3e20c9e26f5377202e3cb4777d72d6d2bf81dc2b3c4e635c61619886440c0c58",
+      "bytes": 17013
+    },
+    "BestOfBothWorlds/AdversarialLowerBound.lean": {
+      "sha256": "92367a81a9dc819c6f7f6685afd78b7a81c3ba80d147586eeac8f28ec31eb5f0",
+      "bytes": 35161
+    },
+    "BestOfBothWorlds/ArchitectureExamples.lean": {
+      "sha256": "235c6aed68b71b6d2d0f2b51e800fbe98d9ab6170ded83a487408d50e1d6de41",
+      "bytes": 7372
+    },
+    "BestOfBothWorlds/BOBLowerBound.lean": {
+      "sha256": "d19278f2ad32b503ea6b7c2ca65cfefbc3947b0b86d3d6a57d037dd2e41524b8",
+      "bytes": 35352
+    },
+    "BestOfBothWorlds/BanditConcentration.lean": {
+      "sha256": "fcbb178d8553e770983a64bc4a572531cabc47652091e5b1915073ba4de46cdd",
+      "bytes": 14582
+    },
+    "BestOfBothWorlds/BanditMartingales.lean": {
+      "sha256": "897dcb049fe9f49a891c45660016aa06e7e894627b7b662fd101fbe08115c629",
+      "bytes": 14948
+    },
+    "BestOfBothWorlds/BanditSpecializations.lean": {
+      "sha256": "2ecadfe912560064ca4a9036ce48072682d94a5d39e1826ee27f557faa365b71",
+      "bytes": 8756
+    },
+    "BestOfBothWorlds/BernoulliInformation.lean": {
+      "sha256": "1c151453f7d3343068541c3ce9e4bfe384292872144424bec6410adb98bd7dc0",
+      "bytes": 9811
+    },
+    "BestOfBothWorlds/BernsteinEnvelope.lean": {
+      "sha256": "3198df3cd736fe3e872f28296c2f90a763794fdaab25b3f4c9b65ee99cfe63cb",
+      "bytes": 5392
+    },
+    "BestOfBothWorlds/ConcentrationConstants.lean": {
+      "sha256": "acd07ec083526fbaaf646bbf57b2f928dfc5e9c24e317b2c0494b2935202278c",
+      "bytes": 3232
+    },
+    "BestOfBothWorlds/ConditionalActionSampling.lean": {
+      "sha256": "85018b8ef12eff6309062a07893e667bca7b06186021045cb9b1dc33221900b3",
+      "bytes": 2979
+    },
+    "BestOfBothWorlds/ConditionalBernstein.lean": {
+      "sha256": "626ba0897564dad50db50543e50c33f89abcab7a3e43d483054d747135f6d7a7",
+      "bytes": 5375
+    },
+    "BestOfBothWorlds/ConditionalImportanceWeighting.lean": {
+      "sha256": "00376df2dd79f3c72f92c290fd6a4da1a78da55354fbdbe881de30abf0425523",
+      "bytes": 22559
+    },
+    "BestOfBothWorlds/FiniteInformation.lean": {
+      "sha256": "6470c5bc3e20e128864c45fc4c571879166a6b0f1df5e7ef93b8a2eb314f9cc2",
+      "bytes": 11939
+    },
+    "BestOfBothWorlds/FiniteMaximizer.lean": {
+      "sha256": "b4faa805f78896be5c81b498099092770453ed46406304acea235cea056dce9f",
+      "bytes": 4012
+    },
+    "BestOfBothWorlds/Freedman.lean": {
+      "sha256": "7e52eb190c268cb545bd433d2ebcdcb16c715340fe073bfdbc28079743721f54",
+      "bytes": 21198
+    },
+    "BestOfBothWorlds/FullTableConcentration.lean": {
+      "sha256": "33af69b18e58d37debc3b5bf66cfd3ca4842d44d48aee2b74afa47e064116e36",
+      "bytes": 8861
+    },
+    "BestOfBothWorlds/GapComplexity.lean": {
+      "sha256": "fda7f9bd8f1a1e6be8b47856bc50cc6fe07c91bc2eca9c58214ed49017a7784f",
+      "bytes": 24767
+    },
+    "BestOfBothWorlds/ImportanceWeighting.lean": {
+      "sha256": "7ada47755fca123fa5c792dc07bbf8febc216de07077684b253285b084a88486",
+      "bytes": 6280
+    },
+    "BestOfBothWorlds/LowerBoundCertificates.lean": {
+      "sha256": "8fbe0e5c7208d88d3e85463635d0fd1766d604c739108624aa667443fc984e50",
+      "bytes": 552
+    },
+    "BestOfBothWorlds/LowerBoundConsequences.lean": {
+      "sha256": "bcb19ce563fc8ad07460068019bd6d78b32fe54aa29b6b12d48c30b34fe26211",
+      "bytes": 5811
+    },
+    "BestOfBothWorlds/LowerBoundEnvironments.lean": {
+      "sha256": "e9f390e985d55164b8679c71c36c4dcb58327a5b5ab2e913c39d13f7353e8bc6",
+      "bytes": 8194
+    },
+    "BestOfBothWorlds/LowerBoundExtraction.lean": {
+      "sha256": "0af5aba01a70c3354bc37a85962d19cd6bdb96341dfcfa3486cdf0a49889c894",
+      "bytes": 7200
+    },
+    "BestOfBothWorlds/LowerBoundGapClasses.lean": {
+      "sha256": "3fdaf31ef7cd3cb11606047412ebd6997247015cb727d1b2e2f5dea2a00500a0",
+      "bytes": 9385
+    },
+    "BestOfBothWorlds/LowerBoundSelection.lean": {
+      "sha256": "08a71d1c83f86be87c1b54b474c8e278b93a8ff6094bec5271bef8b1ff493f95",
+      "bytes": 16360
+    },
+    "BestOfBothWorlds/LowerBoundStochasticGaps.lean": {
+      "sha256": "a28b4cf51afa41ce5d0adb01e4c78869bcc8acd24aa049c8b94f8a298774a606",
+      "bytes": 13997
+    },
+    "BestOfBothWorlds/LowerBoundTesting.lean": {
+      "sha256": "d13e05c632cd7a8fdc3f3299f01b5de74b36a5784d692444bdaf8103979a30f0",
+      "bytes": 7656
+    },
+    "BestOfBothWorlds/MathlibInterop.lean": {
+      "sha256": "9f4fbcbe96a737b3f221aa74d5ff869506ff964ca3289e07becfbabec9b400ad",
+      "bytes": 5959
+    },
+    "BestOfBothWorlds/P1AdversarialBound.lean": {
+      "sha256": "46f21131ade05ef89ca90fde122fa876f43e91c03256fadcb8b613df5db4bd00",
+      "bytes": 13821
+    },
+    "BestOfBothWorlds/P1Algorithm.lean": {
+      "sha256": "698b6b8de4437eec2d4905a0202f87a506540bc16a8e21ac888fe0be21e3a9b8",
+      "bytes": 9739
+    },
+    "BestOfBothWorlds/P1Complexity.lean": {
+      "sha256": "cf7df09f66e05174fa1b8f954946b3dc6969e6f85035efd656d5f073dba70576",
+      "bytes": 16796
+    },
+    "BestOfBothWorlds/P1Corollary.lean": {
+      "sha256": "b4b88751c1e486840efebaa7428a19d961513d1efd6318282873393f2b939b58",
+      "bytes": 8928
+    },
+    "BestOfBothWorlds/P1Examples.lean": {
+      "sha256": "1db7c86e3a268773153a3af6cff0d07cceb2278a179d818d553dfd43ca3cef1a",
+      "bytes": 9539
+    },
+    "BestOfBothWorlds/P1IdealComplexity.lean": {
+      "sha256": "930a78957f1128cb63af6874dbf7e9649e6033d68aa320eb16a1feb951ab92b9",
+      "bytes": 10458
+    },
+    "BestOfBothWorlds/P1Ranking.lean": {
+      "sha256": "737a969be97e2be94cc6912284e45b777127969a4a72202c0e88130109d2ad3c",
+      "bytes": 10314
+    },
+    "BestOfBothWorlds/P1Schedule.lean": {
+      "sha256": "d764b4a5d20a9f4d01dd9cf2e8964a17600605550bcfd0513828cdd3ce500d5f",
+      "bytes": 8787
+    },
+    "BestOfBothWorlds/P1ScheduleIdentities.lean": {
+      "sha256": "bd533cfb393e6121e93c924d1fa795c437d1a23ad47dba601426f0d941c653fb",
+      "bytes": 5412
+    },
+    "BestOfBothWorlds/P1StochasticBound.lean": {
+      "sha256": "189f77680c98efa8c972412cf31ec5f7ca2662ee2cbc908323178766c8718740",
+      "bytes": 18769
+    },
+    "BestOfBothWorlds/P1StochasticEvents.lean": {
+      "sha256": "427b78a9b40282e9f48f8d8a3cc75c4b7466511223285cea88897b61c05936c0",
+      "bytes": 12045
+    },
+    "BestOfBothWorlds/P1StochasticModel.lean": {
+      "sha256": "c541bd260db70bab55bf216c9775e303bfa2b294cd1f3192c4c087bc9516e3ae",
+      "bytes": 8176
+    },
+    "BestOfBothWorlds/P1UpperBounds.lean": {
+      "sha256": "c0d1d039c9afc30adefc1d4a207eada857f24a9f8f9411e9a056e27cd30063b0",
+      "bytes": 1633
+    },
+    "BestOfBothWorlds/RealizedGaps.lean": {
+      "sha256": "972e75be5a94cd78df260a69a25be02ab53c263dfe1a1aa58917dd0dca4be713",
+      "bytes": 12275
+    },
+    "BestOfBothWorlds/SeededChangeOfMeasure.lean": {
+      "sha256": "5d3c4c9669b129c05014eb3318b01294ef9212d01d273ba411b5cbb325a01350",
+      "bytes": 12372
+    },
+    "BestOfBothWorlds/SeededInformativeLikelihood.lean": {
+      "sha256": "36011d17e253a337e75dc336bdfc196b3dc682ef5b3c0985be382484aab2d1b7",
+      "bytes": 4900
+    },
+    "BestOfBothWorlds/SeededLearner.lean": {
+      "sha256": "27a8c56bfc6dcbecc0a2fdd119c4c383faf4b36250659219edf35095e59b49bc",
+      "bytes": 11173
+    },
+    "BestOfBothWorlds/SeededLearnerCounts.lean": {
+      "sha256": "ef9edeaa653d40d733fa302c9d56a2814c552f19b01951283fe00dd4efa203d5",
+      "bytes": 8451
+    },
+    "BestOfBothWorlds/SeededLearnerExamples.lean": {
+      "sha256": "2f887105604a9f5cf25d5bb33d60f1018bfc3a1ea298496a72d0231d2a3bfcdd",
+      "bytes": 11031
+    },
+    "BestOfBothWorlds/SeededLearnerFreshness.lean": {
+      "sha256": "b111b76a16151f198c076c68fe2640c6db327751d0df17760acb0c2259da4acc",
+      "bytes": 18897
+    },
+    "BestOfBothWorlds/SeededLearnerPrefix.lean": {
+      "sha256": "d77e645423236e3d1629e8be512eccbac8f9e3249ee7eed54a5d87cd0ca2aaf2",
+      "bytes": 2221
+    },
+    "BestOfBothWorlds/SeededLearnerRestriction.lean": {
+      "sha256": "388e5eb1f7d9b408623aa1e5d8451b34a17dcf9da9b28248bf6c810eaf487098",
+      "bytes": 6823
+    },
+    "BestOfBothWorlds/SeededLikelihood.lean": {
+      "sha256": "bf453f0275b07ca98bddabec1ca8e77cbee303d8ac517e7472d5743fac252ad0",
+      "bytes": 10453
+    },
+    "BestOfBothWorlds/SeededRealTranscript.lean": {
+      "sha256": "79173d15a3c9467e427cef17730cf5b063be700b063392a022d0c14519f8d2fb",
+      "bytes": 3648
+    },
+    "BestOfBothWorlds/StochasticImportanceWeighting.lean": {
+      "sha256": "d5220622674fe9ab4d752d66897d38477313d6c7054995ad42051d855d0442b5",
+      "bytes": 14793
+    },
+    "BestOfBothWorlds/UniformAdversarialBound.lean": {
+      "sha256": "ca2ee7f971824b523998030f4bce3e913ef92ff7c39a64534aac742df246a469",
+      "bytes": 11628
+    },
+    "BestOfBothWorlds/UniformExamples.lean": {
+      "sha256": "2f1b0d32aedeb910d70eabbc457ebef83931d2d18d60e321dc870e0c97957a32",
+      "bytes": 5374
+    },
+    "BestOfBothWorlds/UniformSampling.lean": {
+      "sha256": "5e6be8f34095ed2da7b10e3b62c44dc91ba21c8dfc9b9c4e031bf4b34b48e1b9",
+      "bytes": 7706
+    },
+    "CheckAxioms.lean": {
+      "sha256": "8e892d195e8b6b4639fbf769f6ecb4faa502cd9aa5f2da6ddc748634ea1d83bd",
+      "bytes": 41974
+    },
+    "lake-manifest.json": {
+      "sha256": "5f84c77f181de3977e9831565a7f061602128c1553a34de603066ae596d87082",
+      "bytes": 3134
+    },
+    "lakefile.toml": {
+      "sha256": "147e6b9b9965e45c6d8404ab55be1bf955cc3de9e1a262806a6aab31a9c72781",
+      "bytes": 229
+    },
+    "lean-toolchain": {
+      "sha256": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "bytes": 25
+    }
+  },
+  "mathematical_module_count": 57,
+  "lean_source_files": 59,
+  "pinned_source_config_files": 62,
+  "verification_input_sha256": {
+    "scripts/verify.sh": "424c13cbda8551d1b45d8700583704153566e6f6154f83656cc1ea7567b0dd3f",
+    "scripts/verify.py": "8a2800ca725e192f277abadedd78b8522ed59e82661f70aefeda76ca601d35a6",
+    "scripts/resource_guard.py": "208e40f7c45b89dff7f879b88f1c0c50db379fe02dbdf02a5fe0a3bbfda9df71",
+    "verification/source-manifest.json": "22774e5e92183ffbbe2e5ad7a5292bbc73fff06aad2a97474b87292751eec452",
+    "verification/expected-declarations.json": "c9ce456ada59b16a0da02a0f28373e3a7e72af84e7925b384454578e89b937f3",
+    "verification/endpoints.json": "05e2e202e727636fef2b89175dd2906e15554a53bd542887eb09139c10f61f30",
+    "verification/mathlib-imports.txt": "ebb40e19f3ff655dd4bfe24c664476530ba2fa46207bfb8e146945573712bb36"
+  },
+  "source_only_test": {
+    "project_compiled_artifacts_transferred": 0,
+    "directory_name": "combined repository with spaces",
+    "public_command": "./scripts/verify.sh --skip-prepare",
+    "isolation": "Offline Bubblewrap user/PID/network/IPC/UTS/mount namespaces; original workspace hidden",
+    "declared_inputs": "Read-only official pinned compiler, and official dependencies/cache freshly retrieved in Step23; no copied project build output",
+    "scope": "Same-host Linux system tools, not a newly installed Ubuntu/Docker image; final paper/Lean/build-script inputs checked against tested copy; documentation and release metadata finalized afterward"
+  },
+  "started_utc": "2026-10-17T13:19:46.942482+00:00",
+  "finished_utc": "2026-10-17T13:35:10.958665+00:00",
+  "explicit_leaf_builds": 57,
+  "root_build": "passed",
+  "axiom_audit": {
+    "status": "passed",
+    "declarations": 1742,
+    "theorems": 1425,
+    "principal_endpoints": 19,
+    "all_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "unsafe_constants": [],
+    "partial_generated_nonproof_helpers": [
+      "BestOfBothWorlds.AdaptiveBanditProcess.ObservedHistory._unsafe_rec",
+      "BestOfBothWorlds.AdaptiveBanditProcess.Trajectory._unsafe_rec",
+      "BestOfBothWorlds.AdaptiveBanditProcess.observe._unsafe_rec",
+      "BestOfBothWorlds.AdaptiveBanditProcess.observedHistoryMeasurableSpace._unsafe_rec",
+      "BestOfBothWorlds.AdaptiveBanditProcess.trajectoryLaw_isProbabilityMeasure._unsafe_rec",
+      "BestOfBothWorlds.AdaptiveBanditProcess.trajectoryMeasurableSpace._unsafe_rec",
+      "BestOfBothWorlds.SeededLearner.Learner.play._unsafe_rec"
+    ],
+    "safe_constants_checked_for_unsafe_dependencies": 1735,
+    "bad_unsafe_or_partial_dependencies": 0
+  },
+  "endpoint_axioms": {
+    "BestOfBothWorlds.UniformAdversarialBound.unif_adversarial_error_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BestOfBothWorlds.LowerBounds.adversarial_lower_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BestOfBothWorlds.LowerBounds.BOBLowerBound.theorem4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BestOfBothWorlds.P1UpperBounds.p1_upper_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BestOfBothWorlds.P1StochasticBound.p1_stochastic_error_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BestOfBothWorlds.P1AdversarialBound.p1_adversarial_error_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BestOfBothWorlds.P1Corollary.p1_complexity_le_bob": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BestOfBothWorlds.P1Corollary.p1_stochastic_bob_error_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BestOfBothWorlds.SeededChangeOfMeasure.lemma10_positive_support": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BestOfBothWorlds.SeededChangeOfMeasure.lemma10_log_likelihood": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BestOfBothWorlds.SeededChangeOfMeasure.lemma10_kl_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BestOfBothWorlds.SeededChangeOfMeasure.lemma10_kl_ne_top": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BestOfBothWorlds.SeededChangeOfMeasure.lemma10_kl_eq_ofReal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BestOfBothWorlds.SeededChangeOfMeasure.lemma10_toReal_kl_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BestOfBothWorlds.SeededChangeOfMeasure.lemma10_event_binaryKL": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BestOfBothWorlds.SeededChangeOfMeasure.lemma10_event_log": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BestOfBothWorlds.SeededChangeOfMeasure.lemma10_event_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BestOfBothWorlds.SeededChangeOfMeasure.lemma10_event_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "BestOfBothWorlds.SeededChangeOfMeasure.lemma10_testing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "kernel_replay": {
+    "status": "passed",
+    "exact_leaf_modules": 57,
+    "proof_bearing_parts": 171,
+    "all_input_hashes_unchanged": true,
+    "imported_libraries": "trusted",
+    "partial_runtime_helpers": "excluded by Lean Replay; safety-checked separately"
+  },
+  "kernel_inputs": {
+    ".lake/build/lib/lean/BestOfBothWorlds/BernsteinEnvelope.olean": "96628c78228085686a9377f5214187f8e72e50bd49d52f053d9f0e604f8172a2",
+    ".lake/build/lib/lean/BestOfBothWorlds/BernsteinEnvelope.olean.server": "ca22ce749947f46326737177a66fadc68629d41b424eaace14d3a541ee5216a6",
+    ".lake/build/lib/lean/BestOfBothWorlds/BernsteinEnvelope.olean.private": "eafa3d335696974bf57b87e15d0174d395d9f61d5e3ca50c1998e83aa47d94c3",
+    ".lake/build/lib/lean/BestOfBothWorlds/ConcentrationConstants.olean": "d5d0f136cb0df20410b64fc0f187328560cdf30f8f219b7de6390e156634f255",
+    ".lake/build/lib/lean/BestOfBothWorlds/ConcentrationConstants.olean.server": "86d1d18c87581bb11a5d6eb1a96e85e6a123dfb305911812333860476e064927",
+    ".lake/build/lib/lean/BestOfBothWorlds/ConcentrationConstants.olean.private": "da54a16c696e3ee1b3b656030eca36a748eb84ec79977e7c3ff64edc63d6375e",
+    ".lake/build/lib/lean/BestOfBothWorlds/FiniteInformation.olean": "54f93f39247297a425013260e555a0a32308a9301831b02c1ec29103d120ad98",
+    ".lake/build/lib/lean/BestOfBothWorlds/FiniteInformation.olean.server": "bdabd57cc9656ef782f9edc82997d8b7c7029d41a25d326901f6e8f722505f37",
+    ".lake/build/lib/lean/BestOfBothWorlds/FiniteInformation.olean.private": "05d4c0ff442dfdf74a18d9f911f2a2ff39068bc1666019ef2a97d5de57b42e97",
+    ".lake/build/lib/lean/BestOfBothWorlds/FiniteMaximizer.olean": "85cf3774e0a4f136237cf1f61bbfcf12b5ad91a4d96710e41c9faa22c78802eb",
+    ".lake/build/lib/lean/BestOfBothWorlds/FiniteMaximizer.olean.server": "5398d3cf293eaa4f04cb8baa47b34591ded60b2c4baa221cc7ee8517b83c3690",
+    ".lake/build/lib/lean/BestOfBothWorlds/FiniteMaximizer.olean.private": "a9eff899077dd4f546b48d9f1212ba807bc5e9e371aa025d41f68b94905081e0",
+    ".lake/build/lib/lean/BestOfBothWorlds/GapComplexity.olean": "de6a2e0ed573fd972dbfa9711fc8497e4bfdd356d3f2f2c51e73338d2e3c8a2a",
+    ".lake/build/lib/lean/BestOfBothWorlds/GapComplexity.olean.server": "e65084b82c6fc07629d08036a5fb4926a633d4a12516ea853e280036cf122454",
+    ".lake/build/lib/lean/BestOfBothWorlds/GapComplexity.olean.private": "23c9f5fe10a81c1aa6418c7c7f11c849c2185c169ade0a8fcccf491dd3dae008",
+    ".lake/build/lib/lean/BestOfBothWorlds/ImportanceWeighting.olean": "d2bb47d3fde5b5c4838def99a37ba56d4197fe75c636fd9282a5a8ac9511b75d",
+    ".lake/build/lib/lean/BestOfBothWorlds/ImportanceWeighting.olean.server": "a6a9f70fa8a74862105582d9c6dfdee8b35b06a70cfa2959d6f807d99c11148d",
+    ".lake/build/lib/lean/BestOfBothWorlds/ImportanceWeighting.olean.private": "ec73103ea8da8ccd66de862da271ca48f36f87a4b412ba40d946f776c2847c44",
+    ".lake/build/lib/lean/BestOfBothWorlds/LowerBoundConsequences.olean": "71e578f0bd91905822c6426aa0cd49a0852d66873380429659ed37dec3b1371a",
+    ".lake/build/lib/lean/BestOfBothWorlds/LowerBoundConsequences.olean.server": "1aace7834ae2d37f8825510c8985757018adcb499db4766a69e2e5d66371064b",
+    ".lake/build/lib/lean/BestOfBothWorlds/LowerBoundConsequences.olean.private": "c21dc649e3f2a06852ef860ec1d2b98327f5e17b60c2a8c5298fdf5b6793c0e2",
+    ".lake/build/lib/lean/BestOfBothWorlds/LowerBoundExtraction.olean": "236bf25ae39a3f4b4612bb7fca6866f949783ddb12e7dfacdcb0fca4313a8c65",
+    ".lake/build/lib/lean/BestOfBothWorlds/LowerBoundExtraction.olean.server": "041d0b535bda823b25d6a123978a2345f0d56a3b73cda8821a5bec2e7b1bc35c",
+    ".lake/build/lib/lean/BestOfBothWorlds/LowerBoundExtraction.olean.private": "32717a7a87bb0714a6ccef545e2f95c9ca86a842be714bef1c0202bda6fb6246",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededLearner.olean": "04273f32d9e6d80b969174f4d67fb739bf41e1531f358fa6bb1eadaa4e22311a",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededLearner.olean.server": "c58d783304e6e2f9e9d13b9b41dbb2b8053ac1f211f1853bc8ee3848cfe868de",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededLearner.olean.private": "170d5dae0c2c74b69bdaa0ec086ae48332c89d2170af5132a52fe5a961d4e67f",
+    ".lake/build/lib/lean/BestOfBothWorlds/BernoulliInformation.olean": "608d9875bcacf448856cd162233c7c3a8e82961a18cfebfd5697d8152f8c08b4",
+    ".lake/build/lib/lean/BestOfBothWorlds/BernoulliInformation.olean.server": "b4d82315b1d47845a6bd6b14602785bc720261eab7725e48fd35628f8dcdcd5d",
+    ".lake/build/lib/lean/BestOfBothWorlds/BernoulliInformation.olean.private": "5439c37d9496db1b51e39e609f5b67bdf3655aa6e48faa249cfc5fbdfb66f710",
+    ".lake/build/lib/lean/BestOfBothWorlds/ConditionalBernstein.olean": "e97e8f9c983aa3ff010e85f5d81b74cf0c907d14e511c0b58f89846e5d750f01",
+    ".lake/build/lib/lean/BestOfBothWorlds/ConditionalBernstein.olean.server": "72c7ce6be453b7deecb49d83ce65977058e40fb2a30ef636f77d2cc3891e14d2",
+    ".lake/build/lib/lean/BestOfBothWorlds/ConditionalBernstein.olean.private": "8655929401966b98e61226b861494cd378f727523359a4109f50ddfe53591d77",
+    ".lake/build/lib/lean/BestOfBothWorlds/LowerBoundSelection.olean": "88eee3f79e2badf93b7b5d97fb2263cf43e67aaa9cbe76a3fcd80dd8efc952f4",
+    ".lake/build/lib/lean/BestOfBothWorlds/LowerBoundSelection.olean.server": "f7a3b22abeef3b72fc433cb0d975d01f8312207f6c15468bcf35eafd9058228c",
+    ".lake/build/lib/lean/BestOfBothWorlds/LowerBoundSelection.olean.private": "13ecedd4fd4f983f9d40941a40547e93795d54491cc817cc534c91a19a8609a9",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1Ranking.olean": "7ddb08b9e833ed9e0fd8302a226de4d361e685b025ca7dea8cb9839ce38743d2",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1Ranking.olean.server": "9b76d17336aa7624864da4767568de456161472eecd415a0919ec068dd6ed09c",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1Ranking.olean.private": "2fd00c41b26401ccc85d620c2ffd06ba6a6b10c5dfd27a2c3e1845eada99b5fa",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1Schedule.olean": "88d2f533bc72c7080a7ec342d7334fbb19b2cc35b51884a1c947f922dc721ee1",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1Schedule.olean.server": "7e5abb76c17fb6b779be8b381f926e290daa805d0aa93fcccbbfb7453b0dfbc0",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1Schedule.olean.private": "1f7e2c70ea656ffdde80b25b00ec539d0d967a2b521caa9d882ac07593a9c8c6",
+    ".lake/build/lib/lean/BestOfBothWorlds/RealizedGaps.olean": "4aee498634a4eefe97ad38c84403d8a91702582364e0233fccd3bee6aedcd0ba",
+    ".lake/build/lib/lean/BestOfBothWorlds/RealizedGaps.olean.server": "1a07135e8fe8b24ba1d4112f33a7a4b31a9798f1debc5cec4b14e0a285f323fe",
+    ".lake/build/lib/lean/BestOfBothWorlds/RealizedGaps.olean.private": "462dfcb5f00d13ecac7c2018a0dbb002e71f618af11eb09a012730fedcf0861a",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededLearnerFreshness.olean": "46be11c83197a54e4f91b7a100659cfc6a13264138a3a76aa25a895c640842a5",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededLearnerFreshness.olean.server": "a18a52b93aca8286ec6d3a6f78aa71e753cead684bcbd7149a7ffdf200a1f624",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededLearnerFreshness.olean.private": "e34d814911501291f9a548dd942db0651a20bf8f627ca639b1160d32c9810ebc",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededLearnerRestriction.olean": "d0416ba83eb72a04c65a33f354fd4da4c70707d5cfef9386285cb8e75f12a924",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededLearnerRestriction.olean.server": "ed3aaef503e4b92426dd256e6da645bbdfb17aa7c6acb4a71fc970d33c714cf0",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededLearnerRestriction.olean.private": "cb120e26444e4104734bfe3685652a4ed72440d0857d186103729f6900f76e64",
+    ".lake/build/lib/lean/BestOfBothWorlds/StochasticImportanceWeighting.olean": "a44cf743f1a773bdec8c9445854e80452956b6b9b56d3964f0943bae86e81371",
+    ".lake/build/lib/lean/BestOfBothWorlds/StochasticImportanceWeighting.olean.server": "c9d27d7140a92fcf4d401b936ff65ec6e2fcd7002515ae66d8f08bc2610e5069",
+    ".lake/build/lib/lean/BestOfBothWorlds/StochasticImportanceWeighting.olean.private": "ba87747a6ee1b2efe8b26e0708ae68b800d68699cb938c23cb48537b7245b641",
+    ".lake/build/lib/lean/BestOfBothWorlds/ConditionalImportanceWeighting.olean": "9d7d9140b9bf4285c535c629f159bd82fb453f0bc0afd50253acc342d18af88a",
+    ".lake/build/lib/lean/BestOfBothWorlds/ConditionalImportanceWeighting.olean.server": "399a52dc5b5a0f6070f9df4f83928f133f80ab5fd573a088feb379b5a3186d10",
+    ".lake/build/lib/lean/BestOfBothWorlds/ConditionalImportanceWeighting.olean.private": "db58d2a5c9d0088c3b80707f7e93de396f38528d10ccf0c9b199d954265aae8b",
+    ".lake/build/lib/lean/BestOfBothWorlds/Freedman.olean": "20469e6f65597e4c006595e31db0da1ade5e55d925e20a826d77d15a4429f2db",
+    ".lake/build/lib/lean/BestOfBothWorlds/Freedman.olean.server": "01c051b1dda2ac649945758167f51ad2cde9644494e8c640c2833172c73b690a",
+    ".lake/build/lib/lean/BestOfBothWorlds/Freedman.olean.private": "7b78c7d11941150e5986ae5a4497a6640df716e99b72d5943ee1debdc5764e20",
+    ".lake/build/lib/lean/BestOfBothWorlds/FullTableConcentration.olean": "658635a0ccf71439c93c31fe8d6ae847bc95d0af96be907ac0ca83dec1f80470",
+    ".lake/build/lib/lean/BestOfBothWorlds/FullTableConcentration.olean.server": "4a671ba028b1dab1f87e6b0bc0324547805ebd31d1f56de2f2281264c34a9e5a",
+    ".lake/build/lib/lean/BestOfBothWorlds/FullTableConcentration.olean.private": "32420cd97b387c133aae3b78ced58190ab2d445cb04be13b5e280f748dad1b61",
+    ".lake/build/lib/lean/BestOfBothWorlds/LowerBoundStochasticGaps.olean": "76a40a57004e31e6f9f7daacc36b9de60fa3d8179b35af8bf86b8ef60311ec87",
+    ".lake/build/lib/lean/BestOfBothWorlds/LowerBoundStochasticGaps.olean.server": "9a2b8643f5f742a82163492e2de3977e9446e0a1882184b729f71ba41b576e2b",
+    ".lake/build/lib/lean/BestOfBothWorlds/LowerBoundStochasticGaps.olean.private": "27c403e5916117535b318dc65d7aa2dee4b44e3c035ff97570b83318b69319ea",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1Complexity.olean": "872a958b37a4e70e9539c55802dd7cfab4b38c226728280605e7eaefdddd8a02",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1Complexity.olean.server": "a0444d5ec8120224aec3e110fd395804172b9ccb7610ef25ef9c3d7bf7862ba2",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1Complexity.olean.private": "5194b2b1ff4cef52ecc6aad2144b3a39dc0d56ad089da5780762a525d093aba7",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1StochasticModel.olean": "ddce23a4af46f76f82e62d353c1bcc71edcef62e0facdd9cf728a4ced5e53c6f",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1StochasticModel.olean.server": "76e0c1163d1d56cf98e30e576a8e90f07bd74150c7bca39b0daae20f96773989",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1StochasticModel.olean.private": "3d46eae6b370341213e20b4b0d02f7bd8f0d4a1eb3c4bba1ce023e6f827b7dfd",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededLearnerCounts.olean": "048fcc043524d494de7799a74c899d86f5127ed847e0f76ee0091818382b453f",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededLearnerCounts.olean.server": "02d2e39fb6c13f960c9e58c0309c481a640f5678266dfbc461a94c499a6be8d4",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededLearnerCounts.olean.private": "8216b403aa15099cafdae434b608f18a7095a5a77df85afc86b4519f0cb305bb",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededRealTranscript.olean": "cdc9d1f3859f9e8023c25b6a5be857a8734ea5739b4bf3e8d314acfbd7330118",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededRealTranscript.olean.server": "1be1d6e2a0ade79fef9d9ee08098099aa0c92aa8c49ddbdceae3465c8b8c0e6f",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededRealTranscript.olean.private": "aef2c03a3ad5eaa3d517883c1df568099ec4aff7607df22663fb432e66a96c7b",
+    ".lake/build/lib/lean/BestOfBothWorlds/AdaptiveBanditProcess.olean": "1235b95fccb6328cdae7843fc5677540ff69964660d346a60b55a3f9aa37692b",
+    ".lake/build/lib/lean/BestOfBothWorlds/AdaptiveBanditProcess.olean.server": "7e6bb9c9bdd7013c8877863b9eb55e0121c340dd55f23db2394738735346bca5",
+    ".lake/build/lib/lean/BestOfBothWorlds/AdaptiveBanditProcess.olean.private": "fa5a7780a9bac981f973a99e3a659f1978e97639c95a83095f02a971df29ef2f",
+    ".lake/build/lib/lean/BestOfBothWorlds/ConditionalActionSampling.olean": "30db3080523f25367e0df5a08c04a02752212c7f9a4a111303751af85300de49",
+    ".lake/build/lib/lean/BestOfBothWorlds/ConditionalActionSampling.olean.server": "f3a38cd38d8f4881159c40756c9665029eda0904638b7bd0b596933d2912ebd3",
+    ".lake/build/lib/lean/BestOfBothWorlds/ConditionalActionSampling.olean.private": "96c378dafa1badadd80e6b2e1efc521110ba2df60950b30cfe70ec3925c08b56",
+    ".lake/build/lib/lean/BestOfBothWorlds/LowerBoundEnvironments.olean": "a53c8502563e230694e2038bb1c932277fc0f05ce66b6f6253d1526957bcddf3",
+    ".lake/build/lib/lean/BestOfBothWorlds/LowerBoundEnvironments.olean.server": "65837f107db442756ca3622cd46c85d23b167d0810623c044168ce0d9e9cc0a1",
+    ".lake/build/lib/lean/BestOfBothWorlds/LowerBoundEnvironments.olean.private": "76f81ae6c35897e6688a22da5b6a7804ea2037b176aa910f6bd3f6cfa3593979",
+    ".lake/build/lib/lean/BestOfBothWorlds/LowerBoundGapClasses.olean": "1b89f1a7736b2abab0789dc0a53c1ea615f040d147130e010a7e34d1a66eaf81",
+    ".lake/build/lib/lean/BestOfBothWorlds/LowerBoundGapClasses.olean.server": "4b00121ef13c3bd767e65df50576cc4ce5f47a0ca84c845fea8ea2d7c32abdff",
+    ".lake/build/lib/lean/BestOfBothWorlds/LowerBoundGapClasses.olean.private": "f0eea34eeca1c1e1223778be5bee79457ab8685b08a9190c1cd27b280ec3dc8b",
+    ".lake/build/lib/lean/BestOfBothWorlds/LowerBoundTesting.olean": "50721d7c93bac41cd23db0f57f9dc007c4d1f14a46db1a5640365161ba612d95",
+    ".lake/build/lib/lean/BestOfBothWorlds/LowerBoundTesting.olean.server": "b5de0f9789804770c1dd85105af964086cf5e23414d23e7098ab2f9d92c4453c",
+    ".lake/build/lib/lean/BestOfBothWorlds/LowerBoundTesting.olean.private": "d37c8ba951f256d5485fec2ef31b3548449c979f0adb51c37045b33729ff1f7d",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1IdealComplexity.olean": "c056fc2261838a8c2114e321758a4577f8d74761a0d64474d01289bf21f19405",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1IdealComplexity.olean.server": "fccdb28162b57511828368a2488b81e3d1a985ee554413c2ccf3f37288e886d0",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1IdealComplexity.olean.private": "18aceb7d989b6ac374f31b45839683fbe6521b39360f09fa0e94f03031fbcaa8",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1ScheduleIdentities.olean": "04782e315b5850878d9d757b422e9db6a9c00fc32e2dd9631ea941517f99d3d7",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1ScheduleIdentities.olean.server": "c0089060e00bc492320a469b602aff5a4c73f689f960332db83e7d21c5349207",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1ScheduleIdentities.olean.private": "b6ac97abe377f7430b5de2cb61550dc16c92ed67d27f674b31ee5fd8161a3d6c",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededLearnerPrefix.olean": "5b19371047bfb6ad63e704a9a54eaacbec8482f91eef7ebc8f721dcfa2db3190",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededLearnerPrefix.olean.server": "22040551d200f054df39558f789ab91964e11baa4d4ad2acc4b60a186a55a619",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededLearnerPrefix.olean.private": "a88ef9163f5333bb2199d6dac97f390360059c405b957f7c021b0819c4c91e5f",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededLikelihood.olean": "f8198b8182599e04d7fbd2d0251d5e97ef7f02f031969a0025a08344f14af6fa",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededLikelihood.olean.server": "0bd8cffdbc3d08ce9b9deb3d9af23cbe6843911b69bda49a57dd7bca4603035a",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededLikelihood.olean.private": "1a6b537c2d57d24ae867ba460aec312d2f22f56ceccd837eff8aad6527570f5f",
+    ".lake/build/lib/lean/BestOfBothWorlds/AdaptiveBanditMoments.olean": "a81599ef768ebfe355a6f854c4cf5e6762b0103f913a4ad185e943c323849b3c",
+    ".lake/build/lib/lean/BestOfBothWorlds/AdaptiveBanditMoments.olean.server": "28110e9727ae4064d20f2ad5e8043049e9c6aaa720cd65048f6fc9c21e2389c1",
+    ".lake/build/lib/lean/BestOfBothWorlds/AdaptiveBanditMoments.olean.private": "8602c376328283eb0c791c7e9b911a79427b10e936c140e892fc399c2413b091",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededChangeOfMeasure.olean": "0893a878c3c3ab98b202d612c4375dc93a75b2038c005e21b2ec369490b1c38f",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededChangeOfMeasure.olean.server": "03d70d977dbc13c249fde89a52da4790bbee8d21b947a1a5cbaac794471adb73",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededChangeOfMeasure.olean.private": "d73e7a3e8692adddeedacf972cbed29d02516bea6166706e7a7529ed082d2c18",
+    ".lake/build/lib/lean/BestOfBothWorlds/AdversarialLowerBound.olean": "d2cb1dd061139692d6f3c1381c5199dfda1617f461de35642708311ac8cc95ac",
+    ".lake/build/lib/lean/BestOfBothWorlds/AdversarialLowerBound.olean.server": "46bcf4b4cb0f930ec6decb13c46c8960a568a766f544aa273132892406ef8f59",
+    ".lake/build/lib/lean/BestOfBothWorlds/AdversarialLowerBound.olean.private": "e31706da30f5ff98c812c1245a49391c8ad631de29d787769fb2bde117bc6ca8",
+    ".lake/build/lib/lean/BestOfBothWorlds/BOBLowerBound.olean": "90472f755a76e35b03d34a6851ee02f2bfcbf58227abbd95632722d1d5689834",
+    ".lake/build/lib/lean/BestOfBothWorlds/BOBLowerBound.olean.server": "9f50a7ac94d7d94126f78d2161396d25f77adece1fef6e7d7dbd8eb47bf83c1e",
+    ".lake/build/lib/lean/BestOfBothWorlds/BOBLowerBound.olean.private": "622854ec4e52076808a914a527511f44679d53f5e215fb44e91e3b90a4c8c2eb",
+    ".lake/build/lib/lean/BestOfBothWorlds/BanditMartingales.olean": "f75b030eb341fbf438a8cc0bc1ba624735cd0909c5047aa1df6819fc81e6aad9",
+    ".lake/build/lib/lean/BestOfBothWorlds/BanditMartingales.olean.server": "6791b55a081594ae01c73e232a4c52c7cb12fe5ac9cceef1e39ef3c629c496b6",
+    ".lake/build/lib/lean/BestOfBothWorlds/BanditMartingales.olean.private": "a04118a2c350fc7fbe9def04ba41352f91cd221161091a7ccea3ab3a426dee96",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededInformativeLikelihood.olean": "86bfd9ddf60ecf543b6d7b5ac3b35dcebdac8da4b26db41ea8ddfd0897ebe6f2",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededInformativeLikelihood.olean.server": "d3194477cd341fb8020f140d1c0a8cc9547f54d98c4f74ab6ca23ea6e6e67c28",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededInformativeLikelihood.olean.private": "8fef623e6dab31676a0328871349ed3cf9b6fbc1de3c714031da8a97d5c00520",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededLearnerExamples.olean": "0cacfd7b7006bc76b3492e68f342f4d4ddb49919d8dafb6a90b19e2de21819bb",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededLearnerExamples.olean.server": "284c54eaae5f504363a24f95edd4c26fc84735ff7d067443912cf6fd89fd00f7",
+    ".lake/build/lib/lean/BestOfBothWorlds/SeededLearnerExamples.olean.private": "c384fc7284dda8b507a0e914b7cd72cdb177e7279288f162f24ee4930454c94f",
+    ".lake/build/lib/lean/BestOfBothWorlds/BanditSpecializations.olean": "02aac17f9b42395aaf9e986d9bf40d3c6b508c9b0befa003d9f3104a489e1709",
+    ".lake/build/lib/lean/BestOfBothWorlds/BanditSpecializations.olean.server": "c1da2203e835c30294a67c9bb795919e2c6e05301ae88011cc08a5c9c7bc392e",
+    ".lake/build/lib/lean/BestOfBothWorlds/BanditSpecializations.olean.private": "e4eadd8d7620f652fdcd36e193f1b038f8d46f1aff1208835cd7ed5e86913a1e",
+    ".lake/build/lib/lean/BestOfBothWorlds/LowerBoundCertificates.olean": "405c5add685c879eff494bfe0d1a66be43fcc4f81e8727d48ebd2d601cd1ebbd",
+    ".lake/build/lib/lean/BestOfBothWorlds/LowerBoundCertificates.olean.server": "95640879ceaf479490a53d15416e4a5e4115a6351e3a541d7eac62cc2dbae17a",
+    ".lake/build/lib/lean/BestOfBothWorlds/LowerBoundCertificates.olean.private": "1377ecc2ea334a1381eba9257fdcea9eb7c686195914ca87883c911ad2a831f9",
+    ".lake/build/lib/lean/BestOfBothWorlds/MathlibInterop.olean": "c0ec43141dc1b3aeeec290a400fe9870f2bcdac1635cad1a7dd9088170e73963",
+    ".lake/build/lib/lean/BestOfBothWorlds/MathlibInterop.olean.server": "4205aff886de16ec3b3269ace32fdb4cec929a041d91f23dfbf366e316c497ef",
+    ".lake/build/lib/lean/BestOfBothWorlds/MathlibInterop.olean.private": "4fa9a9b59d5787e4796b27e2cb3811cff4971864b63938476c54e640ea5592e2",
+    ".lake/build/lib/lean/BestOfBothWorlds/ArchitectureExamples.olean": "8462bdbacba3155271a05c64f337c9d326271ceb6013655acc2cc0a2c0197eb9",
+    ".lake/build/lib/lean/BestOfBothWorlds/ArchitectureExamples.olean.server": "13690e959b5e8f7cdb2b9c27b7cb1cd01b80b7e6ec005c6db471df28fc8501f4",
+    ".lake/build/lib/lean/BestOfBothWorlds/ArchitectureExamples.olean.private": "9f69fd9e1f7108a1266696fd337ab43b0c781ff0a90ca5a3879b26b245096849",
+    ".lake/build/lib/lean/BestOfBothWorlds/BanditConcentration.olean": "34cec7559923a2ead069faa2bf2427ba404e8966647f10934a244a0442463382",
+    ".lake/build/lib/lean/BestOfBothWorlds/BanditConcentration.olean.server": "0be98c8d64496ca1936182fd5c3749c42de337942c496f36b9c9129dc96aa2f6",
+    ".lake/build/lib/lean/BestOfBothWorlds/BanditConcentration.olean.private": "7d6d1022b2614732e727030c8395cdc68377ffd463347ebc1c7cd1a34b9065e6",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1Algorithm.olean": "52782c2f37219b202baa16b84621135ac9c3607c9417cea38d18dd67e8a00631",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1Algorithm.olean.server": "9a1c878ab63da53894e3b59196a38a1a0f6b1ea889946b2f7b5d31cf110478dd",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1Algorithm.olean.private": "94623a30bfec10bb95839549dd7bb29a0fbfa63e82021bddf77ebbc634673e36",
+    ".lake/build/lib/lean/BestOfBothWorlds/UniformSampling.olean": "7c7ffa31e0d86c56a74de10fd80f60c691232fab01d5f3bdcb807847da0e2c36",
+    ".lake/build/lib/lean/BestOfBothWorlds/UniformSampling.olean.server": "eb8eebc5cd972bd54745a695ea0f0b7243d5463876399a0e7a767cceb265ff81",
+    ".lake/build/lib/lean/BestOfBothWorlds/UniformSampling.olean.private": "cc7a37c4d2d22328d7145bd06906adeaea0f13b09c8c17a1e430831b4d777833",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1AdversarialBound.olean": "f2501ae0d16133b0f85f31e7c2d9c570d534cec222e847a99b6723b82897662c",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1AdversarialBound.olean.server": "30f54b091855e58708f3457ee45f1867fe56285defedfdaf59080f7d572aaff4",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1AdversarialBound.olean.private": "197aa6aa799f0100cd3fa491dec65bb055ffd42dfbad439f2798d98b194f3a4e",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1StochasticEvents.olean": "2eb24f7020dd54c7f6f72148a0cf96535327d01ac950df366c19f161b600cacd",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1StochasticEvents.olean.server": "4d1f5aa1ad471cde240da9384774132709135877de92d9f56cccef62881dd009",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1StochasticEvents.olean.private": "dbf77a5d7f04b59162b5e8bfab5734acd7dc253ae9dbf399d8d8155682c764bf",
+    ".lake/build/lib/lean/BestOfBothWorlds/UniformAdversarialBound.olean": "0e7490a46f985694942a111c9fb5c3db5ce75869d2d25714e9a0ffd144fbddc4",
+    ".lake/build/lib/lean/BestOfBothWorlds/UniformAdversarialBound.olean.server": "6d3c7ee21c2ed1b5c0113d3632e01342de44b0af2043feb1fe554d8f655f8e93",
+    ".lake/build/lib/lean/BestOfBothWorlds/UniformAdversarialBound.olean.private": "6d7214bfb23d1cf138d9dddbcfbea3da0a360455252d3883090e94fa5df2907f",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1StochasticBound.olean": "ea73ca639018e89006b34c0fae7e0c3e94d19f271399fdf4fa8f9fe517226767",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1StochasticBound.olean.server": "484fc63242a1e71d9737cbf4ab9912b6a2207cf597436107d8cb95ca4247cb5e",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1StochasticBound.olean.private": "24fc05245e9ff29d724bb9661b594fc3275e9c002c47ca9de865ca13be2d786f",
+    ".lake/build/lib/lean/BestOfBothWorlds/UniformExamples.olean": "2c5c4d4c6721d77814c112a09fda6e404f704b6ee22a29aa46b96dba007d1885",
+    ".lake/build/lib/lean/BestOfBothWorlds/UniformExamples.olean.server": "895d5bd53bf94335ad017c7760853d9e8e6fcd0f6ccebf32927088d26411a74f",
+    ".lake/build/lib/lean/BestOfBothWorlds/UniformExamples.olean.private": "02d16038e8a2f229e75ed9dd57a451f190a1a7a3995cfa26feee0a4936e28397",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1Corollary.olean": "07fed77417cc6377b975d1a8e0b3f075a5b0d33602c73c92ceb8c4fab5b5bee0",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1Corollary.olean.server": "b2ff18f530ada87a04f31e836d4a311f73e5057af78f2cd737871f4510ebb4c5",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1Corollary.olean.private": "d1ca13d7e702446cc2a4f60ab17730341494a2350478594ada810e1de7504d93",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1Examples.olean": "2b54facb793c74a2db5be3306a6c286548f2ac03dcfd1e20439bdaeb7276a2ce",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1Examples.olean.server": "cf56b359ea946ec3640cb3099913bc1dea1e5649907926cf6f35fe5e99e62d10",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1Examples.olean.private": "bc4e921e9f2f0c4dc36b5204b61541b1210f15334fd307acdb131141126cfaa1",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1UpperBounds.olean": "14c7bbbfb9ff2cd533f730bf59779803d8feba6dde628dc854270f4ea727be64",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1UpperBounds.olean.server": "89f4d6fe3cbe626d2a74aee2f5bb51bddeab6e60983d5ca0140f7e794903b283",
+    ".lake/build/lib/lean/BestOfBothWorlds/P1UpperBounds.olean.private": "135322bd3b2ee0639874f59ce3785369585e366a5b9aa1e191bc291c132a05d6"
+  },
+  "kernel_modules": [
+    {
+      "module": "BestOfBothWorlds.BernsteinEnvelope",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 5.921,
+      "log_sha256": "9bbcb19f2c2ac8f8ddaa00763431ef1e1519092888abe48818e82e3295812d23"
+    },
+    {
+      "module": "BestOfBothWorlds.ConcentrationConstants",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.065,
+      "log_sha256": "d56aa4c9128d0320ef5832c7d30bcd1af10a79b3e3477e104a51c5b93d58bbc2"
+    },
+    {
+      "module": "BestOfBothWorlds.FiniteInformation",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.581,
+      "log_sha256": "8060bcb4c8f7ef351cfd52595dee08cf217c9e361242037b03b9e78cbaf433a2"
+    },
+    {
+      "module": "BestOfBothWorlds.FiniteMaximizer",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 5.817,
+      "log_sha256": "cfb29af600f3e1f2fdad5f9c0453cb901f57b6132d841e79faf018d5173a551b"
+    },
+    {
+      "module": "BestOfBothWorlds.GapComplexity",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 5.652,
+      "log_sha256": "356a7e593c2ed0249a48d59c3ea1da30ae975e13ac4c29da9d6b8c42d2b020a1"
+    },
+    {
+      "module": "BestOfBothWorlds.ImportanceWeighting",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.525,
+      "log_sha256": "730c287437b8a04a7444ac140be85d8d7ac23f0dcd38056e214ff371631dbeb0"
+    },
+    {
+      "module": "BestOfBothWorlds.LowerBoundConsequences",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.02,
+      "log_sha256": "add51ac5793ce8d925b2e9c8da938dea8104daab4ea7a06343da08c042372fda"
+    },
+    {
+      "module": "BestOfBothWorlds.LowerBoundExtraction",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.373,
+      "log_sha256": "c53c9e90636d857a6bda7a3c71debbf52357488c5bd7ef01553cbf71196d55c0"
+    },
+    {
+      "module": "BestOfBothWorlds.SeededLearner",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 5.769,
+      "log_sha256": "b7976540ace4651049ed30c2368b1570b68a73aa4a6e373ecc1f2579e15330b9"
+    },
+    {
+      "module": "BestOfBothWorlds.BernoulliInformation",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.527,
+      "log_sha256": "837df47dbd27937c9b47c06ff660dc9ab1ae9e55df1ee540148289f79195bfbb"
+    },
+    {
+      "module": "BestOfBothWorlds.ConditionalBernstein",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.983,
+      "log_sha256": "7526b3abcdd7d23d2df2990a0f13a8dee54ee37846cebcbf4c3b0f92122bc4ae"
+    },
+    {
+      "module": "BestOfBothWorlds.LowerBoundSelection",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.323,
+      "log_sha256": "21b731fd6bfb408080b0bfbf02c3b77e127519167f174090de6332e5418857e4"
+    },
+    {
+      "module": "BestOfBothWorlds.P1Ranking",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.295,
+      "log_sha256": "43d3afe91eec7643b605135935228d408d640f1c9f36a48bee12b5841e9f7aa3"
+    },
+    {
+      "module": "BestOfBothWorlds.P1Schedule",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 5.687,
+      "log_sha256": "53b7d862b325466d73f9dc8600437fa39e427959650d8ecb275104fcd67a16b5"
+    },
+    {
+      "module": "BestOfBothWorlds.RealizedGaps",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 5.922,
+      "log_sha256": "90b155972c0443fa2cc1ebee371d2d4b68d4f58cd57d66c4df63745d90c5bedd"
+    },
+    {
+      "module": "BestOfBothWorlds.SeededLearnerFreshness",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.222,
+      "log_sha256": "8cfa075daffc18848410554dfc57a1cb250e4af3e6d2eabb415bbcf7882447e4"
+    },
+    {
+      "module": "BestOfBothWorlds.SeededLearnerRestriction",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 5.818,
+      "log_sha256": "9295d4a86ee354d1a3c6e3b422c00458d5bc7a875a576641a215028df6e485c6"
+    },
+    {
+      "module": "BestOfBothWorlds.StochasticImportanceWeighting",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.727,
+      "log_sha256": "69b99b6f4f26f0512b6eb64b426dc6a820ac8319ff64f50f3005765d6fce1db9"
+    },
+    {
+      "module": "BestOfBothWorlds.ConditionalImportanceWeighting",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.78,
+      "log_sha256": "7b8534165c805b2581722b3a40aa844d8c15e85f969a3d5a540f4ca56c6eaa13"
+    },
+    {
+      "module": "BestOfBothWorlds.Freedman",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.672,
+      "log_sha256": "ac530b7ddae090c859eec29406d569573d168949a999294f73cd2db123e2162a"
+    },
+    {
+      "module": "BestOfBothWorlds.FullTableConcentration",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.932,
+      "log_sha256": "29c2f406d922b5e0dbfe2726b4eea6c6a5ce850e103abf300a03b0de58a29d36"
+    },
+    {
+      "module": "BestOfBothWorlds.LowerBoundStochasticGaps",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.629,
+      "log_sha256": "a6ae4c34d2ba613eba45537cd4a93fd01d0214b3fdae47f48fb3c99948b3be77"
+    },
+    {
+      "module": "BestOfBothWorlds.P1Complexity",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 5.921,
+      "log_sha256": "b52ff22691dc38940f878c9aca8e1b4aeaadba354c30f8d975031da437bf5e28"
+    },
+    {
+      "module": "BestOfBothWorlds.P1StochasticModel",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.492,
+      "log_sha256": "c176881ce532d6f085dca27320427d6efaf7055eebf463fe1c8cac8f32f190dc"
+    },
+    {
+      "module": "BestOfBothWorlds.SeededLearnerCounts",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.222,
+      "log_sha256": "df6411c470510a5ed9d5eece91551193bce58a733441bb333b5fffc4ffd48d0c"
+    },
+    {
+      "module": "BestOfBothWorlds.SeededRealTranscript",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.425,
+      "log_sha256": "0352d115ea365ed0396ff019ffc4a037b005424e87d8750b5a5bb6a8cd7e6385"
+    },
+    {
+      "module": "BestOfBothWorlds.AdaptiveBanditProcess",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.78,
+      "log_sha256": "c6c7027b8a691f6943dc8d0cc518bc3110201559dfec641494a0dd471db4420f"
+    },
+    {
+      "module": "BestOfBothWorlds.ConditionalActionSampling",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.636,
+      "log_sha256": "ffafa7b2ba910fa8dbe88ef06de33d6dd13e05fc5be564d3086d531d58462957"
+    },
+    {
+      "module": "BestOfBothWorlds.LowerBoundEnvironments",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.779,
+      "log_sha256": "bf4f239e2ad483899b97a4fd3aaf137b1502635751590ea900765032bd4b1ebb"
+    },
+    {
+      "module": "BestOfBothWorlds.LowerBoundGapClasses",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 5.72,
+      "log_sha256": "4868839bffdf3a1d62f9dfbdbac6521c20eebe5e85d6fb3f13b5f7adacb87c7a"
+    },
+    {
+      "module": "BestOfBothWorlds.LowerBoundTesting",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.593,
+      "log_sha256": "c6a1581cad87d341fb313cb02d0ee41cdb264ececc75d0c482edf144c1ca825e"
+    },
+    {
+      "module": "BestOfBothWorlds.P1IdealComplexity",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 5.889,
+      "log_sha256": "040de889b8e0f3c2160384b64d6bb996894d536acbd55083be0ff91d7deeed60"
+    },
+    {
+      "module": "BestOfBothWorlds.P1ScheduleIdentities",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 5.82,
+      "log_sha256": "4442610d90faee2649c410869848d25dd1eb0ea082982c58273340b589703df2"
+    },
+    {
+      "module": "BestOfBothWorlds.SeededLearnerPrefix",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.261,
+      "log_sha256": "2ba32552b7308c8f70178834db44a96f22d779d9f85e1cfb270c1ec066304dbf"
+    },
+    {
+      "module": "BestOfBothWorlds.SeededLikelihood",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.576,
+      "log_sha256": "4251e6c442db98314c5e341763af06e10ceb2b2873abb4b701bfaefe7e03e83a"
+    },
+    {
+      "module": "BestOfBothWorlds.AdaptiveBanditMoments",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.666,
+      "log_sha256": "7867b0c6ae6b0c7f2634bf670cd1f7987664c7f2fed56523265482f1b36b9a3b"
+    },
+    {
+      "module": "BestOfBothWorlds.SeededChangeOfMeasure",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.578,
+      "log_sha256": "670c9527e4e094acb92a8beed4ec87a4d9a1d66ea90c2aa1b4ce70c799032aae"
+    },
+    {
+      "module": "BestOfBothWorlds.AdversarialLowerBound",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 7.096,
+      "log_sha256": "8a67982264f600f8bf9fa5ec230376be8fb905420c9476f1224cb1a45fedd000"
+    },
+    {
+      "module": "BestOfBothWorlds.BOBLowerBound",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 7.101,
+      "log_sha256": "2c643e448eda28444d534880d890d7909a7487f7ffcdb4f3c993ee7c9aa4be03"
+    },
+    {
+      "module": "BestOfBothWorlds.BanditMartingales",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.733,
+      "log_sha256": "b4512b5d4017866d0b21194cb47fdd5ea60da026d001182fd253e99f7c513d8b"
+    },
+    {
+      "module": "BestOfBothWorlds.SeededInformativeLikelihood",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.581,
+      "log_sha256": "1639ee7812a07fec4913840714acfdab902832361bc146cfeb8b3620929a04f1"
+    },
+    {
+      "module": "BestOfBothWorlds.SeededLearnerExamples",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.577,
+      "log_sha256": "f2cd54faff398c678246a73fd26965cfb1fe498929f699bf906450f31bf1880a"
+    },
+    {
+      "module": "BestOfBothWorlds.BanditSpecializations",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.427,
+      "log_sha256": "909447246c75570831807f32a0fb1f9b05b2ae86463547c5a81eb29d70be747c"
+    },
+    {
+      "module": "BestOfBothWorlds.LowerBoundCertificates",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.577,
+      "log_sha256": "991fb99cd781c9a5b53b7654d79a89c64bdb98ef6ef5478b7a74fa4a3e20c249"
+    },
+    {
+      "module": "BestOfBothWorlds.MathlibInterop",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.732,
+      "log_sha256": "57d732a7d31f1a259a4226bbeb837c73e182cd6abcf8192571bfbac427cec887"
+    },
+    {
+      "module": "BestOfBothWorlds.ArchitectureExamples",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.871,
+      "log_sha256": "5c0570c7daf01f5e259f21e22cb9c3cf736fe641f58a4347dc24231e57aaedbd"
+    },
+    {
+      "module": "BestOfBothWorlds.BanditConcentration",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.672,
+      "log_sha256": "3a8c147d78069988c32b58cd2a7fad2c9975faeb15bb4daf77b8b22204aa82a6"
+    },
+    {
+      "module": "BestOfBothWorlds.P1Algorithm",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.469,
+      "log_sha256": "f601745db9545c890b3a3751e074798bc00db3a20524f51a9aa4cabf8c3e8290"
+    },
+    {
+      "module": "BestOfBothWorlds.UniformSampling",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.576,
+      "log_sha256": "5dc5154628e73ee8c0cf5f1c8a15b167a7f0b986e48aa030949c06d05d565ed2"
+    },
+    {
+      "module": "BestOfBothWorlds.P1AdversarialBound",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.529,
+      "log_sha256": "ad8053ff348194e21f0ba63b53599e29bf858527b006a36f4e3fed3f37f701f8"
+    },
+    {
+      "module": "BestOfBothWorlds.P1StochasticEvents",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.58,
+      "log_sha256": "17415f24c60324f44eaf9454e0cc08d21e3be5812cab3dfcb96b0810dfc0bedb"
+    },
+    {
+      "module": "BestOfBothWorlds.UniformAdversarialBound",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.53,
+      "log_sha256": "14adef657302930a9a6511e78116227cf6dd45245811ce04cc943327aef2cb29"
+    },
+    {
+      "module": "BestOfBothWorlds.P1StochasticBound",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.694,
+      "log_sha256": "933e2596c8d371f0dda9373697e989cbbfebf5dc379e8eb1c00f03c0d87d6512"
+    },
+    {
+      "module": "BestOfBothWorlds.UniformExamples",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.629,
+      "log_sha256": "f77cec36cd6f636a52602c63b771a74181ed51cd8507e3b665cbc6cc22f78b53"
+    },
+    {
+      "module": "BestOfBothWorlds.P1Corollary",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.666,
+      "log_sha256": "e5aef1119fe4b06e3fea43a3e3cb4a7ce9f0592ffd4a1cf9c2a3f425dfcb6831"
+    },
+    {
+      "module": "BestOfBothWorlds.P1Examples",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.627,
+      "log_sha256": "0a92175e4639ec57e83d889e76cf4bf2bd1987fdb9d1478d72a54cd8d4c9cfd5"
+    },
+    {
+      "module": "BestOfBothWorlds.P1UpperBounds",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.428,
+      "log_sha256": "c11f57434a3976eeb5cb080d6c8534be72187e59ce9e5f43d0dbef0a1a23ca15"
+    }
+  ],
+  "guarded_commands": 176,
+  "all_command_exit_codes_zero": true,
+  "command_seconds": 921.915,
+  "peak_sampled_group_rss_bytes": 3955949568,
+  "limits": {
+    "concurrent_owned_groups": 1,
+    "LEAN_NUM_THREADS": "1",
+    "aggregate_rss_watchdog_bytes": 6442450944,
+    "pre_command_MemAvailable_bytes": 7516192768,
+    "runtime_MemAvailable_floor_bytes": 1073741824,
+    "cpu_seconds_per_process": 600,
+    "wall_seconds_per_command": 900,
+    "core_dump_bytes": 0,
+    "RLIMIT_AS": "unchanged; must be unlimited"
+  },
+  "raw_lean_summary_sha256": "d03f405206cbd628c3d506925300acd2619a818fafce7fd14b42b4180e454e8c",
+  "paper": {
+    "pages": 43,
+    "build_a": {
+      "status": "passed",
+      "compiler": "Tectonic 0.17.0",
+      "bundle": "https://relay.fullyjustified.net/default_bundle_v33.tar",
+      "source_date_epoch": 1792195200,
+      "bytes": 958198,
+      "sha256": "7c6ee873dfa54b67f4b702e2568de2dc4b1f0169d11824a5ce80f12f644c4e2b",
+      "matches_included_pdf": null,
+      "overfull_warnings": [
+        "Overfull \\hbox (1.22124pt too wide) in paragraph at lines 15--31",
+        "Overfull \\vbox (10.71179pt too high) has occurred while \\output is active []"
+      ]
+    },
+    "build_b": {
+      "status": "passed",
+      "compiler": "Tectonic 0.17.0",
+      "bundle": "https://relay.fullyjustified.net/default_bundle_v33.tar",
+      "source_date_epoch": 1792195200,
+      "bytes": 958198,
+      "sha256": "7c6ee873dfa54b67f4b702e2568de2dc4b1f0169d11824a5ce80f12f644c4e2b",
+      "matches_included_pdf": true,
+      "overfull_warnings": [
+        "Overfull \\hbox (1.22124pt too wide) in paragraph at lines 15--31",
+        "Overfull \\vbox (10.71179pt too high) has occurred while \\output is active []"
+      ]
+    },
+    "byte_identical_rebuild": true
+  },
+  "manuscript_fidelity_sha256": "a3aae4498cf9bf7786b5312001f80c01fe57f8516e2eba3b11a4ab99bd76acfa",
+  "historical_step23_evidence_preserved": [
+    "verification/RELEASE_VERIFICATION.json",
+    "verification/release-kernel.json",
+    "verification/release-endpoint-axioms.json",
+    "verification/release-source-preservation.json",
+    "verification/package-manifest.json",
+    "docs/RELEASE_VERIFICATION.md"
+  ],
+  "commits": 0,
+  "pushes": 0,
+  "publication": false
+}

@@ -1,0 +1,3 @@
+# Keep the certified file bytes unchanged across Git checkouts.
+* -text -filter
+*.pdf binary

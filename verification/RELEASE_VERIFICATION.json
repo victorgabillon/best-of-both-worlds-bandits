@@ -1,0 +1,1309 @@
+{
+  "release_candidate": "0.1.0-rc.1",
+  "technically_reproducible": "PASS",
+  "licensing_and_attribution": "PENDING",
+  "ready_for_publication": "NO",
+  "versions": {
+    "lean": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+    "lake": "Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)"
+  },
+  "toolchain_executable_sha256": {
+    "bin/lean": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+    "bin/lake": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1",
+    "bin/leanchecker": "12c38901cdbfab178f1bf6145dd30012e9a3b2c11ca695292a5884fa3cbaddb6"
+  },
+  "phase": "all",
+  "status": "passed",
+  "started_utc": "2026-10-17T12:16:03.209353+00:00",
+  "finished_utc": "2026-10-17T12:34:47.644871+00:00",
+  "public_entrypoint": "./scripts/verify.sh",
+  "independent_source_copy": {
+    "directory_name": "renamed certificate with spaces",
+    "invoked_from_parent": true,
+    "initial_project_build_artifacts": "absent",
+    "dependency_checkouts": "freshly fetched from official Git URLs at locked revisions",
+    "cache": "3262 official Mathlib closure cache files freshly downloaded; cache executable bootstrapped in new checkout",
+    "development_proof_or_dependency_cache_reused": false,
+    "development_symlinks": false,
+    "compiler": "Existing official pinned compiler selected on PATH; installation not duplicated",
+    "os_scope": "Linux x86_64 host source-only test, not a new Ubuntu installation or container",
+    "docker": "Not used: local daemon socket inaccessible. Additional Bubblewrap namespace repetition is documented separately.",
+    "upstream_internal_doc_symlink": "Batteries docs/README.md points within its own freshly retrieved checkout; no project/dependency parent links"
+  },
+  "explicit_leaf_builds": 57,
+  "import_only_root_build": "passed",
+  "builds": [
+    {
+      "target": "BestOfBothWorlds.BernsteinEnvelope",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 8.509,
+      "log_sha256": "55407ed4f07f53d1e0e5839a47d0c1cc0b9cdab6f7eb2244681466bdf48196d5"
+    },
+    {
+      "target": "BestOfBothWorlds.ConcentrationConstants",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 8.075,
+      "log_sha256": "3cb1fae490ddd16fd2bd781ee740ec9531d7e3e514cc7c4975edaf04bfc7e4fd"
+    },
+    {
+      "target": "BestOfBothWorlds.FiniteInformation",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 11.275,
+      "log_sha256": "a23e998d3fa34e3e78301ea44fb555b1f9c127e140c1fd9673f055fb836efb68"
+    },
+    {
+      "target": "BestOfBothWorlds.FiniteMaximizer",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.427,
+      "log_sha256": "0ca2445ac6611f22c679793450ae50f1d8db151dfb39b8895f189def5dc5e652"
+    },
+    {
+      "target": "BestOfBothWorlds.GapComplexity",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 9.008,
+      "log_sha256": "efbde5e469bb443cbe665567233d26edab2a1abbd66e67ffca5366899b905ed6"
+    },
+    {
+      "target": "BestOfBothWorlds.ImportanceWeighting",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 9.247,
+      "log_sha256": "f02ff0769a92f98b6097259f1457c2b312cab146a393ea9d4936b0fef608f499"
+    },
+    {
+      "target": "BestOfBothWorlds.LowerBoundConsequences",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 9.3,
+      "log_sha256": "280eabd36e1e72ad3f221a9ddc3f0b5238f99fad4d9d899c71a0e3efae738c38"
+    },
+    {
+      "target": "BestOfBothWorlds.LowerBoundExtraction",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 8.796,
+      "log_sha256": "d393e6345fb83a35701c58cfd84019e2b75eb6b3c6677aea2dd0851ec4330e50"
+    },
+    {
+      "target": "BestOfBothWorlds.SeededLearner",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 7.134,
+      "log_sha256": "df922bf5382e7e3cccfd8660f00417bfc6c9fb56a3ee136733d76a8ed0a9c8c6"
+    },
+    {
+      "target": "BestOfBothWorlds.BernoulliInformation",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 10.407,
+      "log_sha256": "e18f228661454749facd71ef965d0a3264cb9ad61871dbd9fbe3d723a425ea38"
+    },
+    {
+      "target": "BestOfBothWorlds.ConditionalBernstein",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 10.256,
+      "log_sha256": "fbf9e838d633912d1ab28ac94f4ba6d1e6d5598fd5bb660ce5425b2e8221158c"
+    },
+    {
+      "target": "BestOfBothWorlds.LowerBoundSelection",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 9.769,
+      "log_sha256": "4d0948e5ca8ee9724f2a88a24539d1926527309718e2923759a2a8d0b6e4798f"
+    },
+    {
+      "target": "BestOfBothWorlds.P1Ranking",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.729,
+      "log_sha256": "57c0fcc54462c434f4dcd7b65ad7f3adc1f3858873a2efe1cdfb5a32a69fd1a7"
+    },
+    {
+      "target": "BestOfBothWorlds.P1Schedule",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.527,
+      "log_sha256": "f70141c45b081090556942eea91e53d6440b0dee2ca89f9d27cc5c9773be0aff"
+    },
+    {
+      "target": "BestOfBothWorlds.RealizedGaps",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.726,
+      "log_sha256": "fd81969d11aad5b29349fdc846d0c8df9309c8292284079a32a9be1dfcd7987a"
+    },
+    {
+      "target": "BestOfBothWorlds.SeededLearnerFreshness",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 7.03,
+      "log_sha256": "69efd8b2f28a8f418623bb2b454cd189789d3cfcc1eb1df07da2099ed5b36107"
+    },
+    {
+      "target": "BestOfBothWorlds.SeededLearnerRestriction",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.492,
+      "log_sha256": "f1695cd8a2b6853f4c0240829a95850c74901ed497d2bf9cec55ec0e5cf796fd"
+    },
+    {
+      "target": "BestOfBothWorlds.StochasticImportanceWeighting",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 11.371,
+      "log_sha256": "3c0880f9d0530c506997fd08c1733510cbfa96274c2d654c97ede66fed7f41b7"
+    },
+    {
+      "target": "BestOfBothWorlds.ConditionalImportanceWeighting",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 12.483,
+      "log_sha256": "b14a704f4e01f258b3ca16e2b7ec08417a2acba805e3234708d4cf90fd0bf094"
+    },
+    {
+      "target": "BestOfBothWorlds.Freedman",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 11.577,
+      "log_sha256": "207deefe46a96d0b89c2f9c2c904b5e9cd0adab9686e0f4876a2d9d5257e3e62"
+    },
+    {
+      "target": "BestOfBothWorlds.FullTableConcentration",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 11.664,
+      "log_sha256": "3cb3c140e641176b4288c2835aecbbc42cd43bce6c918622bbb43f3640238df4"
+    },
+    {
+      "target": "BestOfBothWorlds.LowerBoundStochasticGaps",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 8.061,
+      "log_sha256": "dc0edf8bb7801b2b50a561f11ce7309e3abffd6225bdd9ed8f351679e31ef9cb"
+    },
+    {
+      "target": "BestOfBothWorlds.P1Complexity",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 7.478,
+      "log_sha256": "1799603750b18095a617fb0431845f53b8a4b87e7c319e1eb6d6a5d6bfff354a"
+    },
+    {
+      "target": "BestOfBothWorlds.P1StochasticModel",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 8.923,
+      "log_sha256": "7322da2f2b88e61dbd35833b5bbaf39a600a9750ea1d89edcad4dc34ee327ee2"
+    },
+    {
+      "target": "BestOfBothWorlds.SeededLearnerCounts",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 8.11,
+      "log_sha256": "26a6af84389bb2cc0bf064fb2a7cf718667a3e10ba68554a45bc559ac77db080"
+    },
+    {
+      "target": "BestOfBothWorlds.SeededRealTranscript",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 8.546,
+      "log_sha256": "b13e92b165d807344ff0fe9d9750d94cd2edddd8bcee5ff5360e09d54a068654"
+    },
+    {
+      "target": "BestOfBothWorlds.AdaptiveBanditProcess",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 8.946,
+      "log_sha256": "4a1204bb8288e7435df6dea66d26daa786e65f30a5d1489a12ad5797b497fddd"
+    },
+    {
+      "target": "BestOfBothWorlds.ConditionalActionSampling",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 8.641,
+      "log_sha256": "9fb6e5ecfaf68453d3c5f869d8c80d2cf00526af74b5ce2ae54d556bc5655af8"
+    },
+    {
+      "target": "BestOfBothWorlds.LowerBoundEnvironments",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 10.671,
+      "log_sha256": "183ee6ff23222a1b2afa35b6433b0ffc979ff8054033a75ff66975222a396912"
+    },
+    {
+      "target": "BestOfBothWorlds.LowerBoundGapClasses",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 7.842,
+      "log_sha256": "1d13a7db619e3af69059ea64a5fcdc85445adb8190ceffe772de0cf35b3dd2ef"
+    },
+    {
+      "target": "BestOfBothWorlds.LowerBoundTesting",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 8.791,
+      "log_sha256": "5a554f99eebd6557ea0b20d1d8dc61478a25dbbbf76ceaac442b08a76b3ec866"
+    },
+    {
+      "target": "BestOfBothWorlds.P1IdealComplexity",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.665,
+      "log_sha256": "a097ca4de54acb7c383e0e678f5a11249e96e8ec9278a533b84ce3a049f5c182"
+    },
+    {
+      "target": "BestOfBothWorlds.P1ScheduleIdentities",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.021,
+      "log_sha256": "f3d6483fb80aabf9522fb0a0d0cb46ee608fba9ea8551bacab6c3be5cbdb7d7d"
+    },
+    {
+      "target": "BestOfBothWorlds.SeededLearnerPrefix",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 7.669,
+      "log_sha256": "46ae229fd6257a2cfb0d8328ff1a454affa980442dcb2306d81f1412b08d11fb"
+    },
+    {
+      "target": "BestOfBothWorlds.SeededLikelihood",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 9.153,
+      "log_sha256": "d458a75893e3b6209516e4141172f7007bd905c3c653461e99645c0a68d94244"
+    },
+    {
+      "target": "BestOfBothWorlds.AdaptiveBanditMoments",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 9.898,
+      "log_sha256": "f9e7910a5fdd4292285727d0fe482c5be1098c639ab06ca76ccca193bbcae3fb"
+    },
+    {
+      "target": "BestOfBothWorlds.SeededChangeOfMeasure",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 9.348,
+      "log_sha256": "99fec374e047d8b6237ece9e7c2a1e69ca2f469dd117061d435de8d0981825e2"
+    },
+    {
+      "target": "BestOfBothWorlds.AdversarialLowerBound",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 16.925,
+      "log_sha256": "532b58dd5777a0224f3f475b733038eb476784f566af05a958521db9eddaca65"
+    },
+    {
+      "target": "BestOfBothWorlds.BOBLowerBound",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 15.131,
+      "log_sha256": "ddcf0098e5b4c27b045c9e96da81fc09150ca857f14beacb0cf848d226226b4c"
+    },
+    {
+      "target": "BestOfBothWorlds.BanditMartingales",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 9.657,
+      "log_sha256": "9418fd09e2d0adad57037c082799757c9c9b719600e4c2861cc3b713bb7213dc"
+    },
+    {
+      "target": "BestOfBothWorlds.SeededInformativeLikelihood",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 9.152,
+      "log_sha256": "35c77da15a1b38386918709f4638ebc97cac272968c975788334b23bf1102ac1"
+    },
+    {
+      "target": "BestOfBothWorlds.SeededLearnerExamples",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 9.603,
+      "log_sha256": "5098ba43145c5d0c3e192c4a4fd0fb25387baf613349b42486f82a7f8adefe7a"
+    },
+    {
+      "target": "BestOfBothWorlds.BanditSpecializations",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 9.0,
+      "log_sha256": "9638bcef746423a1a49e9781a3431e5d7fb38d2c228043ca766c9ab5ca63b1d5"
+    },
+    {
+      "target": "BestOfBothWorlds.LowerBoundCertificates",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 8.744,
+      "log_sha256": "a72b6691dd1dd7da7e36f31b009813de862ccb4fab3c82183d2f2b29c3d5a172"
+    },
+    {
+      "target": "BestOfBothWorlds.MathlibInterop",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 8.749,
+      "log_sha256": "db7e7dbe101632ab05d0f76028339507bebb36a039d0a18003634bc9f618258e"
+    },
+    {
+      "target": "BestOfBothWorlds.ArchitectureExamples",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 9.607,
+      "log_sha256": "63c0e9a75a09533b21b114e3ef841286b8163dce055e1ba019e49bfacfc27bb0"
+    },
+    {
+      "target": "BestOfBothWorlds.BanditConcentration",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 9.554,
+      "log_sha256": "531493493660ad4543d6bc48f156b3405bd272b923d75da9d82be98b18dd797c"
+    },
+    {
+      "target": "BestOfBothWorlds.P1Algorithm",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 9.05,
+      "log_sha256": "60e3981f9535d9eaa868cae83eb5db39e7f192df4f66f742eb0da49ab5749541"
+    },
+    {
+      "target": "BestOfBothWorlds.UniformSampling",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 8.722,
+      "log_sha256": "6d7f0a7510b02a9325547c057cb6866265bae7fc2dc9fe5f45819b848b0f22da"
+    },
+    {
+      "target": "BestOfBothWorlds.P1AdversarialBound",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 9.151,
+      "log_sha256": "d12616854e9bc78d47a6a2d3785de6b27c7ac19e2ab621b6be8c5f703b91a11e"
+    },
+    {
+      "target": "BestOfBothWorlds.P1StochasticEvents",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 8.744,
+      "log_sha256": "da7a3d5a706cd2ff4d61a621b17aebfe77c22f48018f6a15ed27d2e9656c11af"
+    },
+    {
+      "target": "BestOfBothWorlds.UniformAdversarialBound",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 9.153,
+      "log_sha256": "1ead008e67a8c6eed7fffbf62b010b8e805c45d2c753b423d6e013d70c5a2cd8"
+    },
+    {
+      "target": "BestOfBothWorlds.P1StochasticBound",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 10.536,
+      "log_sha256": "9595898b70ba0daec016cf6ff16eb0d0fe750c26263dbc66dcdc91cbff0df268"
+    },
+    {
+      "target": "BestOfBothWorlds.UniformExamples",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 9.126,
+      "log_sha256": "fb343e80b3ae2aa2cdf1848f8090a2354bd8e51469465f3fb971f4d27a3f228b"
+    },
+    {
+      "target": "BestOfBothWorlds.P1Corollary",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 21.377,
+      "log_sha256": "f358ee905caac826fead5ce64573d17ec7543cc35c69f90eaeff32a49518d6d1"
+    },
+    {
+      "target": "BestOfBothWorlds.P1Examples",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 9.812,
+      "log_sha256": "6ef9a7985ae0cc479a094b9a11ef86241437aeafa67b8f61e7b6ffbd8ad4fe2c"
+    },
+    {
+      "target": "BestOfBothWorlds.P1UpperBounds",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 8.241,
+      "log_sha256": "50007a17698070abf8f2fce0b40fb2e37898583e933ee11b3cbd6034c34e37bb"
+    },
+    {
+      "target": "BestOfBothWorlds",
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 8.341,
+      "log_sha256": "20213110ffa4d6627759c0362ae7eac01ec155e62ab44b343eeecd54b2327d33"
+    }
+  ],
+  "axiom_audit": {
+    "status": "passed",
+    "declarations": 1742,
+    "theorems": 1425,
+    "principal_endpoints": 19,
+    "all_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "unsafe_constants": [],
+    "partial_generated_nonproof_helpers": [
+      "BestOfBothWorlds.AdaptiveBanditProcess.ObservedHistory._unsafe_rec",
+      "BestOfBothWorlds.AdaptiveBanditProcess.Trajectory._unsafe_rec",
+      "BestOfBothWorlds.AdaptiveBanditProcess.observe._unsafe_rec",
+      "BestOfBothWorlds.AdaptiveBanditProcess.observedHistoryMeasurableSpace._unsafe_rec",
+      "BestOfBothWorlds.AdaptiveBanditProcess.trajectoryLaw_isProbabilityMeasure._unsafe_rec",
+      "BestOfBothWorlds.AdaptiveBanditProcess.trajectoryMeasurableSpace._unsafe_rec",
+      "BestOfBothWorlds.SeededLearner.Learner.play._unsafe_rec"
+    ],
+    "safe_constants_checked_for_unsafe_dependencies": 1735,
+    "bad_unsafe_or_partial_dependencies": 0
+  },
+  "kernel_replay": {
+    "status": "passed",
+    "exact_leaf_modules": 57,
+    "proof_bearing_parts": 171,
+    "all_input_hashes_unchanged": true,
+    "imported_libraries": "trusted",
+    "partial_runtime_helpers": "excluded by Lean Replay; safety-checked separately"
+  },
+  "source_preservation": {
+    "mathematical_modules_identical_to_step22": 57,
+    "pinned_source_and_config_files": 62,
+    "all_tested_runtime_inputs_identical_to_candidate": true,
+    "protected_existing_files_unchanged": 3625
+  },
+  "verification_input_sha256": {
+    "scripts/verify.sh": "424c13cbda8551d1b45d8700583704153566e6f6154f83656cc1ea7567b0dd3f",
+    "scripts/verify.py": "8a2800ca725e192f277abadedd78b8522ed59e82661f70aefeda76ca601d35a6",
+    "scripts/resource_guard.py": "208e40f7c45b89dff7f879b88f1c0c50db379fe02dbdf02a5fe0a3bbfda9df71",
+    "verification/source-manifest.json": "22774e5e92183ffbbe2e5ad7a5292bbc73fff06aad2a97474b87292751eec452",
+    "verification/expected-declarations.json": "c9ce456ada59b16a0da02a0f28373e3a7e72af84e7925b384454578e89b937f3",
+    "verification/endpoints.json": "05e2e202e727636fef2b89175dd2906e15554a53bd542887eb09139c10f61f30",
+    "verification/mathlib-imports.txt": "ebb40e19f3ff655dd4bfe24c664476530ba2fa46207bfb8e146945573712bb36"
+  },
+  "dependencies": [
+    {
+      "name": "Cli",
+      "revision": "c24fe6078c630e89b489bffe59b3e20ac30d12c8",
+      "url": "https://github.com/leanprover/lean4-cli",
+      "tracked_sources_clean": true,
+      "untracked_source_overrides": []
+    },
+    {
+      "name": "LeanSearchClient",
+      "revision": "d6b4c7be5be75ec4917c873ac50c756dc1436372",
+      "url": "https://github.com/leanprover-community/LeanSearchClient",
+      "tracked_sources_clean": true,
+      "untracked_source_overrides": []
+    },
+    {
+      "name": "Qq",
+      "revision": "dce0ad79c486cb1fb504af04f953c3466b0c6db8",
+      "url": "https://github.com/leanprover-community/quote4",
+      "tracked_sources_clean": true,
+      "untracked_source_overrides": []
+    },
+    {
+      "name": "aesop",
+      "revision": "4a174c490d8707121c4a9290800489f105d85e07",
+      "url": "https://github.com/leanprover-community/aesop",
+      "tracked_sources_clean": true,
+      "untracked_source_overrides": []
+    },
+    {
+      "name": "batteries",
+      "revision": "66e469188fe07963e5cf666c7d4433f45b8131c5",
+      "url": "https://github.com/leanprover-community/batteries",
+      "tracked_sources_clean": true,
+      "untracked_source_overrides": []
+    },
+    {
+      "name": "importGraph",
+      "revision": "a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93",
+      "url": "https://github.com/leanprover-community/import-graph",
+      "tracked_sources_clean": true,
+      "untracked_source_overrides": []
+    },
+    {
+      "name": "mathlib",
+      "revision": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "url": "https://github.com/leanprover-community/mathlib4.git",
+      "tracked_sources_clean": true,
+      "untracked_source_overrides": []
+    },
+    {
+      "name": "plausible",
+      "revision": "dfa4f38190d07c37e315953e08b90fe2d95b3c24",
+      "url": "https://github.com/leanprover-community/plausible",
+      "tracked_sources_clean": true,
+      "untracked_source_overrides": []
+    },
+    {
+      "name": "proofwidgets",
+      "revision": "df72b022e558978a1c50264cfc4d7fec86fa8e04",
+      "url": "https://github.com/leanprover-community/ProofWidgets4",
+      "tracked_sources_clean": true,
+      "untracked_source_overrides": []
+    }
+  ],
+  "limits": {
+    "concurrent_owned_groups": 1,
+    "LEAN_NUM_THREADS": "1",
+    "aggregate_rss_watchdog_bytes": 6442450944,
+    "pre_command_MemAvailable_bytes": 7516192768,
+    "runtime_MemAvailable_floor_bytes": 1073741824,
+    "cpu_seconds_per_process": 600,
+    "wall_seconds_per_command": 900,
+    "core_dump_bytes": 0,
+    "RLIMIT_AS": "unchanged; must be unlimited"
+  },
+  "peak_sampled_group_rss_bytes": 3959336960,
+  "command_elapsed_seconds": 1122.183,
+  "build_command_seconds": 541.94,
+  "kernel_command_seconds": 511.446,
+  "independent_disk_logical_bytes": {
+    "dependency_checkouts_and_build_cache": 3060136834,
+    "downloaded_cache_archives_and_tool": 193655659,
+    "project_build": 157121314
+  },
+  "raw_full_summary_sha256": "0839b2ce26298aa31ea9abcc716503eac54d0ea57e7ae58ff7969d50ce52caae",
+  "raw_run_logs": "Retained separately from the lightweight source package",
+  "retained_output_rechecks": {
+    "raw_declaration_audit_sha256": "ea852fa2045b9615e6a76d550c18a1025ddf0254de0d83fafee20e4bb56ec09d",
+    "raw_endpoint_axioms_sha256": "2a8394a3db7ea10e47d51710cfa8f546f820d3d1c0e0b0485a5928ab4ef67807",
+    "raw_kernel_inputs_sha256": "19a509f75fc2967946ba365cdbace826610153f8d677047c4452b91bd50ee17c",
+    "exact_module_and_endpoint_sets_checked": true,
+    "current_compiled_part_hashes_rechecked": 171
+  },
+  "fresh_dependency_bootstrap_evidence": {
+    "source_only_initial_state_sha256": "f7f7fea970243404632f9102cec6e7345aa22fcd16173478c14a1e387c3553ac",
+    "pinned_git_fetches": 9,
+    "dependency_bootstrap_status_sha256": "5035554645fafd03e810647736d2ddd71abf63c0ad57d327b2dc705c197470d5",
+    "dependency_bootstrap_log_sha256": "5e7a5496eb80a4c1b8be2a2953a5aa3530de8348d14dd7351a5453a86525e457",
+    "bootstrap_elapsed_seconds": 38.094,
+    "prepare_only_summary_sha256": "0cc83a44b8ab77dc2b0bbf7436d47dcd234840a324d2129f5bd106d24aae204f",
+    "official_cache_download_log_sha256": "1a63a99027210f180b0d87f428088f12aeffc939a4d7e0583c2514bdd437cca6",
+    "official_cache_files_freshly_downloaded": 3262,
+    "official_cache_files_decompressed": 3262,
+    "note": "Dependency/bootstrap and first cache download precede the final full public run; that run revalidates pins and reuses this explicitly prepared official cache."
+  },
+  "negative_controls": {
+    "status": "passed",
+    "scope": "production parser/failure-gate controls on recorded Step22 logs and source-only fixtures",
+    "Lean_or_Lake_invoked": false,
+    "mathematical_sources_modified": false,
+    "release_candidate_sources_modified": false,
+    "cases": [
+      {
+        "case": "baseline-positive-control",
+        "expected": "accept",
+        "observed": "accept",
+        "declarations": 1742,
+        "safe_constants": 1735,
+        "generated_partial_nonproof_helpers": 7,
+        "production_command_callbacks": [
+          "endpoints",
+          "declarations",
+          "safety",
+          "historical-auxiliary-axioms"
+        ]
+      },
+      {
+        "case": "unexpected-custom-axiom",
+        "expected": "reject",
+        "observed": "reject",
+        "diagnostic": "Unexpected transitive logical axiom(s): {\"BestOfBothWorlds.H_BOB\": [\"Step23Negative.unprovedMathematics\"]}",
+        "production_command_callbacks": [
+          "endpoints",
+          "declarations",
+          "safety",
+          "historical-auxiliary-axioms"
+        ]
+      },
+      {
+        "case": "sorryAx",
+        "expected": "reject",
+        "observed": "reject",
+        "diagnostic": "Unexpected transitive logical axiom(s): {\"BestOfBothWorlds.H_BOB\": [\"sorryAx\"]}",
+        "production_command_callbacks": [
+          "endpoints",
+          "declarations",
+          "safety",
+          "historical-auxiliary-axioms"
+        ]
+      },
+      {
+        "case": "unsafe-theorem-flag",
+        "expected": "reject",
+        "observed": "reject",
+        "diagnostic": "Compiled declaration metadata changed: BestOfBothWorlds.UniformAdversarialBound.unif_adversarial_error_bound: {\"kind\": \"theorem\", \"unsafe\": true, \"partial\": false, \"axioms\": [\"Classical.choice\", \"Quot.sound\", \"propext\"]}",
+        "production_command_callbacks": [
+          "endpoints",
+          "declarations",
+          "safety",
+          "historical-auxiliary-axioms"
+        ]
+      },
+      {
+        "case": "partial-theorem-flag",
+        "expected": "reject",
+        "observed": "reject",
+        "diagnostic": "Compiled declaration metadata changed: BestOfBothWorlds.UniformAdversarialBound.unif_adversarial_error_bound: {\"kind\": \"theorem\", \"unsafe\": false, \"partial\": true, \"axioms\": [\"Classical.choice\", \"Quot.sound\", \"propext\"]}",
+        "production_command_callbacks": [
+          "endpoints",
+          "declarations",
+          "safety",
+          "historical-auxiliary-axioms"
+        ]
+      },
+      {
+        "case": "unsafe-or-partial-dependency",
+        "expected": "reject",
+        "observed": "reject",
+        "diagnostic": "Safe project constants depend on unsafe/partial constants",
+        "production_command_callbacks": [
+          "endpoints",
+          "declarations",
+          "safety",
+          "historical-auxiliary-axioms"
+        ]
+      },
+      {
+        "case": "missing-private-or-public-declaration",
+        "expected": "reject",
+        "observed": "reject",
+        "diagnostic": "Incomplete compiled declaration inspection",
+        "production_command_callbacks": [
+          "endpoints",
+          "declarations",
+          "safety",
+          "historical-auxiliary-axioms"
+        ]
+      },
+      {
+        "case": "source-only-package-path-and-cwd-with-spaces",
+        "expected": "accept",
+        "observed": "accept",
+        "exit_code": 0,
+        "diagnostic": "",
+        "scope": "production --check; no Lean or Lake"
+      },
+      {
+        "case": "unknown-Lean-source",
+        "expected": "reject",
+        "observed": "reject",
+        "exit_code": 2,
+        "diagnostic": "Verification refused: Lean inventory mismatch; unrecognized=['Unknown.lean']; missing=[]",
+        "scope": "production --check; no Lean or Lake"
+      },
+      {
+        "case": "unknown-source-directory-symlink",
+        "expected": "reject",
+        "observed": "reject",
+        "exit_code": 2,
+        "diagnostic": "Verification refused: Unrecognized source-directory symlink(s): ['unknown-linked-directory']",
+        "scope": "production --check; no Lean or Lake"
+      },
+      {
+        "case": "restored-positive-control",
+        "expected": "accept",
+        "observed": "accept",
+        "exit_code": 0,
+        "diagnostic": "",
+        "scope": "production --check; no Lean or Lake"
+      }
+    ],
+    "limitations": [
+      "Recorded-log mutation tests inspect failure gates, not genuine Lean elaboration of bad proofs.",
+      "Fresh complete verification is reported separately by the real public command."
+    ],
+    "production_verifier_sha256": "8a2800ca725e192f277abadedd78b8522ed59e82661f70aefeda76ca601d35a6",
+    "source_manifest_sha256": "22774e5e92183ffbbe2e5ad7a5292bbc73fff06aad2a97474b87292751eec452",
+    "completed_utc": "2026-10-17T12:19:43.408879+00:00"
+  },
+  "isolated_reproduction": {
+    "status": "passed",
+    "isolation": "Bubblewrap user/PID/network/IPC/UTS/mount namespaces; not a fresh Ubuntu or OCI image",
+    "scope": "Second fresh project build, axiom audit and exact-leaf kernel replay; same host system tools and explicitly mounted official dependencies",
+    "command": [
+      "./scripts/verify.sh",
+      "--skip-prepare"
+    ],
+    "network": "unshared; no dependency download inside isolation",
+    "mounts": [
+      {
+        "source": "host system /usr,/bin,/lib,/lib64",
+        "destination": "same system paths",
+        "access": "read-only"
+      },
+      {
+        "source": "existing official pinned Lean 4.35.0 installation",
+        "destination": "/opt/lean",
+        "access": "read-only"
+      },
+      {
+        "source": "second fresh source-only copy",
+        "destination": "/workspace",
+        "access": "read-write new project outputs only"
+      },
+      {
+        "source": "nine pinned Git checkouts and official Mathlib cache fetched by first independent test",
+        "destination": "/workspace/.lake/packages",
+        "access": "read-only"
+      },
+      {
+        "source": "first independent test's explicit downloaded archive cache",
+        "destination": "/workspace/.cache/mathlib",
+        "access": "read-only"
+      },
+      {
+        "source": "new namespace procfs/devices/tmpfs",
+        "destination": "/proc,/dev,/tmp",
+        "access": "namespace-local"
+      }
+    ],
+    "environment": {
+      "PATH": "/opt/lean/bin:/usr/bin:/bin",
+      "LANG": "C.UTF-8",
+      "LC_ALL": "C.UTF-8",
+      "MATHLIB_CACHE_DIR": "/workspace/.cache/mathlib",
+      "LAKE_CACHE_DIR": "/workspace/.cache/lake",
+      "GIT_CONFIG_NOSYSTEM": "1",
+      "GIT_CONFIG_GLOBAL": "/dev/null",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PYTHONNOUSERSITE": "1"
+    },
+    "preflight": {
+      "status": "passed",
+      "cwd": "/workspace",
+      "visible_root_entries": [
+        "bin",
+        "dev",
+        "lib",
+        "lib64",
+        "opt",
+        "proc",
+        "tmp",
+        "usr",
+        "workspace"
+      ],
+      "project_oleans_before_verification": 0,
+      "host_home_root_mnt_hidden": true,
+      "home_and_Lean_overrides_unset": true,
+      "declared_read_only_mounts": [
+        {
+          "destination": "/usr",
+          "flags": "ro,nosuid,nodev,relatime"
+        },
+        {
+          "destination": "/bin",
+          "flags": "ro,nosuid,nodev,relatime"
+        },
+        {
+          "destination": "/lib",
+          "flags": "ro,nosuid,nodev,relatime"
+        },
+        {
+          "destination": "/lib64",
+          "flags": "ro,nosuid,nodev,relatime"
+        },
+        {
+          "destination": "/opt/lean",
+          "flags": "ro,nosuid,nodev,relatime"
+        },
+        {
+          "destination": "/workspace/.lake/packages",
+          "flags": "ro,nosuid,nodev,relatime"
+        },
+        {
+          "destination": "/workspace/.cache/mathlib",
+          "flags": "ro,nosuid,nodev,relatime"
+        }
+      ]
+    },
+    "project_compiled_artifacts_transferred": 0,
+    "source_files_unchanged": 81,
+    "verification_input_sha256": {
+      "scripts/verify.sh": "424c13cbda8551d1b45d8700583704153566e6f6154f83656cc1ea7567b0dd3f",
+      "scripts/verify.py": "8a2800ca725e192f277abadedd78b8522ed59e82661f70aefeda76ca601d35a6",
+      "scripts/resource_guard.py": "208e40f7c45b89dff7f879b88f1c0c50db379fe02dbdf02a5fe0a3bbfda9df71",
+      "verification/source-manifest.json": "22774e5e92183ffbbe2e5ad7a5292bbc73fff06aad2a97474b87292751eec452",
+      "verification/expected-declarations.json": "c9ce456ada59b16a0da02a0f28373e3a7e72af84e7925b384454578e89b937f3",
+      "verification/endpoints.json": "05e2e202e727636fef2b89175dd2906e15554a53bd542887eb09139c10f61f30",
+      "verification/mathlib-imports.txt": "ebb40e19f3ff655dd4bfe24c664476530ba2fa46207bfb8e146945573712bb36"
+    },
+    "versions": {
+      "lean": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+      "lake": "Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)"
+    },
+    "toolchain_executable_sha256": {
+      "bin/lean": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+      "bin/lake": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1",
+      "bin/leanchecker": "12c38901cdbfab178f1bf6145dd30012e9a3b2c11ca695292a5884fa3cbaddb6"
+    },
+    "explicit_leaf_builds": 57,
+    "import_only_root_build": "passed",
+    "builds": [
+      {
+        "target": "BestOfBothWorlds.BernsteinEnvelope",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 9.958,
+        "log_sha256": "4061cbee671230d6d5962d6f591e5220a519d64e326514d531ac1de9fbea77fb"
+      },
+      {
+        "target": "BestOfBothWorlds.ConcentrationConstants",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 7.437,
+        "log_sha256": "97e6aab6999a1bf35f38a186454a2c0d75886966acc34a4dbbc467e2f6fcd1d5"
+      },
+      {
+        "target": "BestOfBothWorlds.FiniteInformation",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 10.169,
+        "log_sha256": "95844ff64e6049aaaa5e7e2dd42b95a017893db47c3bcf46880287917222494a"
+      },
+      {
+        "target": "BestOfBothWorlds.FiniteMaximizer",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 6.261,
+        "log_sha256": "b5e6ee44d39954660546ecc139dc6e63bf721d978ad00f8c476e990c447ee9ea"
+      },
+      {
+        "target": "BestOfBothWorlds.GapComplexity",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 9.714,
+        "log_sha256": "dc52efc5f274c2ab999ba26859018a1d48a84350ff96152164d662521bb3fab5"
+      },
+      {
+        "target": "BestOfBothWorlds.ImportanceWeighting",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 8.695,
+        "log_sha256": "839f4da7d3954dfa2ec341318ce32c9d53b6bc3197b4e7cdd9ab5b88de5a4b76"
+      },
+      {
+        "target": "BestOfBothWorlds.LowerBoundConsequences",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 9.414,
+        "log_sha256": "3c4b38de554fd182e1825595b91ed3c149b2e7f2bb47d4a4f09a8b2ad39cc9fa"
+      },
+      {
+        "target": "BestOfBothWorlds.LowerBoundExtraction",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 7.873,
+        "log_sha256": "fa5896c8a6aa0927797e0231b2650370ba1816273e40881b81145d2cc721cda2"
+      },
+      {
+        "target": "BestOfBothWorlds.SeededLearner",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 6.664,
+        "log_sha256": "4c9eef16509b82652cf618b6df6d15530edf74feb26994804e240549b01ffda0"
+      },
+      {
+        "target": "BestOfBothWorlds.BernoulliInformation",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 8.801,
+        "log_sha256": "2c6d7f34adcb2d31247cf32a8ceeb7b2ed253aaac20b85039429edf828ea384a"
+      },
+      {
+        "target": "BestOfBothWorlds.ConditionalBernstein",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 8.547,
+        "log_sha256": "640cb49cff28247c83ee6834d659b1aa811462ad61d81055499f8c6a12b32b58"
+      },
+      {
+        "target": "BestOfBothWorlds.LowerBoundSelection",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 9.07,
+        "log_sha256": "11a6373fe879f25765bab8f0991f7a1faf1e0a82f5e902b0a421f5faf121f18a"
+      },
+      {
+        "target": "BestOfBothWorlds.P1Ranking",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 6.07,
+        "log_sha256": "479af76f764ca0f36945b3b3fd23e37f201e78b52edd96ce536d4cd55c6ef8ad"
+      },
+      {
+        "target": "BestOfBothWorlds.P1Schedule",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 6.532,
+        "log_sha256": "1ff70634dda0aa129f822520c684b0e0fb9c47ca824d36eccf26c6e1f7dd28aa"
+      },
+      {
+        "target": "BestOfBothWorlds.RealizedGaps",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 6.581,
+        "log_sha256": "db26c11fd9070fb1590df314750b97a35d6d28080d2c319ee7c047a8476ef06f"
+      },
+      {
+        "target": "BestOfBothWorlds.SeededLearnerFreshness",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 7.244,
+        "log_sha256": "d402287a31138eec6e9ffc5c1ab5be33ac3b5e1b91dbad0374defd5f5f7824a9"
+      },
+      {
+        "target": "BestOfBothWorlds.SeededLearnerRestriction",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 6.261,
+        "log_sha256": "5f253c0915e7250cbde457d3245c739c54169ab9423a560034f352225b03caa0"
+      },
+      {
+        "target": "BestOfBothWorlds.StochasticImportanceWeighting",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 9.607,
+        "log_sha256": "6187585f25769d68850bf7433d9088508c1228d2ce0f51b65d1d009720a4a336"
+      },
+      {
+        "target": "BestOfBothWorlds.ConditionalImportanceWeighting",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 10.513,
+        "log_sha256": "d4666c054545433a841601f9d16acdcb0ffe0119ba40935d9bd8e96ff6ec1839"
+      },
+      {
+        "target": "BestOfBothWorlds.Freedman",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 9.863,
+        "log_sha256": "2233fe745ef32b2b51bcadfbe87d081c5f0a91c1351ae01c4e2f10a75580836b"
+      },
+      {
+        "target": "BestOfBothWorlds.FullTableConcentration",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 9.658,
+        "log_sha256": "d53b064185676c73a7a60d1315d314639a320b8da8014978276124e9daf2da25"
+      },
+      {
+        "target": "BestOfBothWorlds.LowerBoundStochasticGaps",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 7.889,
+        "log_sha256": "4fd7a328657cc03101a0d0124eafbdf28246d53ed62389f60101d91249197c66"
+      },
+      {
+        "target": "BestOfBothWorlds.P1Complexity",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 7.407,
+        "log_sha256": "d19841e4076c0fbe3f8121db5bff5cde2968f8aa14bb5d36c16c29445701befe"
+      },
+      {
+        "target": "BestOfBothWorlds.P1StochasticModel",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 8.074,
+        "log_sha256": "7e67ecd4a22b6bdf2b2c1b8c1817d39e771d125bf548095a6f83a2cc2ffc3b5b"
+      },
+      {
+        "target": "BestOfBothWorlds.SeededLearnerCounts",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 7.672,
+        "log_sha256": "a0f2cb4f493b610eca9d25844f56da1b1532da46a5836d46e49dc363779c3088"
+      },
+      {
+        "target": "BestOfBothWorlds.SeededRealTranscript",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 7.878,
+        "log_sha256": "408d8e2a7625551f0e6f11208f9fec7802d880ab8a092a7df96a3876b7b8e97f"
+      },
+      {
+        "target": "BestOfBothWorlds.AdaptiveBanditProcess",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 8.646,
+        "log_sha256": "f0dd50628d8cb904f44a8544e2f5efc286b01792fc329b327f16cb180b932710"
+      },
+      {
+        "target": "BestOfBothWorlds.ConditionalActionSampling",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 8.037,
+        "log_sha256": "d2327baee53f1bfb5a0ca4e14ff469f53331b249f8459dd164580e84a86089f9"
+      },
+      {
+        "target": "BestOfBothWorlds.LowerBoundEnvironments",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 10.174,
+        "log_sha256": "3cddfd0ab07da7e75ae344576f1affcd598541c720891401b4cd16fc49e5c3e8"
+      },
+      {
+        "target": "BestOfBothWorlds.LowerBoundGapClasses",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 7.539,
+        "log_sha256": "aa2d0cad50cf4234ca16a897bf1fa7bf77cfd3bc45fc4a84e41f65470c42996e"
+      },
+      {
+        "target": "BestOfBothWorlds.LowerBoundTesting",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 8.645,
+        "log_sha256": "c3c4a378a61ebf60f1d727a57bfc2fbffd6f0875b8ffb457bb0ab69215567297"
+      },
+      {
+        "target": "BestOfBothWorlds.P1IdealComplexity",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 6.472,
+        "log_sha256": "8bc471484a3526e11ad9291cb10d157308f0e33559563515f628cca6c31790d9"
+      },
+      {
+        "target": "BestOfBothWorlds.P1ScheduleIdentities",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 5.717,
+        "log_sha256": "d818d3210ee2ac8e8904106c19d76d2f0969ef1e3366d36c3429f7341708d763"
+      },
+      {
+        "target": "BestOfBothWorlds.SeededLearnerPrefix",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 7.075,
+        "log_sha256": "189f2abcba15581a822ae4d0c174d57983424e11a210a263fd9e4c9d016c57bd"
+      },
+      {
+        "target": "BestOfBothWorlds.SeededLikelihood",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 8.189,
+        "log_sha256": "a7e96dc7a5d9e728645d60ab973c7dd8b42f21d2ea776b65df137e586f587f0d"
+      },
+      {
+        "target": "BestOfBothWorlds.AdaptiveBanditMoments",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 9.121,
+        "log_sha256": "ec82147ad7eb2c1c2af947d607e68dbd8fdd71f366c3501bf3c0a934826f62fe"
+      },
+      {
+        "target": "BestOfBothWorlds.SeededChangeOfMeasure",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 8.683,
+        "log_sha256": "1070f535c8902ceff28a9643f73b915cbd55ffe7aa21be43e18a4a21d35938ed"
+      },
+      {
+        "target": "BestOfBothWorlds.AdversarialLowerBound",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 16.868,
+        "log_sha256": "cea786101c954a2c7c376402efd46a2d736559afea71d9a9f2eb7886e91cd8f1"
+      },
+      {
+        "target": "BestOfBothWorlds.BOBLowerBound",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 14.518,
+        "log_sha256": "1f0291a546c7b5ae047f9592546c523e335622cc1d76beb1d953502e6eeb2aca"
+      },
+      {
+        "target": "BestOfBothWorlds.BanditMartingales",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 8.796,
+        "log_sha256": "1e3f50246e22983e3b8812ee2019ca39038cd9c9dd576d3e9a850ddb892a0feb"
+      },
+      {
+        "target": "BestOfBothWorlds.SeededInformativeLikelihood",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 8.19,
+        "log_sha256": "7b3c9b5930395ff17ebcd1f300cb791d951ceb219f7ffe9af9768a7beddbfd96"
+      },
+      {
+        "target": "BestOfBothWorlds.SeededLearnerExamples",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 8.793,
+        "log_sha256": "736b0669719fd609a90e99be358f7a69e5113adced929eedb42c038c1771dbbe"
+      },
+      {
+        "target": "BestOfBothWorlds.BanditSpecializations",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 7.874,
+        "log_sha256": "df4389aa812f6a4a760c8ba84b9fb1e7964324edcdaefa8e4cfdeb416a71011c"
+      },
+      {
+        "target": "BestOfBothWorlds.LowerBoundCertificates",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 7.833,
+        "log_sha256": "45063654624c1075a55b1be9f3d390390279da6009c1cfe68fa056662f0ab18f"
+      },
+      {
+        "target": "BestOfBothWorlds.MathlibInterop",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 7.989,
+        "log_sha256": "e45c603adaef109e581f792b0d488ceb7228d0e88aa5ba250a7b4f26d7053907"
+      },
+      {
+        "target": "BestOfBothWorlds.ArchitectureExamples",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 8.392,
+        "log_sha256": "084f0f43138fbf5533c42c2f3b95d2f566b4331a2f2ca39aaa6a3071ad49cbf8"
+      },
+      {
+        "target": "BestOfBothWorlds.BanditConcentration",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 9.05,
+        "log_sha256": "964a87a717c087b046855254ade7256ba92b1afb0e4414a0125ba4b629f0a471"
+      },
+      {
+        "target": "BestOfBothWorlds.P1Algorithm",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 7.888,
+        "log_sha256": "7d591ba74d466858cfe2e01e7f8ce626fe7b6188a6c4cfef1793b0b02ab82560"
+      },
+      {
+        "target": "BestOfBothWorlds.UniformSampling",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 7.872,
+        "log_sha256": "98401623129fdbf2dfe5d459e87532f8bd74556275c2d1a5f8ec49a760e065e6"
+      },
+      {
+        "target": "BestOfBothWorlds.P1AdversarialBound",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 8.28,
+        "log_sha256": "ad4c3da19272ccd2b3557fd4cafcf33dd4f6d508f3c3a6268d4716c1a62873a1"
+      },
+      {
+        "target": "BestOfBothWorlds.P1StochasticEvents",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 8.277,
+        "log_sha256": "016dbff1a44c8b492e29b7f4ab7941a372f62a743cd30ad83f7fd0036b869c77"
+      },
+      {
+        "target": "BestOfBothWorlds.UniformAdversarialBound",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 8.447,
+        "log_sha256": "0bbfa77a626805b9aaa4c209e300f9a35f607256a299a7f1c98e6f53fb553c1f"
+      },
+      {
+        "target": "BestOfBothWorlds.P1StochasticBound",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 10.078,
+        "log_sha256": "eaca2b03a7792deb377e9360a3f9d8e2d1eb40489bfe845dad35bd0e00e3527f"
+      },
+      {
+        "target": "BestOfBothWorlds.UniformExamples",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 8.396,
+        "log_sha256": "c874c5a84088d77cad0c171c3b2d4e232af5c05a8272dd8eb1135a447333af88"
+      },
+      {
+        "target": "BestOfBothWorlds.P1Corollary",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 20.519,
+        "log_sha256": "295f7550b2c13cefb95b70c9f06f4e9e573eb1f8350e7b6cc0ed6a5e8e6b0bc0"
+      },
+      {
+        "target": "BestOfBothWorlds.P1Examples",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 8.594,
+        "log_sha256": "6c66d593b670e30398eaaa58da240e8e2f2e24c94e3d7d4550c5848a4b0a0b66"
+      },
+      {
+        "target": "BestOfBothWorlds.P1UpperBounds",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 7.472,
+        "log_sha256": "4ef0694f74176e3fd0ad42fb5d47c1a36c8d8a5aa3fd5a4e022ed2613a157e03"
+      },
+      {
+        "target": "BestOfBothWorlds",
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 7.299,
+        "log_sha256": "c4d4caf52b7a6301ac5751f73d518c268f9189f859101fd8993ef8826ef807f8"
+      }
+    ],
+    "axiom_audit": {
+      "status": "passed",
+      "declarations": 1742,
+      "theorems": 1425,
+      "principal_endpoints": 19,
+      "all_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "unsafe_constants": [],
+      "partial_generated_nonproof_helpers": [
+        "BestOfBothWorlds.AdaptiveBanditProcess.ObservedHistory._unsafe_rec",
+        "BestOfBothWorlds.AdaptiveBanditProcess.Trajectory._unsafe_rec",
+        "BestOfBothWorlds.AdaptiveBanditProcess.observe._unsafe_rec",
+        "BestOfBothWorlds.AdaptiveBanditProcess.observedHistoryMeasurableSpace._unsafe_rec",
+        "BestOfBothWorlds.AdaptiveBanditProcess.trajectoryLaw_isProbabilityMeasure._unsafe_rec",
+        "BestOfBothWorlds.AdaptiveBanditProcess.trajectoryMeasurableSpace._unsafe_rec",
+        "BestOfBothWorlds.SeededLearner.Learner.play._unsafe_rec"
+      ],
+      "safe_constants_checked_for_unsafe_dependencies": 1735,
+      "bad_unsafe_or_partial_dependencies": 0
+    },
+    "kernel_replay": {
+      "status": "passed",
+      "exact_leaf_modules": 57,
+      "proof_bearing_parts": 171,
+      "all_input_hashes_unchanged": true,
+      "imported_libraries": "trusted",
+      "partial_runtime_helpers": "excluded by Lean Replay; safety-checked separately"
+    },
+    "started_utc": "2026-10-17T12:35:17.109632+00:00",
+    "finished_utc": "2026-10-17T12:50:45.013059+00:00",
+    "peak_sampled_group_rss_bytes": 3956891648,
+    "command_elapsed_seconds": 925.779,
+    "build_command_seconds": 503.575,
+    "kernel_command_seconds": 365.774,
+    "raw_full_summary_sha256": "fdfcd5bac732158fcd436870218a0bbddd734a5a1747d8a04a9dbd9712691182",
+    "raw_wrapper_summary_sha256": "22f5d0ab416a95fe9308a0c3792c477ec9e3dbc603c5d73bf2c7cf03802ef8fe",
+    "retained_output_rechecks": {
+      "raw_declaration_audit_sha256": "ea852fa2045b9615e6a76d550c18a1025ddf0254de0d83fafee20e4bb56ec09d",
+      "raw_endpoint_axioms_sha256": "2a8394a3db7ea10e47d51710cfa8f546f820d3d1c0e0b0485a5928ab4ef67807",
+      "raw_kernel_inputs_sha256": "19a509f75fc2967946ba365cdbace826610153f8d677047c4452b91bd50ee17c",
+      "exact_module_and_endpoint_sets_checked": true,
+      "current_compiled_part_hashes_rechecked": 171
+    }
+  },
+  "commits_created": false,
+  "publication_performed": false,
+  "scope_limit": "Principal mathematical statements, not all manuscript prose/experiments or unrestricted-kernel representation/P1 inter-model composition."
+}

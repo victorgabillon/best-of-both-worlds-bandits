@@ -1,0 +1,19 @@
+Best of Both Worlds — Lean formalization
+Copyright 2026 the contributors to the Lean formalization.
+
+The author approved Apache License 2.0 for the new Lean formalization.
+The accompanying original verification tooling and formalization documentation
+are included in this software scope. No mathematical source file was changed
+to add a header; this notice identifies the unchanged Lean source distribution.
+
+This scope excludes paper/**, the original research article, manuscript text,
+figures, third-party LaTeX files, and separately retrieved Lean/Mathlib software.
+Those materials retain their own rights; see docs/LICENSING.md.
+
+Original research authors: Yasin Abbasi-Yadkori, Peter L. Bartlett,
+Victor Gabillon, Alan Malek, Michal Valko.
+Victor Gabillon coordinated the formalization and maintains this repository.
+ChatGPT and Codex assisted as tools; they are not human authors.
+
+The collective copyright description does not infer sole ownership by a
+maintainer or alter existing third-party notices.

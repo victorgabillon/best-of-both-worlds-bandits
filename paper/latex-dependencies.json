@@ -1,0 +1,529 @@
+{
+  "scope": "Observed class/style/bibliography-style names in the successful Step24B build; this is not the complete fonts/formats/engine resource manifest",
+  "cls_sty_names": 86,
+  "bst_names": 1,
+  "files": [
+    {
+      "filename": "algorithm.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "algorithm2e.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "algorithmic.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "aliasctr.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "amsbsy.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "amsfonts.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "amsgen.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "amsmath.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "amsopn.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "amssymb.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "amstext.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "array.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "article.cls",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "atbegshi-ltx.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "atveryend-ltx.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "auxhook.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "bigintcalc.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "bitset.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "bm.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "calc.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "caption.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "caption3.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "colortbl.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "colt2018.cls",
+      "provider": "Official COLT 2018 author kit",
+      "bundled_in_repository": false,
+      "license": "See dependencies.json; wrapper has no explicit redistribution grant"
+    },
+    {
+      "filename": "enumitem.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "etexcmds.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "etoolbox.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "expl3.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "float.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "fontenc.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "gettitlestring.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "graphics.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "graphicx.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "hycolor.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "hyperref.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "ifoddpage.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "iftex.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "ifthen.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "infwarerr.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "intcalc.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "jmlr.cls",
+      "provider": "Official COLT 2018 author kit",
+      "bundled_in_repository": false,
+      "license": "LPPL-1.3-or-later"
+    },
+    {
+      "filename": "jmlrutils.sty",
+      "provider": "Official COLT 2018 author kit",
+      "bundled_in_repository": false,
+      "license": "LPPL-1.3-or-later"
+    },
+    {
+      "filename": "kvdefinekeys.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "kvoptions.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "kvsetkeys.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "l3keys2e.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "letltxmacro.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "ltxcmds.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "mathtools.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "mhsetup.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "nameref.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "natbib.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "parseargs.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "pdfescape.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "pdftexcmds.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "pgf.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "pgfcomp-version-0-65.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "pgfcomp-version-1-18.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "pgfcore.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "pgffor.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "pgfkeys.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "pgfmath.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "pgfrcs.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "pgfsys.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "refcount.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "relsize.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "rerunfilecheck.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "siunitx.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "stringenc.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "thm-autoref.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "thm-kv.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "thm-listof.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "thm-patch.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "thm-restate.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "thmtools.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "tikz.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "times.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "todonotes.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "translations.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "trig.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "uniquecounter.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "url.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "wrapfig.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "xcolor.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "xkeyval.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "xspace.sty",
+      "provider": "External Tectonic v33 bundle",
+      "bundled_in_repository": false,
+      "license": "Upstream package license; no aggregate relicensing"
+    },
+    {
+      "filename": "plainnat.bst",
+      "provider": "External Tectonic v33 bundle; observed in Main.blg",
+      "bundled_in_repository": false,
+      "license": "Upstream natbib bibliography-style license; not redistributed"
+    }
+  ]
+}

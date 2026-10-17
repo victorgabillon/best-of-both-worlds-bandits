@@ -1,0 +1,557 @@
+% !TEX root = Main.tex
+%
+
+\section{Lower bound in the best of both worlds} %setting (Theorem~\ref{th:lowBOB}) }
+\label{app:prooflowBOB}
+%
+\setcounter{scratchcounter}{\value{theorem}}\setcounter{theorem}{\the\numexpr\getrefnumber{th:lowBOB}-1}
+\thi*
+\setcounter{theorem}{\the\numexpr\value{scratchcounter}}
+\begin{proof}%[Theorem~\ref{th:lowBOB}]\
+	%    
+Fix the reference gaps defining $\Gaps_4$, a learner, and a
+horizon $\timeHorizon$ satisfying the hypothesis of the theorem.
+Throughout the proof, the learner is run with this fixed horizon,
+which it may know. The constructions below may depend on this
+learner and on $\timeHorizon$.
+Let $\pullsNumber_k(t)$ be the number of times arm $k$ has been
+pulled by the end of round $t$.
+	Let us consider a base problem, denoted \basePro{}, with $\nu_1,\ldots, \nu_\nArms$, 
+	Bernoulli distributions with mean $\mean^{\basePro}_1,
+	\ldots, \mean^{\basePro}_\nArms$ 
+	such that $\mean^{\basePro}_1 \triangleq 1/2$, and for all $k\in[2,\nArms], 
+	\mean^{\basePro}_k \triangleq  1/2-\gap_k$ 
+	(the gaps specified in the claim of the theorem).
+	The expectation and probability with respect to the
+	learner and the samples of this problem are 
+	$\Exp_{\basePro}$ and $\Pro_{\basePro}$.% with $\gap_k\geq 0$ for .
+	
+	With respect to this base problem, choose any maximizing index $i\in\arg\max_{j\in\setArms}\frac{j}{\gap_j}$.
+ %denotes the rank of a suboptimal arm in the	base problem. 
+\noindent\textbf{Choice of the initial phase length.}
+We choose the length of the initial phase so as to maximize the resulting
+lower bound on the learner's error. The stochastic and adversarial
+constructions differ only during this phase. A shorter phase reduces
+the phase-length contribution $\timeHorizon_i\gap_i^2/i$ to the
+information-theoretic estimate and therefore strengthens the resulting
+error lower bound.
+
+However, the initial phase must be sufficiently long to ensure that
+the adversarial problem belongs to the prescribed class $\Gaps_4$.
+Its expected gaps must remain large enough after accounting for
+fluctuations of the cumulative rewards.
+
+We therefore seek the shortest initial phase, up to universal constant
+factors, that guarantees these gap constraints uniformly over arms
+satisfying the selection bounds. The choice below uses a convenient
+factor $2$ to provide additional gap margin. Together with the phase
+bound below, it keeps $\timeHorizon_i\gap_i^2/i$ bounded by a universal
+constant times $\timeHorizon/\complexityBoth^{\basePro}$.
+
+Set
+\[
+\dividefac_i\triangleq\min\left\{1,\frac{2\gap_1}{\gap_i}\right\},
+\qquad 0<\dividefac_i\leq1.
+\]
+The initial phase $\earlyPhase_i$ is the prefix of rounds
+$t=1,\ldots,\timeHorizon_i$, where
+\[
+\timeHorizon_i\triangleq\left\lceil\timeHorizon\dividefac_i\right\rceil
+=\min\left\{\timeHorizon,
+\left\lceil\frac{2\timeHorizon\gap_1}{\gap_i}\right\rceil\right\}.
+\]
+The equality uses the fact that $\timeHorizon$ is an integer;
+in particular, $1\leq\timeHorizon_i\leq\timeHorizon$.
+
+The theorem's horizon condition implies
+\[
+\timeHorizon\gap_1^2\geq128\log(32\nArms)\geq1.
+\]
+Writing $r=\timeHorizon\gap_1/\gap_i$, since
+$\gap_1\gap_i\leq1/64$, we have
+\[
+r=\frac{\timeHorizon\gap_1^2}{\gap_1\gap_i}\geq1,
+\qquad
+\frac{\gap_i}{\timeHorizon\gap_1}
+=\frac{\gap_1\gap_i}{\timeHorizon\gap_1^2}
+\leq\frac{1}{64}\leq\frac18.
+\]
+Thus $\gap_i/\timeHorizon\leq\gap_1/8$, and the capped ceiling gives
+\[
+\timeHorizon_i\leq\lceil2r\rceil\leq2r+1\leq3r
+=\frac{3\timeHorizon\gap_1}{\gap_i}.
+\]
+
+ 
+Since $\gap_1=\gap_2>0$, we have $1/\gap_1<2/\gap_2$.
+Thus $i\geq2$ for every choice of maximizing index.
+
+	Now we want to identify an arm with a gap of the same order as $\gap_i$ that the 
+	learner will not pull
+	very much in the base problem \basePro{}
+	during the period~$\earlyPhase_i$. This arm will be the one 'attacked' by the adversary to confuse the learner as the learner is not pulling it very much.
+
+
+If $i=2$, choose $\refarm=2$. Since at most one pull of arm $2$
+is made in each round, $\pullsNumber_2(n_i)\leq n_i$ almost surely,
+and hence
+\[
+\Exp_{\basePro}\left[\pullsNumber_2(n_i)\right]
+\leq n_i=\frac{2n_i}{i}.
+\]
+Under the phase definition above, $i=2$ gives $\dividefac_i=1$
+and $n_i=\timeHorizon$.
+The second phase is then empty, and the \advPro{} construction below
+coincides with \basePro{} throughout the horizon. This empty second
+phase is allowed by the construction.
+
+If $i\geq3$, consider the arms with indices in
+$[\lceil i/2\rceil:i]$. There are $\lfloor i/2\rfloor+1>i/2$
+such arms. Since
+\[
+\sum_{k\in\setArms}\Exp_{\basePro}\left[\pullsNumber_k(n_i)\right]=n_i,
+\]
+they cannot all have expected pull counts strictly greater than $2n_i/i$.
+Choose any $\refarm\in[\lceil i/2\rceil:i]$ whose expected pull count
+is at most $2n_i/i$. In this case $\refarm\geq\lceil i/2\rceil\geq2$.
+
+ By construction we have $\gap_{\refarm}\leq\gap_i$ and
+	%
+	\begin{equation}\label{eq:notSoMuchPulls}
+	\Exp_{\basePro}\left[\pullsNumber_{\refarm}(n_i) \right]\leq \frac{2n_i}{i}\cdot
+	\end{equation}
+	%    
+
+In both cases, $2\leq\refarm\leq i$ and $\refarm\geq i/2$.
+The maximizing property of $i$ gives
+$i/\gap_i\geq\refarm/\gap_{\refarm}$, so
+ \begin{equation}\label{eq:zhihan}
+     \gap_i\leq\frac{i}{\refarm}\gap_{\refarm}\leq2\gap_{\refarm}.
+ \end{equation}
+Equality is permitted in this gap comparison. The resulting bound
+$\gap_{\refarm}/\gap_i\geq1/2$ is sufficient for the expected-gap
+lower bound below.
+
+	
+	
+	Now we construct an i.i.d.\,stochastic problem, denoted \stoPro{}, where
+	the arm distributions are the same as in the \basePro{}
+	problem, except for arm $\refarm$, $\mu^{\stoPro}_{k}\triangleq \mu^{\basePro}_{k} $ 
+	for all $k\neq \refarm$.
+	%    We distinguish two cases: if the  $\refarm=1$ then
+	We set in  \stoPro{},         
+	$\mu^{\stoPro}_{\refarm} \triangleq 1/2 + \gap_1/4$.
+
+The best arm in the constructed \stoPro{} problem is
+$\bestArmSto\triangleq\refarm$. Its gaps, indexed by the original arm
+labels, satisfy
+\[
+\gap_1^{\stoPro}=\gap_{\refarm}^{\stoPro}=\frac{\gap_1}{4},
+\]
+and, for every $j\in\setArms\setminus\{1,\refarm\}$,
+\[
+\gap_j\leq\gap_j^{\stoPro}
+=\gap_j+\frac{\gap_1}{4}\leq\frac54\gap_j.
+\]
+Thus label $1$ has gap $\gap_1/4$, the selected label $\refarm$ is
+the exceptional label with the same gap, and every remaining label
+satisfies the ordinary bounds $[\gap_j/4,4\gap_j]$.
+Consequently, $\stoPro\in\Gaps_4$.
+
+We next compare the complexity of the constructed stochastic problem
+with that of \basePro{}. Since the construction changes the ordering
+of the arms, this comparison must use the sorted stochastic gaps.
+Let $h_1\leq\cdots\leq h_\nArms$ be the sorted values of the labelled
+gaps $\gap_j^{\stoPro}$, and define the local quantity
+\[
+Q\triangleq\max_{j\in\setArms}\frac{j}{\gap_j},
+\qquad \complexityBoth^{\basePro}=\frac{Q}{\gap_1},
+\qquad Q\geq\frac{2}{\gap_1}.
+\]
+The sorted stochastic gaps consist of two copies of $\gap_1/4$,
+followed by the ordered list $\gap_j+\gap_1/4$ for
+$j\in[2:\nArms]\setminus\{\refarm\}$.
+Deleting the entry for $\refarm$ from the ordered list with labels
+$2,\ldots,\nArms$ moves a remaining position by at most one.
+This comparison remains valid when gaps tie. Hence
+\[
+h_1=h_2=\frac{\gap_1}{4},
+\qquad
+\gap_{r-1}+\frac{\gap_1}{4}\leq h_r
+\leq\gap_r+\frac{\gap_1}{4}
+\quad(3\leq r\leq\nArms).
+\]
+When $\nArms=2$, there are no ranks $r\geq3$; only the first two
+ranks are used below.
+
+For the upper bound, the first two ranks satisfy
+\[
+\max_{r\in\{1,2\}}\frac{r}{h_r}
+=\frac{8}{\gap_1}\leq4Q.
+\]
+For each rank $r\geq3$, we have
+\[
+\frac{r}{h_r}\leq\frac{r}{\gap_{r-1}}
+=\frac{r}{r-1}\frac{r-1}{\gap_{r-1}}
+\leq\frac32Q\leq4Q.
+\]
+Thus, bounding every rank in $\setArms$ gives
+\[
+\complexityBoth^{\stoPro}
+=\frac{4}{\gap_1}\max_{r\in\setArms}\frac{r}{h_r}
+\leq\frac{4}{\gap_1}(4Q)
+=16\complexityBoth^{\basePro}.
+\]
+For the lower bound, $h_r\leq2\gap_r$ for every rank $r$:
+for $r=1,2$ this follows from $h_r=\gap_1/4$ and
+$\gap_1=\gap_2$, while for $r\geq3$ it follows from
+$h_r\leq\gap_r+\gap_1/4$ and $\gap_1\leq\gap_r$.
+Consequently,
+\[
+\complexityBoth^{\stoPro}
+\geq\frac{4}{\gap_1}\max_{r\in\setArms}\frac{r}{2\gap_r}
+=2\complexityBoth^{\basePro}
+\geq\frac12\complexityBoth^{\basePro}.
+\]
+Combining these bounds, we retain the weaker lower bound in
+\begin{equation}\label{eq:newHBOBSTO}
+  \complexityBoth^{\basePro} /2
+	\leq
+        \complexityBoth^{\stoPro} 
+		\leq
+ 16 \complexityBoth^{\basePro} 
+\end{equation}
+
+Writing $\complexitySR^{\basePro}$ and $\complexitySR^{\stoPro}$
+for the respective \SR{} complexities, the same sorted-gap comparison
+and the stronger lower bound above give
+\[
+\begin{aligned}
+\complexitySR^{\stoPro}
+&\leq\max\left\{\frac{32}{\gap_1^2},
+\frac32\complexitySR^{\basePro}\right\}
+\leq16\complexitySR^{\basePro},\\
+\frac{\complexityBoth^{\stoPro}}{\complexitySR^{\stoPro}}
+&\geq\frac18\frac{\complexityBoth^{\basePro}}{\complexitySR^{\basePro}}.
+\end{aligned}
+\]
+For the square-root profile $\gap_r=\gap_1\sqrt{r/2}$,
+$r\in[2:\nArms]$, the ratio for \stoPro{} is at least
+$\frac18\sqrt{\nArms/2}$, for every eligible choice of arm~$\refarm$.
+
+	The expectation and probability with respect to the
+	learner and the samples of this problem are denoted
+	$\Exp_{\stoPro}$ and $\Pro_{\stoPro}$.
+	
+
+	
+	The second bandit problem is the adversarial one, denoted \advPro{}.
+Before interaction with the learner, it samples a table
+$\gainVector\in\{0,1\}^{\nArms\times\timeHorizon}$.
+For any sampled table with several maximizing arms, let
+$\bestArm_{\gainVector}$ be the smallest maximizing index.
+On $\eventc$ the maximizer is unique, so this convention does
+not affect the extracted instance.
+The Bernoulli entries are independent across arms and rounds,
+and independent of the learner's internal randomness.
+The table-generating distribution is fixed once the learner,
+horizon, reference gaps, and the choices of $i$ and $\refarm$ are fixed;
+it does not adapt to the learner's realized actions.
+For each $t\in[\timeHorizon]$ and arm $k$, the $(k,t)$ entry is
+Bernoulli with mean $\mean_k^{\advPro}(t)$.
+	For all $t$ and $k\neq\refarm$, \advPro{} follows the \basePro{} 
+	problem:  $\mu_{k}^{\advPro}(t)\triangleq\mu_{k}^{\basePro}$.
+	For arm $\refarm$,
+	until the end of phase $\earlyPhase_i$, for all $t$ with $1\leq 
+	t\leq n_i$, $\mu^{\advPro}_{\refarm}(t)\triangleq\mu_{\refarm}^{\basePro}$ 
+	and then a switch happens, for $n_i< t\leq n$, arm $\refarm$ 
+	possesses  the same distributions as in the \stoPro{} problem,  
+	$\mu^{\advPro}_{\refarm}(t)\triangleq \mu_{\refarm}^{\stoPro}$.
+	The expectation and probability with respect to the
+	learner and the samples of this problem are denoted
+	$\Exp_{\advPro}$ and $\Pro_{\advPro}$.
+	
+	
+Let us compute the expected cumulative gains for this fixed construction.
+For each arm $k\in\setArms$, let
+$\expectCumul_k\triangleq\sum_{t=1}^{\timeHorizon}\mean_k^{\advPro}(t)$.
+Then
+\[
+\expectCumul_{\refarm}
+=\timeHorizon_i\left(\frac12-\gap_{\refarm}\right)
++(\timeHorizon-\timeHorizon_i)\left(\frac12+\frac{\gap_1}{4}\right),
+\qquad \expectCumul_1=\frac{\timeHorizon}{2},
+\]
+and, for $j\in\setArms\setminus\{1,\refarm\}$,
+\[
+\expectCumul_j=\timeHorizon\left(\frac12-\gap_j\right).
+\]
+Define the expected average gap
+\[
+b\triangleq\frac{\expectCumul_1-\expectCumul_{\refarm}}{\timeHorizon}
+=\frac{\timeHorizon_i}{\timeHorizon}\gap_{\refarm}
+-\left(1-\frac{\timeHorizon_i}{\timeHorizon}\right)\frac{\gap_1}{4}.
+\]
+If $\timeHorizon_i=\timeHorizon$, then $b=\gap_{\refarm}\geq\gap_1$.
+This case also includes a full-horizon phase caused by ceiling rounding.
+If $\timeHorizon_i<\timeHorizon$, its definition gives
+$\timeHorizon_i\geq2\timeHorizon\gap_1/\gap_i$, so
+Equation~\ref{eq:zhihan} yields
+\[
+b\geq\frac{2\gap_1\gap_{\refarm}}{\gap_i}-\frac{\gap_1}{4}
+\geq\frac{3\gap_1}{4}.
+\]
+For the upper bound, in all cases,
+\[
+b\leq\frac{\timeHorizon_i}{\timeHorizon}\gap_{\refarm}
+\leq\left(\frac{2\gap_1}{\gap_i}+\frac{1}{\timeHorizon}\right)\gap_i
+=2\gap_1+\frac{\gap_i}{\timeHorizon}
+\leq\frac{17\gap_1}{8}.
+\]
+Consequently,
+\[
+\frac{3\gap_1}{4}\leq b\leq\frac{17\gap_1}{8}.
+\]
+
+	%    
+	Let us consider the event
+	$\eventc =\left\{ \forall k\in\setArms,  |\cumulGain_k-\expectCumul_{k}| \leq  \timeHorizon \gap_1/16 \right\}
+	$.
+For a fixed arm $j$, $\cumulGain_j$ is the sum of all $\timeHorizon$
+entries in its row of the reward table. These entries are independent
+and lie in $[0,1]$, although their means may differ across rounds.
+This is the full table sum, including rounds on which the learner
+does not pull arm $j$. Two-sided Hoeffding gives
+\begin{align*}
+\Pro_{\advPro}\left(
+|\cumulGain_j-\expectCumul_j|>\frac{\timeHorizon\gap_1}{16}\right)
+&\leq2\exp\left(-\frac{2(\timeHorizon\gap_1/16)^2}{\timeHorizon}\right)\\
+&=2\exp\left(-\frac{\timeHorizon\gap_1^2}{128}\right).
+\end{align*}
+Therefore, a union bound over arms yields
+\begin{equation}\label{eq:goodEventBOB}
+\Pro_{\advPro}(\eventc^c)
+\leq2\nArms\exp\left(-\frac{\timeHorizon\gap_1^2}{128}\right)
+\leq\frac{1}{16}.
+\end{equation}
+The last inequality uses the theorem hypothesis
+\[
+\nArms\exp\left(-\frac{\timeHorizon\gap_1^2}{128}\right)\leq\frac{1}{32}.
+\]
+Consequently, $\Pro_{\advPro}(\eventc)\geq15/16$.
+%	\todov{here i put a power of 3 to be safe and i ttink it doesnt matter in the proof because we put it as an hypothesis of the theorem that $n$ is large enough}
+
+On $\eventc$, each difference $\cumulGain_1-\cumulGain_j$
+deviates from $\expectCumul_1-\expectCumul_j$ by at most
+$\timeHorizon\gap_1/8$.
+For the selected arm, the bounds on $b$ therefore give
+\[
+\frac{5\gap_1}{8}
+\leq\frac{\cumulGain_1-\cumulGain_{\refarm}}{\timeHorizon}
+\leq\frac{9\gap_1}{4}.
+\]
+For every $j\in\setArms\setminus\{1,\refarm\}$, we have
+\[
+\gap_j-\frac{\gap_1}{8}
+\leq\frac{\cumulGain_1-\cumulGain_j}{\timeHorizon}
+\leq\gap_j+\frac{\gap_1}{8}.
+\]
+Since $\gap_j\geq\gap_1$, this implies
+\[
+\frac78\gap_j
+\leq\frac{\cumulGain_1-\cumulGain_j}{\timeHorizon}
+\leq\frac98\gap_j.
+\]
+All these differences are strictly positive, so arm $1$ is the
+unique best arm on $\eventc$. Thus the displayed differences are
+the gaps $\gap_j^{\gainVector}$ for $j\neq1$.
+The best arm's own gap is
+\[
+\gap_1^{\gainVector}
+=\min_{j\in\setArms\setminus\{1\}}
+\frac{\cumulGain_1-\cumulGain_j}{\timeHorizon}.
+\]
+The lower bounds for all other arms and the upper bound for the
+selected arm give
+\[
+\frac{5\gap_1}{8}\leq\gap_1^{\gainVector}\leq\frac{9\gap_1}{4}.
+\]
+The bounds for labels $1$ and $\refarm$ lie in
+$[\gap_1/4,4\gap_1]$, and the bounds for every remaining label $j$
+lie in $[\gap_j/4,4\gap_j]$.
+Hence every table $\gainVector\in\eventc$ belongs to $\Gaps_4$,
+with $\refarm$ as the exceptional label in the class definition.
+
+	Note that therefore the only difference between the two problems 
+	\stoPro{} and \advPro{} is for  arm $\refarm$ during phase $\earlyPhase_i$.
+	
+	
+The stochastic problem has best arm $\refarm$, whereas arm $1$ is
+uniquely best in the adversarial construction on $\eventc$.
+We compare the distributions of the learner's observations to quantify
+the difficulty of distinguishing these problems.
+
+Let $P_A$ and $P_S$ denote the laws of the observed transcript $Z$
+from Lemma~\ref{l:transcriptChangeMeas} under randomized \advPro{}
+and \stoPro{}, respectively. These transcript laws are distinguished
+from the full table-and-learner law $\Pro_{\advPro}$ used for $\eventc$,
+which also involves unobserved table entries.
+Both constructions have independent Bernoulli entries, independent
+of the learner's internal randomness, with all parameters in
+$[3/8,17/32]\subset(0,1)$. The same learner is run with the same
+horizon, and the only differing arm-round pairs are arm $\refarm$
+through the initial prefix of $\timeHorizon_i$ rounds.
+The arm and prefix are fixed before interaction.
+Apply the lemma with $A=\advPro$, $B=\stoPro$,
+$\mathcal T=\{1,\ldots,\timeHorizon_i\}$, and
+\[
+u=\frac12-\gap_{\refarm},\qquad v=\frac12+\frac{\gap_1}{4}.
+\]
+It gives
+\[
+D(P_A\Vert P_S)
+=\Exp_{\advPro}\left[\pullsNumber_{\refarm}(\timeHorizon_i)\right]
+\operatorname{kl}(u,v).
+\]
+Through this fixed prefix, \advPro{} and \basePro{} have identical
+reward laws and use the same learner. Their interaction laws agree
+through $\timeHorizon_i$, including the learner's adaptive actions.
+Consequently,
+\[
+\Exp_{\advPro}\left[\pullsNumber_{\refarm}(\timeHorizon_i)\right]
+=\Exp_{\basePro}\left[\pullsNumber_{\refarm}(\timeHorizon_i)\right],
+\]
+and hence
+\[
+D(P_A\Vert P_S)
+=\Exp_{\basePro}\left[\pullsNumber_{\refarm}(\timeHorizon_i)\right]
+\operatorname{kl}(u,v).
+\]
+
+For $u,v\in(0,1)$, the inequality $\log z\leq z-1$ gives
+\begin{align*}
+\operatorname{kl}(u,v)
+&\leq u\left(\frac{u}{v}-1\right)
++(1-u)\left(\frac{1-u}{1-v}-1\right)\\
+&=\frac{(u-v)^2}{v(1-v)}.
+\end{align*}
+Here $\gap_1\leq\gap_{\refarm}\leq1/8$, so
+\[
+|u-v|\leq\frac54\gap_{\refarm},\qquad
+v(1-v)=\frac14-\frac{\gap_1^2}{16}\geq\frac{255}{1024}.
+\]
+Thus
+\[
+\operatorname{kl}(u,v)
+\leq\frac{1600}{255}\gap_{\refarm}^2\leq8\gap_{\refarm}^2.
+\]
+Using Equation~\ref{eq:notSoMuchPulls}, $\gap_{\refarm}\leq\gap_i$,
+the phase-length bound, and
+$\complexityBoth^{\basePro}=i/(\gap_1\gap_i)$, we obtain
+\begin{equation}\label{eq:transcriptKLBOB}
+\begin{aligned}
+D(P_A\Vert P_S)
+&\leq8\gap_{\refarm}^2\frac{2\timeHorizon_i}{i}\\
+&\leq\frac{16\gap_i^2\timeHorizon_i}{i}\\
+&\leq\frac{48\timeHorizon\gap_1\gap_i}{i}\\
+&=\frac{48\timeHorizon}{\complexityBoth^{\basePro}}\\
+&\leq\frac{768\timeHorizon}{\complexityBoth^{\stoPro}}.
+\end{aligned}
+\end{equation}
+The last inequality uses Equation~\ref{eq:newHBOBSTO}:
+$\complexityBoth^{\stoPro}\leq16\complexityBoth^{\basePro}$ implies
+$1/\complexityBoth^{\basePro}\leq16/\complexityBoth^{\stoPro}$.
+The chosen phase is long enough to satisfy the adversarial gap
+constraints, while its length bound keeps this information cost at
+most a universal constant times $\timeHorizon/\complexityBoth^{\stoPro}$.
+
+Assume the stochastic-error premise of Theorem~\ref{th:lowBOB}, and set
+\[
+x=\frac{\timeHorizon}{\complexityBoth^{\stoPro}}>0,\qquad
+p=P_A(\recomArm_{\timeHorizon}=1),\qquad
+q=P_S(\recomArm_{\timeHorizon}=1).
+\]
+Since the unique best arm in \stoPro{} is $\refarm\neq1$,
+\[
+q\leq\ProErr_{\stoPro}(\timeHorizon)
+\leq\frac{1}{64}\exp(-2048x).
+\]
+If $q=0$, common support in Lemma~\ref{l:transcriptChangeMeas} gives
+$p=0$. Otherwise $0<q<1$, and its event consequence for
+$W=\{\recomArm_{\timeHorizon}=1\}$, together with
+Equation~\ref{eq:transcriptKLBOB}, gives
+\[
+p\log(1/q)\leq D(P_A\Vert P_S)+\log2\leq768x+\log2.
+\]
+The stochastic guarantee also gives
+$\log(1/q)\geq2048x+\log64=2048x+6\log2$. Therefore,
+\[
+p\leq\frac{768x+\log2}{2048x+6\log2}\leq\frac38.
+\]
+The denominator is positive, $768=(3/8)2048$, and
+$\log2\leq(3/8)6\log2$, which proves the last inequality.
+The same conclusion holds when $q=0$.
+This bounds the probability of recommending arm $1$; that arm need
+not be best on tables outside $\eventc$.
+
+Return now to the full table-and-learner probability law, and write
+\[
+\ProErr_{\advPro}(\timeHorizon)
+=\Pro_{\advPro}\left(\recomArm_{\timeHorizon}\neq\bestArm_{\gainVector}\right),
+\]
+with the fixed table tie-breaking convention above.
+On $\eventc$, arm $1$ is uniquely best, and
+$\Pro_{\advPro}(\recomArm_{\timeHorizon}=1)=p$ because this is a
+transcript event. Equation~\ref{eq:goodEventBOB} therefore yields
+\begin{equation}\label{eq:randomizedErrorBOB}
+\begin{aligned}
+\ProErr_{\advPro}(\timeHorizon)
+&\geq\Pro_{\advPro}\left(\{\recomArm_{\timeHorizon}\neq1\}\cap\eventc\right)\\
+&\geq\Pro_{\advPro}(\recomArm_{\timeHorizon}\neq1)
+-\Pro_{\advPro}(\eventc^c)\\
+&=1-p-\Pro_{\advPro}(\eventc^c)\\
+&\geq1-\frac38-\frac{1}{16}\\
+&=\frac{9}{16}\geq\frac18.
+\end{aligned}
+\end{equation}
+No independence between the recommendation and $\eventc$ is needed.
+
+Equation~\ref{eq:randomizedErrorBOB} gives the lower bound needed
+for the extraction of a deterministic table:
+\[
+\ProErr_{\advPro}(\timeHorizon)\geq1/8.
+\]
+For a fixed table $\gainVector$, write
+\[
+\ProErr_{\gainVector}(\timeHorizon)
+\triangleq\ProErr_{\advPro(\gainVector)}(\timeHorizon),
+\]
+where the probability is over the learner's internal randomness.
+The random \advPro{} model is a distribution over fixed tables,
+independent of that randomness, so
+\[
+\ProErr_{\advPro}(\timeHorizon)
+=\Exp_{\gainVector\sim\advPro}
+\left[\ProErr_{\gainVector}(\timeHorizon)\right].
+\]
+Suppose for contradiction that $\ProErr_{\gainVector}(\timeHorizon)<1/16$
+for every $\gainVector\in\eventc$. Splitting this expectation using
+indicators and applying Equation~\ref{eq:goodEventBOB} gives
+\begin{align*}
+\ProErr_{\advPro}(\timeHorizon)
+&=\Exp_{\gainVector\sim\advPro}\left[
+\ProErr_{\gainVector}(\timeHorizon)\indicator{\gainVector\in\eventc}\right]
++\Exp_{\gainVector\sim\advPro}\left[
+\ProErr_{\gainVector}(\timeHorizon)\indicator{\gainVector\notin\eventc}\right]\\
+&\leq\frac{1}{16}\Pro_{\advPro}(\eventc)
++\Pro_{\advPro}(\eventc^c)\\
+&=\frac{1}{16}+\frac{15}{16}\Pro_{\advPro}(\eventc^c)\\
+&\leq\frac{1}{16}+\frac{15}{256}\\
+&=\frac{31}{256}<\frac18.
+\end{align*}
+This contradicts the stated input $\ProErr_{\advPro}(\timeHorizon)\geq1/8$.
+Hence there exists a deterministic table $\gainVector\in\eventc$ with
+$\ProErr_{\advPro(\gainVector)}(\timeHorizon)\geq1/16$.
+The gap calculation above shows that this table belongs to $\Gaps_4$.
+	%
+\end{proof}%

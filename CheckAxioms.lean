@@ -1,0 +1,865 @@
+module
+
+import BestOfBothWorlds
+
+#check BestOfBothWorlds.gap_complexity_bounds
+#print axioms BestOfBothWorlds.gap_complexity_bounds
+
+#check BestOfBothWorlds.gap_complexity_sandwich
+#print axioms BestOfBothWorlds.gap_complexity_sandwich
+
+#check BestOfBothWorlds.gap_complexity_chain
+#print axioms BestOfBothWorlds.gap_complexity_chain
+
+#check BestOfBothWorlds.scaleGap
+#print axioms BestOfBothWorlds.scaleGap
+
+#check BestOfBothWorlds.gap_pos_of_sorted
+#print axioms BestOfBothWorlds.gap_pos_of_sorted
+
+#check BestOfBothWorlds.scaleGap_admissible
+#print axioms BestOfBothWorlds.scaleGap_admissible
+
+#check BestOfBothWorlds.gap_complexities_pos
+#print axioms BestOfBothWorlds.gap_complexities_pos
+
+#check BestOfBothWorlds.H_SR_scale
+#print axioms BestOfBothWorlds.H_SR_scale
+
+#check BestOfBothWorlds.H_BOB_scale
+#print axioms BestOfBothWorlds.H_BOB_scale
+
+#check BestOfBothWorlds.H_UNIF_scale
+#print axioms BestOfBothWorlds.H_UNIF_scale
+
+#check BestOfBothWorlds.gap_complexity_ratios_scale
+#print axioms BestOfBothWorlds.gap_complexity_ratios_scale
+
+#check BestOfBothWorlds.flat_gap_complexities
+#print axioms BestOfBothWorlds.flat_gap_complexities
+
+#check BestOfBothWorlds.flat_gap_ratios
+#print axioms BestOfBothWorlds.flat_gap_ratios
+
+#check BestOfBothWorlds.superlinear_gap_complexities
+#print axioms BestOfBothWorlds.superlinear_gap_complexities
+
+#check BestOfBothWorlds.superlinear_gap_ratio
+#print axioms BestOfBothWorlds.superlinear_gap_ratio
+
+#check BestOfBothWorlds.lastRank
+#print axioms BestOfBothWorlds.lastRank
+
+#check BestOfBothWorlds.lastRank_rank
+#print axioms BestOfBothWorlds.lastRank_rank
+
+#check BestOfBothWorlds.rank_div_square_root_gap
+#print axioms BestOfBothWorlds.rank_div_square_root_gap
+
+#check BestOfBothWorlds.rank_div_gap_le_square_root
+#print axioms BestOfBothWorlds.rank_div_gap_le_square_root
+
+#check BestOfBothWorlds.square_root_gap_complexities
+#print axioms BestOfBothWorlds.square_root_gap_complexities
+
+#check BestOfBothWorlds.square_root_gap_separation
+#print axioms BestOfBothWorlds.square_root_gap_separation
+
+#check BestOfBothWorlds.square_root_gap_ratio
+#print axioms BestOfBothWorlds.square_root_gap_ratio
+
+#check BestOfBothWorlds.ImportanceWeighting.estimator
+#print axioms BestOfBothWorlds.ImportanceWeighting.estimator
+
+#check BestOfBothWorlds.ImportanceWeighting.expectation
+#print axioms BestOfBothWorlds.ImportanceWeighting.expectation
+
+#check BestOfBothWorlds.ImportanceWeighting.variance
+#print axioms BestOfBothWorlds.ImportanceWeighting.variance
+
+#check BestOfBothWorlds.ImportanceWeighting.probability_le_one
+#print axioms BestOfBothWorlds.ImportanceWeighting.probability_le_one
+
+#check BestOfBothWorlds.ImportanceWeighting.unbiased
+#print axioms BestOfBothWorlds.ImportanceWeighting.unbiased
+
+#check BestOfBothWorlds.ImportanceWeighting.second_moment
+#print axioms BestOfBothWorlds.ImportanceWeighting.second_moment
+
+#check BestOfBothWorlds.ImportanceWeighting.variance_eq
+#print axioms BestOfBothWorlds.ImportanceWeighting.variance_eq
+
+#check BestOfBothWorlds.ImportanceWeighting.variance_nonneg
+#print axioms BestOfBothWorlds.ImportanceWeighting.variance_nonneg
+
+#check BestOfBothWorlds.ImportanceWeighting.variance_le_inv_probability
+#print axioms BestOfBothWorlds.ImportanceWeighting.variance_le_inv_probability
+
+#check BestOfBothWorlds.ImportanceWeighting.increment_abs_le_inv_probability
+#print axioms BestOfBothWorlds.ImportanceWeighting.increment_abs_le_inv_probability
+
+#check BestOfBothWorlds.ImportanceWeighting.toPMF
+#print axioms BestOfBothWorlds.ImportanceWeighting.toPMF
+
+#check BestOfBothWorlds.ImportanceWeighting.toPMF_toReal
+#print axioms BestOfBothWorlds.ImportanceWeighting.toPMF_toReal
+
+#check BestOfBothWorlds.ImportanceWeighting.pmf_expectation
+#print axioms BestOfBothWorlds.ImportanceWeighting.pmf_expectation
+
+-- Also inspect the five unchanged gap definitions omitted from the original audit.
+
+#check BestOfBothWorlds.firstRank
+#print axioms BestOfBothWorlds.firstRank
+
+#check BestOfBothWorlds.secondRank
+#print axioms BestOfBothWorlds.secondRank
+
+#check BestOfBothWorlds.H_SR
+#print axioms BestOfBothWorlds.H_SR
+
+#check BestOfBothWorlds.H_UNIF
+#print axioms BestOfBothWorlds.H_UNIF
+
+#check BestOfBothWorlds.H_BOB
+#print axioms BestOfBothWorlds.H_BOB
+
+-- Step 18B: every named definition, instance and theorem in the new module.
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.observedReward
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.observedReward
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.estimator
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.estimator
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.estimator_eq_deterministic
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.estimator_eq_deterministic
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.actionMeasure
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.actionMeasure
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.actionMeasure_isProbabilityMeasure
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.actionMeasure_isProbabilityMeasure
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.jointLaw
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.jointLaw
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.jointLaw_isProbabilityMeasure
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.jointLaw_isProbabilityMeasure
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.mean
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.mean
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.secondMoment
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.secondMoment
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.centered
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.centered
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.coordinate_integrable
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.coordinate_integrable
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.coordinate_sq_le
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.coordinate_sq_le
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.coordinate_square_integrable
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.coordinate_square_integrable
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.mean_bounds
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.mean_bounds
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.secondMoment_le_mean
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.secondMoment_le_mean
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.secondMoment_bounds
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.secondMoment_bounds
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.observedReward_measurable
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.observedReward_measurable
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.estimator_measurable
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.estimator_measurable
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.centered_measurable
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.centered_measurable
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.action_integral
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.action_integral
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.joint_integral
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.joint_integral
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.joint_reward_bounds
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.joint_reward_bounds
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.estimator_bounds
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.estimator_bounds
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.estimator_integrable
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.estimator_integrable
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.estimator_square_integrable
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.estimator_square_integrable
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.centered_integrable
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.centered_integrable
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.increment_bound
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.increment_bound
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.centered_square_integrable
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.centered_square_integrable
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.unbiased
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.unbiased
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.second_moment
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.second_moment
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.centered_mean_zero
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.centered_mean_zero
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.centered_second_moment
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.centered_second_moment
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.variance_nonneg
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.variance_nonneg
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.variance_bound
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.variance_bound
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.dirac_reward_bounds
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.dirac_reward_bounds
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.mean_dirac
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.mean_dirac
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.secondMoment_dirac
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.secondMoment_dirac
+
+#check BestOfBothWorlds.StochasticImportanceWeighting.centered_second_moment_dirac
+#print axioms BestOfBothWorlds.StochasticImportanceWeighting.centered_second_moment_dirac
+
+-- Step 18C: all named definitions, aliases, instances and proved theorems.
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.Outcome
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.Outcome
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.history
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.history
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.action
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.action
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.rewardVector
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.rewardVector
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.history_measurable
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.history_measurable
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.action_measurable
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.action_measurable
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.rewardVector_measurable
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.rewardVector_measurable
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.actionKernel
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.actionKernel
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.actionKernel_isMarkovKernel
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.actionKernel_isMarkovKernel
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.actionKernel_apply
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.actionKernel_apply
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.jointMeasure
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.jointMeasure
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.jointMeasure_isProbabilityMeasure
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.jointMeasure_isProbabilityMeasure
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.observedReward_measurable
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.observedReward_measurable
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.estimator
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.estimator
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.estimator_measurable
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.estimator_measurable
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.historySigma
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.historySigma
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.historySigma_le
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.historySigma_le
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.history_function_measurable
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.history_function_measurable
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.centered
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.centered
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.centered_measurable
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.centered_measurable
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.historySigma_sigmaFinite
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.historySigma_sigmaFinite
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.rewardVector_independent_history_action
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.rewardVector_independent_history_action
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.history_measurePreserving
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.history_measurePreserving
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.reward_bounds
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.reward_bounds
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.estimator_bounds
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.estimator_bounds
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.increment_bound
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.increment_bound
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.probability_pos_of_floor
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.probability_pos_of_floor
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.reciprocal_le
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.reciprocal_le
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.estimator_uniform_bound
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.estimator_uniform_bound
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.increment_uniform_bound
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.increment_uniform_bound
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.estimator_integrable
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.estimator_integrable
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.estimator_square_integrable
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.estimator_square_integrable
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.centered_integrable
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.centered_integrable
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.centered_square_integrable
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.centered_square_integrable
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.integral_by_history
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.integral_by_history
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.setIntegral_by_history
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.setIntegral_by_history
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.setIntegral_history
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.setIntegral_history
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.condExp_of_history_integrals
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.condExp_of_history_integrals
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.condExp_of_fixed_history
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.condExp_of_fixed_history
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.conditional_unbiased
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.conditional_unbiased
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.conditional_centered_mean_zero
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.conditional_centered_mean_zero
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.secondMoment_ratio_integrable
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.secondMoment_ratio_integrable
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.conditional_second_moment
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.conditional_second_moment
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.conditional_centered_second_moment
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.conditional_centered_second_moment
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.conditional_variance_nonneg
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.conditional_variance_nonneg
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.conditional_variance_bound
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.conditional_variance_bound
+
+#check BestOfBothWorlds.ConditionalImportanceWeighting.conditional_variance_uniform_bound
+#print axioms BestOfBothWorlds.ConditionalImportanceWeighting.conditional_variance_uniform_bound
+
+-- Step 18D: every explicitly named declaration in the new modules.
+
+#check BestOfBothWorlds.ConditionalActionSampling.indicator_integrable
+#print axioms BestOfBothWorlds.ConditionalActionSampling.indicator_integrable
+
+#check BestOfBothWorlds.ConditionalActionSampling.conditional_indicator
+#print axioms BestOfBothWorlds.ConditionalActionSampling.conditional_indicator
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.ObservedHistory
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.ObservedHistory
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.observedHistoryMeasurableSpace
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.observedHistoryMeasurableSpace
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.Trajectory
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.Trajectory
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.trajectoryMeasurableSpace
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.trajectoryMeasurableSpace
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.observe
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.observe
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.observe_measurable
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.observe_measurable
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.trajectoryPrefix
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.trajectoryPrefix
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.prefix_self
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.prefix_self
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.prefix_succ
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.prefix_succ
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.prefix_measurable
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.prefix_measurable
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.prefix_comp
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.prefix_comp
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.historyPrefix
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.historyPrefix
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.historyPrefix_self
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.historyPrefix_self
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.historyPrefix_succ
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.historyPrefix_succ
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.historyPrefix_measurable
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.historyPrefix_measurable
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.observe_prefix
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.observe_prefix
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.Policy
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.Policy
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.rawPolicy
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.rawPolicy
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.rawPolicy_pos
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.rawPolicy_pos
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.rawPolicy_norm
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.rawPolicy_norm
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.rawPolicy_measurable
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.rawPolicy_measurable
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.trajectoryLaw
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.trajectoryLaw
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.trajectoryLaw_isProbabilityMeasure
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.trajectoryLaw_isProbabilityMeasure
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.prefix_measurePreserving
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.prefix_measurePreserving
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.historyAt
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.historyAt
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.historyAt_measurable
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.historyAt_measurable
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.historyProjection
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.historyProjection
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.historyProjection_measurable
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.historyProjection_measurable
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.historyProjection_factor
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.historyProjection_factor
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.historySigma
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.historySigma
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.historySigma_mono
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.historySigma_mono
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.historyFiltration
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.historyFiltration
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.historyFiltration_of_le
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.historyFiltration_of_le
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.historyAt_observable
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.historyAt_observable
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.policy_observable
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.policy_observable
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.roundOutcome
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.roundOutcome
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.roundOutcome_measurable
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.roundOutcome_measurable
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.roundAction
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.roundAction
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.roundRewardVector
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.roundRewardVector
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.roundObservedReward
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.roundObservedReward
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.roundOutcome_history
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.roundOutcome_history
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.observed_history_extension
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.observed_history_extension
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.roundAction_observable
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.roundAction_observable
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.roundObservedReward_observable
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.roundObservedReward_observable
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.roundOutcome_measurePreserving
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.roundOutcome_measurePreserving
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.round_reward_measurePreserving
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.round_reward_measurePreserving
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.observed_le_raw_round
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.observed_le_raw_round
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.indepFun_comp_measurePreserving
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.indepFun_comp_measurePreserving
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.round_reward_independent_rawpast_action
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.round_reward_independent_rawpast_action
+
+#check BestOfBothWorlds.AdaptiveBanditProcess.round_reward_independent_past_action
+#print axioms BestOfBothWorlds.AdaptiveBanditProcess.round_reward_independent_past_action
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.setIntegral_comp_measurePreserving
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.setIntegral_comp_measurePreserving
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.condExp_comp_measurePreserving
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.condExp_comp_measurePreserving
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.condExp_shrink
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.condExp_shrink
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.importanceWeighted
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.importanceWeighted
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.increment
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.increment
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.samplingProbability
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.samplingProbability
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.reciprocalProbability
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.reciprocalProbability
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.varianceIncrement
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.varianceIncrement
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.pullIndicator
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.pullIndicator
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.increment_eq_weighted_sub_mean
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.increment_eq_weighted_sub_mean
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.samplingProbability_bounds
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.samplingProbability_bounds
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.reciprocalProbability_uniform_bound
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.reciprocalProbability_uniform_bound
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.varianceIncrement_bounds
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.varianceIncrement_bounds
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.samplingProbability_stronglyMeasurable
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.samplingProbability_stronglyMeasurable
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.varianceIncrement_stronglyMeasurable
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.varianceIncrement_stronglyMeasurable
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.pullIndicator_stronglyMeasurable
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.pullIndicator_stronglyMeasurable
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.round_policy_eq
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.round_policy_eq
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.importanceWeighted_formula
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.importanceWeighted_formula
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.importanceWeighted_stronglyMeasurable
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.importanceWeighted_stronglyMeasurable
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.increment_stronglyMeasurable
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.increment_stronglyMeasurable
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.importanceWeighted_eq_comp
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.importanceWeighted_eq_comp
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.increment_eq_comp
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.increment_eq_comp
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.conditional_round_observed
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.conditional_round_observed
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.conditional_unbiased
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.conditional_unbiased
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.conditional_increment_zero
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.conditional_increment_zero
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.conditional_second_moment
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.conditional_second_moment
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.conditional_increment_square
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.conditional_increment_square
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.importanceWeighted_bounds
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.importanceWeighted_bounds
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.increment_bound
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.increment_bound
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.importanceWeighted_uniform_bound
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.importanceWeighted_uniform_bound
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.increment_uniform_bound
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.increment_uniform_bound
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.importanceWeighted_integrable
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.importanceWeighted_integrable
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.importanceWeighted_square_integrable
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.importanceWeighted_square_integrable
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.increment_integrable
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.increment_integrable
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.increment_square_integrable
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.increment_square_integrable
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.conditional_variance_bounds
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.conditional_variance_bounds
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.conditional_variance_uniform_bound
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.conditional_variance_uniform_bound
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.pullIndicator_integrable
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.pullIndicator_integrable
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.samplingProbability_integrable
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.samplingProbability_integrable
+
+#check BestOfBothWorlds.AdaptiveBanditMoments.conditional_pullIndicator
+#print axioms BestOfBothWorlds.AdaptiveBanditMoments.conditional_pullIndicator
+
+#check BestOfBothWorlds.BanditMartingales.partialSum
+#print axioms BestOfBothWorlds.BanditMartingales.partialSum
+
+#check BestOfBothWorlds.BanditMartingales.partialSum_zero
+#print axioms BestOfBothWorlds.BanditMartingales.partialSum_zero
+
+#check BestOfBothWorlds.BanditMartingales.partialSum_succ_sub
+#print axioms BestOfBothWorlds.BanditMartingales.partialSum_succ_sub
+
+#check BestOfBothWorlds.BanditMartingales.partialSum_integrable
+#print axioms BestOfBothWorlds.BanditMartingales.partialSum_integrable
+
+#check BestOfBothWorlds.BanditMartingales.partialSum_stronglyAdapted
+#print axioms BestOfBothWorlds.BanditMartingales.partialSum_stronglyAdapted
+
+#check BestOfBothWorlds.BanditMartingales.partialSum_martingale
+#print axioms BestOfBothWorlds.BanditMartingales.partialSum_martingale
+
+#check BestOfBothWorlds.BanditMartingales.partialSum_integral_zero
+#print axioms BestOfBothWorlds.BanditMartingales.partialSum_integral_zero
+
+#check BestOfBothWorlds.BanditMartingales.predictable_partialSum
+#print axioms BestOfBothWorlds.BanditMartingales.predictable_partialSum
+
+#check BestOfBothWorlds.BanditMartingales.partialSum_sub
+#print axioms BestOfBothWorlds.BanditMartingales.partialSum_sub
+
+#check BestOfBothWorlds.BanditMartingales.compensated_partialSum_martingale
+#print axioms BestOfBothWorlds.BanditMartingales.compensated_partialSum_martingale
+
+#check BestOfBothWorlds.BanditMartingales.compensated_expected_counts
+#print axioms BestOfBothWorlds.BanditMartingales.compensated_expected_counts
+
+#check BestOfBothWorlds.BanditMartingales.partialSum_conditional_square
+#print axioms BestOfBothWorlds.BanditMartingales.partialSum_conditional_square
+
+#check BestOfBothWorlds.BanditMartingales.partialSum_stopped_eq
+#print axioms BestOfBothWorlds.BanditMartingales.partialSum_stopped_eq
+
+#check BestOfBothWorlds.BanditMartingales.partialSum_const
+#print axioms BestOfBothWorlds.BanditMartingales.partialSum_const
+
+#check BestOfBothWorlds.BanditMartingales.partialSum_stopped_const
+#print axioms BestOfBothWorlds.BanditMartingales.partialSum_stopped_const
+
+#check BestOfBothWorlds.BanditMartingales.cumulativeEstimate
+#print axioms BestOfBothWorlds.BanditMartingales.cumulativeEstimate
+
+#check BestOfBothWorlds.BanditMartingales.cumulativeMartingale
+#print axioms BestOfBothWorlds.BanditMartingales.cumulativeMartingale
+
+#check BestOfBothWorlds.BanditMartingales.predictableVariance
+#print axioms BestOfBothWorlds.BanditMartingales.predictableVariance
+
+#check BestOfBothWorlds.BanditMartingales.pullCount
+#print axioms BestOfBothWorlds.BanditMartingales.pullCount
+
+#check BestOfBothWorlds.BanditMartingales.expectedPullCount
+#print axioms BestOfBothWorlds.BanditMartingales.expectedPullCount
+
+#check BestOfBothWorlds.BanditMartingales.compensatedPullCount
+#print axioms BestOfBothWorlds.BanditMartingales.compensatedPullCount
+
+#check BestOfBothWorlds.BanditMartingales.cumulativeMartingale_zero
+#print axioms BestOfBothWorlds.BanditMartingales.cumulativeMartingale_zero
+
+#check BestOfBothWorlds.BanditMartingales.cumulativeMartingale_succ_sub
+#print axioms BestOfBothWorlds.BanditMartingales.cumulativeMartingale_succ_sub
+
+#check BestOfBothWorlds.BanditMartingales.predictableVariance_zero
+#print axioms BestOfBothWorlds.BanditMartingales.predictableVariance_zero
+
+#check BestOfBothWorlds.BanditMartingales.predictableVariance_succ_sub
+#print axioms BestOfBothWorlds.BanditMartingales.predictableVariance_succ_sub
+
+#check BestOfBothWorlds.BanditMartingales.cumulativeMartingale_eq_estimate_sub_means
+#print axioms BestOfBothWorlds.BanditMartingales.cumulativeMartingale_eq_estimate_sub_means
+
+#check BestOfBothWorlds.BanditMartingales.pullCount_stronglyAdapted
+#print axioms BestOfBothWorlds.BanditMartingales.pullCount_stronglyAdapted
+
+#check BestOfBothWorlds.BanditMartingales.expectedPullCount_predictable
+#print axioms BestOfBothWorlds.BanditMartingales.expectedPullCount_predictable
+
+#check BestOfBothWorlds.BanditMartingales.cumulativeMartingale_martingale
+#print axioms BestOfBothWorlds.BanditMartingales.cumulativeMartingale_martingale
+
+#check BestOfBothWorlds.BanditMartingales.cumulativeMartingale_integrable
+#print axioms BestOfBothWorlds.BanditMartingales.cumulativeMartingale_integrable
+
+#check BestOfBothWorlds.BanditMartingales.cumulativeMartingale_stronglyMeasurable
+#print axioms BestOfBothWorlds.BanditMartingales.cumulativeMartingale_stronglyMeasurable
+
+#check BestOfBothWorlds.BanditMartingales.cumulativeMartingale_condExp
+#print axioms BestOfBothWorlds.BanditMartingales.cumulativeMartingale_condExp
+
+#check BestOfBothWorlds.BanditMartingales.predictableVariance_predictable
+#print axioms BestOfBothWorlds.BanditMartingales.predictableVariance_predictable
+
+#check BestOfBothWorlds.BanditMartingales.predictableVariance_nonneg
+#print axioms BestOfBothWorlds.BanditMartingales.predictableVariance_nonneg
+
+#check BestOfBothWorlds.BanditMartingales.predictableVariance_le_reciprocalSum
+#print axioms BestOfBothWorlds.BanditMartingales.predictableVariance_le_reciprocalSum
+
+#check BestOfBothWorlds.BanditMartingales.predictableVariance_uniform_bound
+#print axioms BestOfBothWorlds.BanditMartingales.predictableVariance_uniform_bound
+
+#check BestOfBothWorlds.BanditMartingales.predictableVariance_eq_sum_condExp
+#print axioms BestOfBothWorlds.BanditMartingales.predictableVariance_eq_sum_condExp
+
+#check BestOfBothWorlds.BanditMartingales.pullCount_integrable
+#print axioms BestOfBothWorlds.BanditMartingales.pullCount_integrable
+
+#check BestOfBothWorlds.BanditMartingales.expectedPullCount_integrable
+#print axioms BestOfBothWorlds.BanditMartingales.expectedPullCount_integrable
+
+#check BestOfBothWorlds.BanditMartingales.compensatedPullCount_martingale
+#print axioms BestOfBothWorlds.BanditMartingales.compensatedPullCount_martingale
+
+#check BestOfBothWorlds.BanditMartingales.pullCount_integral_eq
+#print axioms BestOfBothWorlds.BanditMartingales.pullCount_integral_eq
+
+#check BestOfBothWorlds.BanditSpecializations.finitePolicy
+#print axioms BestOfBothWorlds.BanditSpecializations.finitePolicy
+
+#check BestOfBothWorlds.BanditSpecializations.finitePolicy_agrees
+#print axioms BestOfBothWorlds.BanditSpecializations.finitePolicy_agrees
+
+#check BestOfBothWorlds.BanditSpecializations.finitePolicy_floor
+#print axioms BestOfBothWorlds.BanditSpecializations.finitePolicy_floor
+
+#check BestOfBothWorlds.BanditSpecializations.fixedTable_reward_vector
+#print axioms BestOfBothWorlds.BanditSpecializations.fixedTable_reward_vector
+
+#check BestOfBothWorlds.BanditSpecializations.fixedTable_observed_reward
+#print axioms BestOfBothWorlds.BanditSpecializations.fixedTable_observed_reward
+
+#check BestOfBothWorlds.BanditSpecializations.stochastic_cumulative_identity
+#print axioms BestOfBothWorlds.BanditSpecializations.stochastic_cumulative_identity
+
+#check BestOfBothWorlds.BanditSpecializations.stochastic_martingale
+#print axioms BestOfBothWorlds.BanditSpecializations.stochastic_martingale
+
+#check BestOfBothWorlds.BanditSpecializations.fixedTable_conditional_unbiased
+#print axioms BestOfBothWorlds.BanditSpecializations.fixedTable_conditional_unbiased
+
+#check BestOfBothWorlds.BanditSpecializations.fixedTable_conditional_variance
+#print axioms BestOfBothWorlds.BanditSpecializations.fixedTable_conditional_variance
+
+#check BestOfBothWorlds.BanditSpecializations.fixedTable_cumulative_identity
+#print axioms BestOfBothWorlds.BanditSpecializations.fixedTable_cumulative_identity
+
+#check BestOfBothWorlds.BanditSpecializations.fixedTable_martingale
+#print axioms BestOfBothWorlds.BanditSpecializations.fixedTable_martingale
+
+-- Fully elaborated principal statements expose every hypothesis, instance and coercion.
+section Step18DExplicitStatements
+set_option pp.all true
+set_option pp.universes true
+set_option pp.maxSteps 1000000
+set_option format.width 120
+#check @BestOfBothWorlds.AdaptiveBanditProcess.Policy
+#check @BestOfBothWorlds.AdaptiveBanditProcess.trajectoryLaw_isProbabilityMeasure
+#check @BestOfBothWorlds.AdaptiveBanditProcess.prefix_measurePreserving
+#check @BestOfBothWorlds.AdaptiveBanditProcess.historyFiltration
+#check @BestOfBothWorlds.AdaptiveBanditProcess.historyAt_observable
+#check @BestOfBothWorlds.AdaptiveBanditProcess.policy_observable
+#check @BestOfBothWorlds.AdaptiveBanditProcess.observed_history_extension
+#check @BestOfBothWorlds.AdaptiveBanditProcess.roundOutcome_measurePreserving
+#check @BestOfBothWorlds.AdaptiveBanditProcess.round_reward_measurePreserving
+#check @BestOfBothWorlds.AdaptiveBanditProcess.round_reward_independent_past_action
+#check @BestOfBothWorlds.AdaptiveBanditMoments.importanceWeighted_formula
+#check @BestOfBothWorlds.AdaptiveBanditMoments.conditional_unbiased
+#check @BestOfBothWorlds.AdaptiveBanditMoments.conditional_increment_zero
+#check @BestOfBothWorlds.AdaptiveBanditMoments.conditional_second_moment
+#check @BestOfBothWorlds.AdaptiveBanditMoments.conditional_increment_square
+#check @BestOfBothWorlds.AdaptiveBanditMoments.conditional_variance_bounds
+#check @BestOfBothWorlds.AdaptiveBanditMoments.importanceWeighted_integrable
+#check @BestOfBothWorlds.AdaptiveBanditMoments.importanceWeighted_square_integrable
+#check @BestOfBothWorlds.AdaptiveBanditMoments.increment_integrable
+#check @BestOfBothWorlds.AdaptiveBanditMoments.increment_square_integrable
+#check @BestOfBothWorlds.BanditMartingales.cumulativeMartingale_martingale
+#check @BestOfBothWorlds.BanditMartingales.cumulativeMartingale_condExp
+#check @BestOfBothWorlds.BanditMartingales.cumulativeMartingale_eq_estimate_sub_means
+#check @BestOfBothWorlds.BanditMartingales.predictableVariance_predictable
+#check @BestOfBothWorlds.BanditMartingales.predictableVariance_eq_sum_condExp
+#check @BestOfBothWorlds.BanditMartingales.predictableVariance_nonneg
+#check @BestOfBothWorlds.BanditMartingales.predictableVariance_le_reciprocalSum
+#check @BestOfBothWorlds.BanditMartingales.predictableVariance_uniform_bound
+#check @BestOfBothWorlds.BanditMartingales.compensatedPullCount_martingale
+#check @BestOfBothWorlds.BanditMartingales.pullCount_integral_eq
+#check @BestOfBothWorlds.BanditMartingales.expectedPullCount_predictable
+#check @BestOfBothWorlds.BanditSpecializations.finitePolicy
+#check @BestOfBothWorlds.BanditSpecializations.finitePolicy_floor
+#check @BestOfBothWorlds.BanditSpecializations.stochastic_cumulative_identity
+#check @BestOfBothWorlds.BanditSpecializations.stochastic_martingale
+#check @BestOfBothWorlds.BanditSpecializations.fixedTable_conditional_unbiased
+#check @BestOfBothWorlds.BanditSpecializations.fixedTable_conditional_variance
+#check @BestOfBothWorlds.BanditSpecializations.fixedTable_cumulative_identity
+#check @BestOfBothWorlds.BanditSpecializations.fixedTable_martingale
+end Step18DExplicitStatements

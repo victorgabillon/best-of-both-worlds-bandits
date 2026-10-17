@@ -1,0 +1,292 @@
+{
+  "status": "passed",
+  "mathematical_modules": 57,
+  "all_byte_identical_to_step22": true,
+  "modules": {
+    "BestOfBothWorlds/AdaptiveBanditMoments.lean": {
+      "step22_sha256": "a6cb47c6a3b06b485f233b1046c80c85a864761bec9689200c73c3986c41dceb",
+      "release_sha256": "a6cb47c6a3b06b485f233b1046c80c85a864761bec9689200c73c3986c41dceb",
+      "identical": true
+    },
+    "BestOfBothWorlds/AdaptiveBanditProcess.lean": {
+      "step22_sha256": "3e20c9e26f5377202e3cb4777d72d6d2bf81dc2b3c4e635c61619886440c0c58",
+      "release_sha256": "3e20c9e26f5377202e3cb4777d72d6d2bf81dc2b3c4e635c61619886440c0c58",
+      "identical": true
+    },
+    "BestOfBothWorlds/AdversarialLowerBound.lean": {
+      "step22_sha256": "92367a81a9dc819c6f7f6685afd78b7a81c3ba80d147586eeac8f28ec31eb5f0",
+      "release_sha256": "92367a81a9dc819c6f7f6685afd78b7a81c3ba80d147586eeac8f28ec31eb5f0",
+      "identical": true
+    },
+    "BestOfBothWorlds/ArchitectureExamples.lean": {
+      "step22_sha256": "235c6aed68b71b6d2d0f2b51e800fbe98d9ab6170ded83a487408d50e1d6de41",
+      "release_sha256": "235c6aed68b71b6d2d0f2b51e800fbe98d9ab6170ded83a487408d50e1d6de41",
+      "identical": true
+    },
+    "BestOfBothWorlds/BOBLowerBound.lean": {
+      "step22_sha256": "d19278f2ad32b503ea6b7c2ca65cfefbc3947b0b86d3d6a57d037dd2e41524b8",
+      "release_sha256": "d19278f2ad32b503ea6b7c2ca65cfefbc3947b0b86d3d6a57d037dd2e41524b8",
+      "identical": true
+    },
+    "BestOfBothWorlds/BanditConcentration.lean": {
+      "step22_sha256": "fcbb178d8553e770983a64bc4a572531cabc47652091e5b1915073ba4de46cdd",
+      "release_sha256": "fcbb178d8553e770983a64bc4a572531cabc47652091e5b1915073ba4de46cdd",
+      "identical": true
+    },
+    "BestOfBothWorlds/BanditMartingales.lean": {
+      "step22_sha256": "897dcb049fe9f49a891c45660016aa06e7e894627b7b662fd101fbe08115c629",
+      "release_sha256": "897dcb049fe9f49a891c45660016aa06e7e894627b7b662fd101fbe08115c629",
+      "identical": true
+    },
+    "BestOfBothWorlds/BanditSpecializations.lean": {
+      "step22_sha256": "2ecadfe912560064ca4a9036ce48072682d94a5d39e1826ee27f557faa365b71",
+      "release_sha256": "2ecadfe912560064ca4a9036ce48072682d94a5d39e1826ee27f557faa365b71",
+      "identical": true
+    },
+    "BestOfBothWorlds/BernoulliInformation.lean": {
+      "step22_sha256": "1c151453f7d3343068541c3ce9e4bfe384292872144424bec6410adb98bd7dc0",
+      "release_sha256": "1c151453f7d3343068541c3ce9e4bfe384292872144424bec6410adb98bd7dc0",
+      "identical": true
+    },
+    "BestOfBothWorlds/BernsteinEnvelope.lean": {
+      "step22_sha256": "3198df3cd736fe3e872f28296c2f90a763794fdaab25b3f4c9b65ee99cfe63cb",
+      "release_sha256": "3198df3cd736fe3e872f28296c2f90a763794fdaab25b3f4c9b65ee99cfe63cb",
+      "identical": true
+    },
+    "BestOfBothWorlds/ConcentrationConstants.lean": {
+      "step22_sha256": "acd07ec083526fbaaf646bbf57b2f928dfc5e9c24e317b2c0494b2935202278c",
+      "release_sha256": "acd07ec083526fbaaf646bbf57b2f928dfc5e9c24e317b2c0494b2935202278c",
+      "identical": true
+    },
+    "BestOfBothWorlds/ConditionalActionSampling.lean": {
+      "step22_sha256": "85018b8ef12eff6309062a07893e667bca7b06186021045cb9b1dc33221900b3",
+      "release_sha256": "85018b8ef12eff6309062a07893e667bca7b06186021045cb9b1dc33221900b3",
+      "identical": true
+    },
+    "BestOfBothWorlds/ConditionalBernstein.lean": {
+      "step22_sha256": "626ba0897564dad50db50543e50c33f89abcab7a3e43d483054d747135f6d7a7",
+      "release_sha256": "626ba0897564dad50db50543e50c33f89abcab7a3e43d483054d747135f6d7a7",
+      "identical": true
+    },
+    "BestOfBothWorlds/ConditionalImportanceWeighting.lean": {
+      "step22_sha256": "00376df2dd79f3c72f92c290fd6a4da1a78da55354fbdbe881de30abf0425523",
+      "release_sha256": "00376df2dd79f3c72f92c290fd6a4da1a78da55354fbdbe881de30abf0425523",
+      "identical": true
+    },
+    "BestOfBothWorlds/FiniteInformation.lean": {
+      "step22_sha256": "6470c5bc3e20e128864c45fc4c571879166a6b0f1df5e7ef93b8a2eb314f9cc2",
+      "release_sha256": "6470c5bc3e20e128864c45fc4c571879166a6b0f1df5e7ef93b8a2eb314f9cc2",
+      "identical": true
+    },
+    "BestOfBothWorlds/FiniteMaximizer.lean": {
+      "step22_sha256": "b4faa805f78896be5c81b498099092770453ed46406304acea235cea056dce9f",
+      "release_sha256": "b4faa805f78896be5c81b498099092770453ed46406304acea235cea056dce9f",
+      "identical": true
+    },
+    "BestOfBothWorlds/Freedman.lean": {
+      "step22_sha256": "7e52eb190c268cb545bd433d2ebcdcb16c715340fe073bfdbc28079743721f54",
+      "release_sha256": "7e52eb190c268cb545bd433d2ebcdcb16c715340fe073bfdbc28079743721f54",
+      "identical": true
+    },
+    "BestOfBothWorlds/FullTableConcentration.lean": {
+      "step22_sha256": "33af69b18e58d37debc3b5bf66cfd3ca4842d44d48aee2b74afa47e064116e36",
+      "release_sha256": "33af69b18e58d37debc3b5bf66cfd3ca4842d44d48aee2b74afa47e064116e36",
+      "identical": true
+    },
+    "BestOfBothWorlds/GapComplexity.lean": {
+      "step22_sha256": "fda7f9bd8f1a1e6be8b47856bc50cc6fe07c91bc2eca9c58214ed49017a7784f",
+      "release_sha256": "fda7f9bd8f1a1e6be8b47856bc50cc6fe07c91bc2eca9c58214ed49017a7784f",
+      "identical": true
+    },
+    "BestOfBothWorlds/ImportanceWeighting.lean": {
+      "step22_sha256": "7ada47755fca123fa5c792dc07bbf8febc216de07077684b253285b084a88486",
+      "release_sha256": "7ada47755fca123fa5c792dc07bbf8febc216de07077684b253285b084a88486",
+      "identical": true
+    },
+    "BestOfBothWorlds/LowerBoundCertificates.lean": {
+      "step22_sha256": "8fbe0e5c7208d88d3e85463635d0fd1766d604c739108624aa667443fc984e50",
+      "release_sha256": "8fbe0e5c7208d88d3e85463635d0fd1766d604c739108624aa667443fc984e50",
+      "identical": true
+    },
+    "BestOfBothWorlds/LowerBoundConsequences.lean": {
+      "step22_sha256": "bcb19ce563fc8ad07460068019bd6d78b32fe54aa29b6b12d48c30b34fe26211",
+      "release_sha256": "bcb19ce563fc8ad07460068019bd6d78b32fe54aa29b6b12d48c30b34fe26211",
+      "identical": true
+    },
+    "BestOfBothWorlds/LowerBoundEnvironments.lean": {
+      "step22_sha256": "e9f390e985d55164b8679c71c36c4dcb58327a5b5ab2e913c39d13f7353e8bc6",
+      "release_sha256": "e9f390e985d55164b8679c71c36c4dcb58327a5b5ab2e913c39d13f7353e8bc6",
+      "identical": true
+    },
+    "BestOfBothWorlds/LowerBoundExtraction.lean": {
+      "step22_sha256": "0af5aba01a70c3354bc37a85962d19cd6bdb96341dfcfa3486cdf0a49889c894",
+      "release_sha256": "0af5aba01a70c3354bc37a85962d19cd6bdb96341dfcfa3486cdf0a49889c894",
+      "identical": true
+    },
+    "BestOfBothWorlds/LowerBoundGapClasses.lean": {
+      "step22_sha256": "3fdaf31ef7cd3cb11606047412ebd6997247015cb727d1b2e2f5dea2a00500a0",
+      "release_sha256": "3fdaf31ef7cd3cb11606047412ebd6997247015cb727d1b2e2f5dea2a00500a0",
+      "identical": true
+    },
+    "BestOfBothWorlds/LowerBoundSelection.lean": {
+      "step22_sha256": "08a71d1c83f86be87c1b54b474c8e278b93a8ff6094bec5271bef8b1ff493f95",
+      "release_sha256": "08a71d1c83f86be87c1b54b474c8e278b93a8ff6094bec5271bef8b1ff493f95",
+      "identical": true
+    },
+    "BestOfBothWorlds/LowerBoundStochasticGaps.lean": {
+      "step22_sha256": "a28b4cf51afa41ce5d0adb01e4c78869bcc8acd24aa049c8b94f8a298774a606",
+      "release_sha256": "a28b4cf51afa41ce5d0adb01e4c78869bcc8acd24aa049c8b94f8a298774a606",
+      "identical": true
+    },
+    "BestOfBothWorlds/LowerBoundTesting.lean": {
+      "step22_sha256": "d13e05c632cd7a8fdc3f3299f01b5de74b36a5784d692444bdaf8103979a30f0",
+      "release_sha256": "d13e05c632cd7a8fdc3f3299f01b5de74b36a5784d692444bdaf8103979a30f0",
+      "identical": true
+    },
+    "BestOfBothWorlds/MathlibInterop.lean": {
+      "step22_sha256": "9f4fbcbe96a737b3f221aa74d5ff869506ff964ca3289e07becfbabec9b400ad",
+      "release_sha256": "9f4fbcbe96a737b3f221aa74d5ff869506ff964ca3289e07becfbabec9b400ad",
+      "identical": true
+    },
+    "BestOfBothWorlds/P1AdversarialBound.lean": {
+      "step22_sha256": "46f21131ade05ef89ca90fde122fa876f43e91c03256fadcb8b613df5db4bd00",
+      "release_sha256": "46f21131ade05ef89ca90fde122fa876f43e91c03256fadcb8b613df5db4bd00",
+      "identical": true
+    },
+    "BestOfBothWorlds/P1Algorithm.lean": {
+      "step22_sha256": "698b6b8de4437eec2d4905a0202f87a506540bc16a8e21ac888fe0be21e3a9b8",
+      "release_sha256": "698b6b8de4437eec2d4905a0202f87a506540bc16a8e21ac888fe0be21e3a9b8",
+      "identical": true
+    },
+    "BestOfBothWorlds/P1Complexity.lean": {
+      "step22_sha256": "cf7df09f66e05174fa1b8f954946b3dc6969e6f85035efd656d5f073dba70576",
+      "release_sha256": "cf7df09f66e05174fa1b8f954946b3dc6969e6f85035efd656d5f073dba70576",
+      "identical": true
+    },
+    "BestOfBothWorlds/P1Corollary.lean": {
+      "step22_sha256": "b4b88751c1e486840efebaa7428a19d961513d1efd6318282873393f2b939b58",
+      "release_sha256": "b4b88751c1e486840efebaa7428a19d961513d1efd6318282873393f2b939b58",
+      "identical": true
+    },
+    "BestOfBothWorlds/P1Examples.lean": {
+      "step22_sha256": "1db7c86e3a268773153a3af6cff0d07cceb2278a179d818d553dfd43ca3cef1a",
+      "release_sha256": "1db7c86e3a268773153a3af6cff0d07cceb2278a179d818d553dfd43ca3cef1a",
+      "identical": true
+    },
+    "BestOfBothWorlds/P1IdealComplexity.lean": {
+      "step22_sha256": "930a78957f1128cb63af6874dbf7e9649e6033d68aa320eb16a1feb951ab92b9",
+      "release_sha256": "930a78957f1128cb63af6874dbf7e9649e6033d68aa320eb16a1feb951ab92b9",
+      "identical": true
+    },
+    "BestOfBothWorlds/P1Ranking.lean": {
+      "step22_sha256": "737a969be97e2be94cc6912284e45b777127969a4a72202c0e88130109d2ad3c",
+      "release_sha256": "737a969be97e2be94cc6912284e45b777127969a4a72202c0e88130109d2ad3c",
+      "identical": true
+    },
+    "BestOfBothWorlds/P1Schedule.lean": {
+      "step22_sha256": "d764b4a5d20a9f4d01dd9cf2e8964a17600605550bcfd0513828cdd3ce500d5f",
+      "release_sha256": "d764b4a5d20a9f4d01dd9cf2e8964a17600605550bcfd0513828cdd3ce500d5f",
+      "identical": true
+    },
+    "BestOfBothWorlds/P1ScheduleIdentities.lean": {
+      "step22_sha256": "bd533cfb393e6121e93c924d1fa795c437d1a23ad47dba601426f0d941c653fb",
+      "release_sha256": "bd533cfb393e6121e93c924d1fa795c437d1a23ad47dba601426f0d941c653fb",
+      "identical": true
+    },
+    "BestOfBothWorlds/P1StochasticBound.lean": {
+      "step22_sha256": "189f77680c98efa8c972412cf31ec5f7ca2662ee2cbc908323178766c8718740",
+      "release_sha256": "189f77680c98efa8c972412cf31ec5f7ca2662ee2cbc908323178766c8718740",
+      "identical": true
+    },
+    "BestOfBothWorlds/P1StochasticEvents.lean": {
+      "step22_sha256": "427b78a9b40282e9f48f8d8a3cc75c4b7466511223285cea88897b61c05936c0",
+      "release_sha256": "427b78a9b40282e9f48f8d8a3cc75c4b7466511223285cea88897b61c05936c0",
+      "identical": true
+    },
+    "BestOfBothWorlds/P1StochasticModel.lean": {
+      "step22_sha256": "c541bd260db70bab55bf216c9775e303bfa2b294cd1f3192c4c087bc9516e3ae",
+      "release_sha256": "c541bd260db70bab55bf216c9775e303bfa2b294cd1f3192c4c087bc9516e3ae",
+      "identical": true
+    },
+    "BestOfBothWorlds/P1UpperBounds.lean": {
+      "step22_sha256": "c0d1d039c9afc30adefc1d4a207eada857f24a9f8f9411e9a056e27cd30063b0",
+      "release_sha256": "c0d1d039c9afc30adefc1d4a207eada857f24a9f8f9411e9a056e27cd30063b0",
+      "identical": true
+    },
+    "BestOfBothWorlds/RealizedGaps.lean": {
+      "step22_sha256": "972e75be5a94cd78df260a69a25be02ab53c263dfe1a1aa58917dd0dca4be713",
+      "release_sha256": "972e75be5a94cd78df260a69a25be02ab53c263dfe1a1aa58917dd0dca4be713",
+      "identical": true
+    },
+    "BestOfBothWorlds/SeededChangeOfMeasure.lean": {
+      "step22_sha256": "5d3c4c9669b129c05014eb3318b01294ef9212d01d273ba411b5cbb325a01350",
+      "release_sha256": "5d3c4c9669b129c05014eb3318b01294ef9212d01d273ba411b5cbb325a01350",
+      "identical": true
+    },
+    "BestOfBothWorlds/SeededInformativeLikelihood.lean": {
+      "step22_sha256": "36011d17e253a337e75dc336bdfc196b3dc682ef5b3c0985be382484aab2d1b7",
+      "release_sha256": "36011d17e253a337e75dc336bdfc196b3dc682ef5b3c0985be382484aab2d1b7",
+      "identical": true
+    },
+    "BestOfBothWorlds/SeededLearner.lean": {
+      "step22_sha256": "27a8c56bfc6dcbecc0a2fdd119c4c383faf4b36250659219edf35095e59b49bc",
+      "release_sha256": "27a8c56bfc6dcbecc0a2fdd119c4c383faf4b36250659219edf35095e59b49bc",
+      "identical": true
+    },
+    "BestOfBothWorlds/SeededLearnerCounts.lean": {
+      "step22_sha256": "ef9edeaa653d40d733fa302c9d56a2814c552f19b01951283fe00dd4efa203d5",
+      "release_sha256": "ef9edeaa653d40d733fa302c9d56a2814c552f19b01951283fe00dd4efa203d5",
+      "identical": true
+    },
+    "BestOfBothWorlds/SeededLearnerExamples.lean": {
+      "step22_sha256": "2f887105604a9f5cf25d5bb33d60f1018bfc3a1ea298496a72d0231d2a3bfcdd",
+      "release_sha256": "2f887105604a9f5cf25d5bb33d60f1018bfc3a1ea298496a72d0231d2a3bfcdd",
+      "identical": true
+    },
+    "BestOfBothWorlds/SeededLearnerFreshness.lean": {
+      "step22_sha256": "b111b76a16151f198c076c68fe2640c6db327751d0df17760acb0c2259da4acc",
+      "release_sha256": "b111b76a16151f198c076c68fe2640c6db327751d0df17760acb0c2259da4acc",
+      "identical": true
+    },
+    "BestOfBothWorlds/SeededLearnerPrefix.lean": {
+      "step22_sha256": "d77e645423236e3d1629e8be512eccbac8f9e3249ee7eed54a5d87cd0ca2aaf2",
+      "release_sha256": "d77e645423236e3d1629e8be512eccbac8f9e3249ee7eed54a5d87cd0ca2aaf2",
+      "identical": true
+    },
+    "BestOfBothWorlds/SeededLearnerRestriction.lean": {
+      "step22_sha256": "388e5eb1f7d9b408623aa1e5d8451b34a17dcf9da9b28248bf6c810eaf487098",
+      "release_sha256": "388e5eb1f7d9b408623aa1e5d8451b34a17dcf9da9b28248bf6c810eaf487098",
+      "identical": true
+    },
+    "BestOfBothWorlds/SeededLikelihood.lean": {
+      "step22_sha256": "bf453f0275b07ca98bddabec1ca8e77cbee303d8ac517e7472d5743fac252ad0",
+      "release_sha256": "bf453f0275b07ca98bddabec1ca8e77cbee303d8ac517e7472d5743fac252ad0",
+      "identical": true
+    },
+    "BestOfBothWorlds/SeededRealTranscript.lean": {
+      "step22_sha256": "79173d15a3c9467e427cef17730cf5b063be700b063392a022d0c14519f8d2fb",
+      "release_sha256": "79173d15a3c9467e427cef17730cf5b063be700b063392a022d0c14519f8d2fb",
+      "identical": true
+    },
+    "BestOfBothWorlds/StochasticImportanceWeighting.lean": {
+      "step22_sha256": "d5220622674fe9ab4d752d66897d38477313d6c7054995ad42051d855d0442b5",
+      "release_sha256": "d5220622674fe9ab4d752d66897d38477313d6c7054995ad42051d855d0442b5",
+      "identical": true
+    },
+    "BestOfBothWorlds/UniformAdversarialBound.lean": {
+      "step22_sha256": "ca2ee7f971824b523998030f4bce3e913ef92ff7c39a64534aac742df246a469",
+      "release_sha256": "ca2ee7f971824b523998030f4bce3e913ef92ff7c39a64534aac742df246a469",
+      "identical": true
+    },
+    "BestOfBothWorlds/UniformExamples.lean": {
+      "step22_sha256": "2f1b0d32aedeb910d70eabbc457ebef83931d2d18d60e321dc870e0c97957a32",
+      "release_sha256": "2f1b0d32aedeb910d70eabbc457ebef83931d2d18d60e321dc870e0c97957a32",
+      "identical": true
+    },
+    "BestOfBothWorlds/UniformSampling.lean": {
+      "step22_sha256": "5e6be8f34095ed2da7b10e3b62c44dc91ba21c8dfc9b9c4e031bf4b34b48e1b9",
+      "release_sha256": "5e6be8f34095ed2da7b10e3b62c44dc91ba21c8dfc9b9c4e031bf4b34b48e1b9",
+      "identical": true
+    }
+  }
+}
