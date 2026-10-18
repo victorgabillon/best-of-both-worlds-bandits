@@ -9,6 +9,13 @@
 \setcounter{theorem}{\the\numexpr\value{scratchcounter}}
 \begin{proof}%[Theorem~\ref{th:lowBOB}]\
 	%    
+As in Theorem 2, we exploit the fact that two environments with different best
+arms can produce observations that are difficult to distinguish. Here, the
+stochastic guarantee forces the learner to recommend one arm with very high
+probability, while the adversarial environment requires a different
+recommendation. We use a change-of-measure argument to quantify this conflict,
+then show that it persists for a deterministic adversarial reward table.
+
 Fix the reference gaps defining $\Gaps_4$, a learner, and a
 horizon $\timeHorizon$ satisfying the hypothesis of the theorem.
 Throughout the proof, the learner is run with this fixed horizon,

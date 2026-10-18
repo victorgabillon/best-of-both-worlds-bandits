@@ -1,6 +1,6 @@
 {
   "version": "0.1.0-rc.4",
-  "scope": "Exact initial Step25 public publication files, derived from finalStep24Brc.4; mathematical/manuscript inputs unchanged; historical reports retain original scope",
+  "scope": "Current public repository after the five author-approved prose changes of 2026-10-18; mathematical and Lean inputs unchanged from initial Step25 commit 6dedfd811608ff70a39eb49276eb31be4d5db9b6; historical audit reports retain their original scope",
   "self_hash_excluded": true,
   "files": {
     ".gitattributes": {
@@ -260,8 +260,8 @@
       "sha256": "a416c139ccf9fe914bb55b40089c960d03cf7e0eba007dc65d2cd6b546c24707"
     },
     "README.md": {
-      "bytes": 6083,
-      "sha256": "87c164009912bdb4594360b5491ea4f878043f44f9192d75cfabfda556cf8213"
+      "bytes": 6249,
+      "sha256": "03f67f73060a5608e0107fac1df1a96e8e71f2ecf5b698ea34cd8ba9f2bfd991"
     },
     "RELEASE_VERSION": {
       "bytes": 11,
@@ -276,16 +276,16 @@
       "sha256": "7af8fbde501d5aff75c7a3b20ea909f83acfa4fcabbb04ae588b2f6233447ef8"
     },
     "docs/LICENSING.md": {
-      "bytes": 3472,
-      "sha256": "442e9cb07e416e6a60183e94e820d39c6387c3a7b53d23bf7ff91434e3195f4b"
+      "bytes": 3676,
+      "sha256": "5cb8625ca2f1d149d779509b2cb6a38a63d39a45b5a1844d111a1c120ccdf411"
     },
     "docs/MANUSCRIPT_FIDELITY.md": {
       "bytes": 4233,
       "sha256": "3a6d7ad022380a6da2082e904716e218a392169c07e83140107b41a7a4aa081f"
     },
     "docs/PROVENANCE.md": {
-      "bytes": 5087,
-      "sha256": "935ee9fa21c1276981528d55dc6a94aebe5ddb46cd19fcb7705f145a12cc6a8c"
+      "bytes": 7345,
+      "sha256": "136e5873709b81ba9554ee4acd5a9d5ebcc7e56db30a1cf739caf9bac936b293"
     },
     "docs/RELEASE_CHECKLIST.md": {
       "bytes": 2555,
@@ -324,20 +324,20 @@
       "sha256": "d4c538726ee4541b410f2a6dcd62e1c78d7edb33d669739d6f5b385797ce430e"
     },
     "paper/README.md": {
-      "bytes": 3188,
-      "sha256": "ce654f763a005a7562a357bf9dcfb6d75542cb864e6c371ce46522e4c9bb56e0"
+      "bytes": 3679,
+      "sha256": "8a9fcc0c10f579e76513fcc4c637b144784790c3e78df5c7fa104a7704ba413d"
     },
     "paper/RIGHTS.md": {
-      "bytes": 5472,
-      "sha256": "35ce315d490f3604d9919ecd1316194c1b8c40e9f198d833c9af899f9cb8eeba"
+      "bytes": 5668,
+      "sha256": "2ecb6c8295ea9f5568e47ef78a636744ef067deecf0596d62d03fd7d933ca7a1"
     },
     "paper/corrected-paper.pdf": {
-      "bytes": 958146,
-      "sha256": "df406d32ccddbd0986803630925f12f3316282d04ac37b682a05ebed5ebe2820"
+      "bytes": 959734,
+      "sha256": "ddcf0bb137c9fe71abd1317e56ba4f841712edb2f9932fe0055eed5db97cd4d2"
     },
     "paper/corrected-paper.pdf.sha256": {
       "bytes": 86,
-      "sha256": "37cac33ce78ece5b6f941dcd75dd92b485c9ef903f0163686a1a3f9a7377f144"
+      "sha256": "98912d5065d9300eb5669dfc020943bf4fd893a6134a1ebcdb24f195261c9077"
     },
     "paper/dependencies.json": {
       "bytes": 1805,
@@ -364,12 +364,12 @@
       "sha256": "73fc642d585d5ccc88e0ac1257fdc7c60a9ae955cf735d468bd936b3f90c00f2"
     },
     "paper/source/appLOWAd.tex": {
-      "bytes": 11597,
-      "sha256": "4b11ed0713eecd2894bcc781a48f6c9af60c28d8ce00b8889362a5094e890c48"
+      "bytes": 11975,
+      "sha256": "a000f09e079a925aaa417d663c6885b26c96bbdc11f196e7c1d26b650727cd36"
     },
     "paper/source/appLOWBOB.tex": {
-      "bytes": 21221,
-      "sha256": "31e6d1e7664277a10448724313fd7591ec37a45824795893c6aba8fe93264102"
+      "bytes": 21672,
+      "sha256": "78fe3dafa2dfbdabe05433eefcfaed5489270e990d435c502a2d47b791224c25"
     },
     "paper/source/appTechLem.tex": {
       "bytes": 7750,
@@ -432,20 +432,20 @@
       "sha256": "9bec837dddce51460f86923685dd43110972538760a65c17eb7035fc70601860"
     },
     "paper/source/intro.tex": {
-      "bytes": 18388,
-      "sha256": "b3aaeace45ba79adae6ccc576d513f05709c9505397780df6540e37870d46e2f"
+      "bytes": 18373,
+      "sha256": "c719eadfdd70e6fbc13525e8cdb9ecdc5f5bc9b2def06524b6f63c8e33046f52"
     },
     "paper/source/lowerBoundBOB.tex": {
-      "bytes": 14107,
-      "sha256": "e1a217afd93b2e2ee4f2398377b62423d2e5f30d33bd57fabae0e0ea9957e358"
+      "bytes": 14436,
+      "sha256": "f6ad287e60a453e020f3de667084a56046a12e51512681c4bcc1ff8c96a3c44b"
     },
     "paper/source/problemFormulation.tex": {
       "bytes": 11418,
       "sha256": "7bf01fc134077cbdd176e9d6ce412ea2ce5e4ec7e51d767241c7859402cb0f3b"
     },
     "paper/source/upLowGenAd.tex": {
-      "bytes": 9398,
-      "sha256": "1e617b5aa628ff95410e33ffb1a61618da45986d1d5ccc976bf84b070022bcc9"
+      "bytes": 9736,
+      "sha256": "5e27214e9608982f9145c8225e734b064305b8fda06f2068643687f2f95bc9df"
     },
     "paper/source/upperBoundBOB.tex": {
       "bytes": 17103,

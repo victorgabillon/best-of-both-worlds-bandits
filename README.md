@@ -2,7 +2,7 @@
 
 This repository contains the corrected COLT 2018 paper, its LaTeX sources and PDF, together with a Lean 4 formalization of its principal mathematical results. The repository publishes the corrected research manuscript and its Lean certificates. The formalization and manuscript have the separate licenses described below.
 
-- [Corrected paper (PDF, 43 pages)](paper/corrected-paper.pdf)
+- [Corrected paper (PDF, 44 pages)](paper/corrected-paper.pdf)
 - [Complete LaTeX sources](paper/source/)
 - [Paper build instructions](paper/README.md)
 - [Theorem-to-Lean map](docs/THEOREM_MAP.md)
@@ -42,7 +42,7 @@ The six principal named results—Theorems 1, 2, 4 and 6, Corollary 7 and Lemma 
 
 The upper bounds use concrete positive-probability observed-history policies. Lower bounds use general measurable private-seed learners, including deterministic actions and zero sampling probabilities. No unrestricted learner-kernel representation theorem or composed P1 bridge between those interfaces is claimed. Theorem 4 retains its conditional hypotheses and actual constructed complexity. Lower-bound witness tables are oblivious.
 
-Lean checks mathematical statements under their explicit hypotheses. It does not certify every sentence, the paper's experiments, editorial choices, or every possible tie-resolution rule. [MANUSCRIPT_FIDELITY.md](docs/MANUSCRIPT_FIDELITY.md) records the historical E3/Step 24 comparison with the frozen mathematical baseline. The [current audit](docs/STEP24B_AUDIT.md) extends that record through the approved acknowledgement correction.
+Lean checks mathematical statements under their explicit hypotheses. It does not certify every sentence, the paper's experiments, editorial choices, or every possible tie-resolution rule. [MANUSCRIPT_FIDELITY.md](docs/MANUSCRIPT_FIDELITY.md) records the historical E3/Step 24 comparison with the frozen mathematical baseline. The [Step 24B audit](docs/STEP24B_AUDIT.md) extends that record through the approved acknowledgement correction. [Provenance](docs/PROVENANCE.md#approved-expository-update-2026-10-18) records the subsequent five prose changes; all mathematics and Lean sources remain unchanged.
 
 ## Attribution and licenses
 

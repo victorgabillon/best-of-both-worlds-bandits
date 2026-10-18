@@ -173,11 +173,15 @@ of variance on its estimates for the best arms.
 \noindent\textbf{Sketch of the proof} 
 \textit{(full proof in 
 	Appendix~\ref{app:prooflowBOB})}:
-The proof constructs a stochastic problem and
-an adversarial environment that are difficult
-for the learner to distinguish, but for which
-successful identification requires different
-recommendations.
+The idea is again to construct two environments that are difficult for the
+learner to distinguish but have different best arms. This time, one environment
+is stochastic and the other is adversarial. If the learner identifies the best
+arm with very high probability in the stochastic environment, it cannot
+reliably recognize that a different recommendation is needed in the
+adversarial environment. Consequently, sufficiently good stochastic
+performance forces a substantial probability of error in the adversarial
+environment.
+
 Our proof of the lower bound uses some arguments of purely stochastic best-arm identification 
 lower bounds of~\cite{Audibert10BA} and~\cite{Carpentier16TB}.
 We were also inspired by the lower bound of~\cite{Auer16AA} 

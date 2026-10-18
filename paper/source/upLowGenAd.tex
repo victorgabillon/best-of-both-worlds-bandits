@@ -118,11 +118,15 @@ upper tail for each competitor.
 %
 \noindent\textbf{Sketch of the proof} \textit{(full proof given 
 	in Appendix~\ref{app:prooflowadPRO})}:
-The key idea is to identify an arm that the
-learner samples infrequently and use it to
-construct two environments that are difficult
-to distinguish from the learner's observations
-but have different best arms with high probability.
+The key idea is to identify an arm that the learner samples infrequently and
+use it to construct two environments with different best arms but observations
+that are difficult to distinguish. If the learner cannot tell which environment
+it faces, it has little information on which to base a different recommendation
+in each. Yet the correct recommendation differs between the two environments,
+so the learner cannot reliably identify the best arm in both. An
+information-theoretic testing inequality quantifies the error that it must
+incur in at least one environment.
+
 Consider a fixed learner run with horizon $\timeHorizon$, and a base
 problem \basePro{} with Bernoulli means $\mean_1^{\basePro}=1/2$ and
 $\mean_j^{\basePro}=1/2-\gap_j$ for $j\in\setArmsmo$.

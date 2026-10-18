@@ -6,6 +6,13 @@
 \toto*
 \setcounter{theorem}{\the\numexpr\value{scratchcounter}}
 \begin{proof}%[Theorem~\ref{th:LOWadPRO}]
+The argument compares two environments that require different best-arm
+recommendations but provide insufficient information for the learner to
+reliably distinguish them. We quantify this difficulty using the distributions
+of the learner's observed interactions, rather than the complete reward
+tables, since unobserved rewards cannot help the learner identify the
+environment.
+
 Fix the reference gaps
 $0<\gap_1=\gap_2\leq\cdots\leq\gap_{\nArms}\leq1/8$,
 a learner, and a positive integer horizon $\timeHorizon$ satisfying
